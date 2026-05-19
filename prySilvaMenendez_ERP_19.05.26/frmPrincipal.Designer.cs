@@ -29,15 +29,26 @@
         private void InitializeComponent()
         {
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.statuslblEstado = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip1
             // 
-            this.statusStrip1.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.statusStrip1.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.statuslblEstado});
             this.statusStrip1.Location = new System.Drawing.Point(0, 428);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(690, 22);
             this.statusStrip1.TabIndex = 0;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // statuslblEstado
+            // 
+            this.statuslblEstado.Name = "statuslblEstado";
+            this.statuslblEstado.Size = new System.Drawing.Size(187, 17);
+            this.statuslblEstado.Text = "Estado de Conexion Base de Datos";
             // 
             // frmPrincipal
             // 
@@ -48,6 +59,9 @@
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main ERP";
+            this.Load += new System.EventHandler(this.frmPrincipal_Load);
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -56,6 +70,7 @@
         #endregion
 
         private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel statuslblEstado;
     }
 }
 
