@@ -19,9 +19,18 @@ namespace prySilvaMenendez_ERP_19._05._26
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
-            frmPrincipal Principal = new frmPrincipal();
-            Principal.ShowDialog();
-            this.Close();
+            clsConexion.ConexionBaseDeDatos.Conectar();
+            clsConexion.ConexionBaseDeDatos.Consultar("SELECT * FROM Usuarios WHERE Usuario = '" + txtNombre.Text + "' AND Contraseña = '" + mskContraseña.Text + "'");
+            if (txtNombre.Text == "admin" && mskContraseña.Text == "1234")
+            {
+                frmPrincipal Principal = new frmPrincipal();
+                Principal.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Usuario o contraseña incorrectos");
+            }
         }
     }
 }

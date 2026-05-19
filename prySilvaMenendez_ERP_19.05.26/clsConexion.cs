@@ -15,10 +15,8 @@ namespace prySilvaMenendez_ERP_19._05._26
         {
                 public static OleDbConnection conexion;
                 public static string error;
-
                 public static bool Conectar() 
                 {
-                    
                     string ruta = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "BaseDatos", "SilvaMenendez.accdb");
                     string cadena = "Provider=Microsoft.ACE.OLEDB.16.0;Data Source=" + ruta;
 
