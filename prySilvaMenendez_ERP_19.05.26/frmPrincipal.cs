@@ -19,7 +19,18 @@ namespace prySilvaMenendez_ERP_19._05._26
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
-            
+            bool conectado = clsConexion.ConexionBaseDeDatos.Conectar ();
+            if (conectado)
+            {
+                statuslblEstado.Text = "Conectado a la Base de Datos";
+                statuslblEstado.BackColor = Color.Green;
+
+            }
+            else
+            {
+                statuslblEstado.Text = "Error al Conectar a la Base de Datos" ;
+                statuslblEstado.BackColor = Color.Red;
+            }
         }
     }
 }
