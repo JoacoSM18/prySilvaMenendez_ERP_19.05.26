@@ -13,46 +13,64 @@ namespace prySilvaMenendez_ERP_19._05._26
     {
         public class ConexionBaseDeDatos
         {
-                public static OleDbConnection conexion;
-                public static string error;
-                public static bool Conectar() 
+            public static OleDbConnection conexion;
+            public static string error;
+            public static bool Conectar()
+            {
+                string ruta = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "BaseDatos", "SilvaMenendez.accdb");
+                string cadena = "Provider=Microsoft.ACE.OLEDB.16.0;Data Source=" + ruta;
+                try
                 {
-                    string ruta = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "BaseDatos", "SilvaMenendez.accdb");
-                    string cadena = "Provider=Microsoft.ACE.OLEDB.16.0;Data Source=" + ruta;
-
-                    try
-                    {
-                        conexion = new OleDbConnection(cadena);
-                        conexion.Open();
-                        return true;
-                    }
-                    catch (Exception ex)
-                    {
-                        error = ex.Message;
-                        return false;
-                    }
+                    conexion = new OleDbConnection(cadena);
+                    conexion.Open();
+                    return true;
                 }
-
-                public static void Desconectar()
+                catch (Exception ex)
                 {
-                    if (conexion != null && conexion.State == ConnectionState.Open)
-                        conexion.Close();
+                    error = ex.Message;
+                    return false;
                 }
-
-                public static DataTable Consultar(string sql)
+            }
+            public static void Desconectar()
+            {
+                if (conexion != null && conexion.State == ConnectionState.Open) conexion.Close();
+            }
+            public static DataTable Consultar(string sql)
+            {
+                DataTable tabla = new DataTable();
+                try
                 {
-                    DataTable tabla = new DataTable();
-                    try
-                    {
-                        OleDbDataAdapter da = new OleDbDataAdapter(sql, conexion);
-                        da.Fill(tabla);
-                    }
-                    catch (Exception ex)
-                    {
-                        error = ex.Message;
-                    }
-                    return tabla;
+                    OleDbDataAdapter da = new OleDbDataAdapter(sql, conexion);
+                    da.Fill(tabla);
                 }
+                catch (Exception ex)
+                {
+                    error = ex.Message;
+                }
+                return tabla;
+            }
+            public static DataTable AuditarSesion(string usuario, bool acceso)
+            {
+                try 
+                { 
+                    string estado;
+                    if (acceso == true)
+                    {
+                        estado = "Sí";
+                    }
+                    else
+                    {
+                        estado = "No";
+                    }
+                    string sql = "INSERT INTO AuditoriaSesion " + "(Usuario, FechaHora, Acceso) VALUES ('" + usuario + "', '" + DateTime.Now.ToString() + "', '" + estado + "')";
+                    OleDbCommand cmd = new OleDbCommand(sql, conexion);
+                    cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    error = ex.Message;
+                }
+            }
         }
     }
 }

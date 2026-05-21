@@ -12,6 +12,7 @@ namespace prySilvaMenendez_ERP_19._05._26
 {
     public partial class frmInicioSesion : Form
     {
+        int intentos = 3;
         public frmInicioSesion()
         {
             InitializeComponent();
@@ -23,14 +24,28 @@ namespace prySilvaMenendez_ERP_19._05._26
             DataTable tabla = clsConexion.ConexionBaseDeDatos.Consultar("SELECT * FROM Usuarios WHERE Gmail = '" + txtNombre.Text + "' AND Contraseña = '" + mskContraseña.Text + "'");
             if (tabla.Rows.Count > 0)
             {
-                frmPrincipal Principal = new frmPrincipal();
+                clsConexion.ConexionBaseDeDatos.AuditarSesion(txtNombre.Text, true);
+                string nombre = tabla.Rows[0]["Nombre"].ToString();
+                string perfil = tabla.Rows[0]["Perfil"].ToString();
+                frmPrincipal Principal = new frmPrincipal(nombre, perfil);
                 Principal.ShowDialog();
                 this.Close();
             }
             else
             {
-                MessageBox.Show("Usuario o Contraseña Incorrectos");
+                clsConexion.ConexionBaseDeDatos.AuditarSesion(txtNombre.Text, false);
+                intentos--;
+                MessageBox.Show("Usuario o Contraseña Incorrectos, Te Quedan " + intentos + " Intentos Disponibles", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                if (intentos <= 0) 
+                {
+                    this.Close();
+                }
             }
+        }
+
+        private void frmInicioSesion_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

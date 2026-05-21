@@ -12,9 +12,13 @@ namespace prySilvaMenendez_ERP_19._05._26
 {
     public partial class frmPrincipal : Form
     {
-        public frmPrincipal()
+        string nombreUsuario;
+        string perfilUsuario;
+        public frmPrincipal(string nombre, string perfil)
         {
             InitializeComponent();
+            nombreUsuario = nombre;
+            perfilUsuario = perfil;
         }
 
         private void frmPrincipal_Load(object sender, EventArgs e)
@@ -31,6 +35,9 @@ namespace prySilvaMenendez_ERP_19._05._26
                 statuslblEstado.Text = "Error al Conectar a la Base de Datos" ;
                 statuslblEstado.BackColor = Color.Red;
             }
+            lblUsuario.Text = nombreUsuario;
+            lblPerfil.Text = perfilUsuario;
+            lblFechaHora.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
         }
     }
 }
