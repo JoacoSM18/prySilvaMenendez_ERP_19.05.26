@@ -20,8 +20,8 @@ namespace prySilvaMenendez_ERP_19._05._26
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
             clsConexion.ConexionBaseDeDatos.Conectar();
-            clsConexion.ConexionBaseDeDatos.Consultar("SELECT * FROM Usuarios WHERE Usuario = '" + txtNombre.Text + "' AND Contraseña = '" + mskContraseña.Text + "'");
-            if (txtNombre.Text == "admin" && mskContraseña.Text == "1234")
+            DataTable tabla = clsConexion.ConexionBaseDeDatos.Consultar("SELECT * FROM Usuarios WHERE Gmail = '" + txtNombre.Text + "' AND Contraseña = '" + mskContraseña.Text + "'");
+            if (tabla.Rows.Count > 0)
             {
                 frmPrincipal Principal = new frmPrincipal();
                 Principal.ShowDialog();
@@ -29,7 +29,7 @@ namespace prySilvaMenendez_ERP_19._05._26
             }
             else
             {
-                MessageBox.Show("Usuario o contraseña incorrectos");
+                MessageBox.Show("Usuario o Contraseña Incorrectos");
             }
         }
     }
