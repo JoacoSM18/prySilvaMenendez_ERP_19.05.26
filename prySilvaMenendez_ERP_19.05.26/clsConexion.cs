@@ -49,20 +49,11 @@ namespace prySilvaMenendez_ERP_19._05._26
                 }
                 return tabla;
             }
-            public static DataTable AuditarSesion(string usuario, bool acceso)
+            public static void AuditarSesion(string usuario, bool acceso)
             {
-                try 
-                { 
-                    string estado;
-                    if (acceso == true)
-                    {
-                        estado = "Sí";
-                    }
-                    else
-                    {
-                        estado = "No";
-                    }
-                    string sql = "INSERT INTO AuditoriaSesion " + "(Usuario, FechaHora, Acceso) VALUES ('" + usuario + "', '" + DateTime.Now.ToString() + "', '" + estado + "')";
+                try
+                {
+                    string sql = "INSERT INTO AuditoriaInicioSesion (Usuario, FechayHora, IntentoFallido) " + "VALUES ('" + usuario + "', '" + DateTime.Now.ToString() + "', " + acceso + ")";
                     OleDbCommand cmd = new OleDbCommand(sql, conexion);
                     cmd.ExecuteNonQuery();
                 }

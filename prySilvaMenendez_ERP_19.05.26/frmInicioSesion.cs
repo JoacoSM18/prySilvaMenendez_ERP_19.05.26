@@ -20,16 +20,30 @@ namespace prySilvaMenendez_ERP_19._05._26
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
+            clsConexion.ConexionBaseDeDatos.Desconectar();
             clsConexion.ConexionBaseDeDatos.Conectar();
-            DataTable tabla = clsConexion.ConexionBaseDeDatos.Consultar("SELECT * FROM Usuarios WHERE Gmail = '" + txtNombre.Text + "' AND Contraseña = '" + mskContraseña.Text + "'");
+            DataTable tabla = clsConexion.ConexionBaseDeDatos.Consultar("SELECT * FROM Usuario WHERE Gmail = '" + txtNombre.Text + "' AND Contraseña = '" + mskContraseña.Text.Trim() + "'");
             if (tabla.Rows.Count > 0)
             {
                 clsConexion.ConexionBaseDeDatos.AuditarSesion(txtNombre.Text, true);
                 string nombre = tabla.Rows[0]["Nombre"].ToString();
                 string perfil = tabla.Rows[0]["Perfil"].ToString();
-                frmPrincipal Principal = new frmPrincipal(nombre, perfil);
-                Principal.ShowDialog();
-                this.Close();
+                if (perfil == "Administrador")
+                {
+                    frmAdmin admin = new frmAdmin();
+                    admin.ShowDialog();
+                }
+                else if (perfil == "Recursos Humanos")
+                {
+                    frmRRHH rrhh = new frmRRHH();
+                    rrhh.ShowDialog();
+                }
+                else
+                {
+                    frmPrincipal Principal = new frmPrincipal(nombre, perfil);
+                    Principal.ShowDialog();
+                    this.Close();
+                }
             }
             else
             {
@@ -41,8 +55,9 @@ namespace prySilvaMenendez_ERP_19._05._26
                     this.Close();
                 }
             }
-        }
 
+            
+        }
         private void frmInicioSesion_Load(object sender, EventArgs e)
         {
 
