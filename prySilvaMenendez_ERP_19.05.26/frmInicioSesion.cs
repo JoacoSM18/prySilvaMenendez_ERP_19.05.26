@@ -35,7 +35,7 @@ namespace prySilvaMenendez_ERP_19._05._26
                 }
                 else if (perfil == "Recursos Humanos")
                 {
-                    frmRRHH rrhh = new frmRRHH();
+                    frmRRHH rrhh = new frmRRHH(nombre, perfil);
                     rrhh.ShowDialog();
                 }
                 else

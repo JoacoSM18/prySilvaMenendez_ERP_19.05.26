@@ -12,14 +12,25 @@ namespace prySilvaMenendez_ERP_19._05._26
 {
     public partial class frmRRHH : Form
     {
-        public frmRRHH()
+        string nombreUsuario;
+        string perfilUsuario;
+        public frmRRHH(string nombre, string perfil)
         {
             InitializeComponent();
+            nombreUsuario = nombre;
+            perfilUsuario = perfil;
         }
 
         private void lblNombre_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void frmRRHH_Load(object sender, EventArgs e)
+        {
+            lblUsuario.Text = nombreUsuario;
+            lblPerfil.Text = perfilUsuario;
+            lblFechaHora.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
         }
     }
 }
