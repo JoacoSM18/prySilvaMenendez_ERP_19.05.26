@@ -24,7 +24,7 @@ namespace prySilvaMenendez_ERP_19._05._26
             clsConexion.ConexionBaseDeDatos.Conectar();
             if (cmbPerfiles.SelectedItem == null)
             {
-                MessageBox.Show("Seleccione un perfil", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Seleccione un Perfil", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
             string[] datos = txtUsuario.Text.Trim().Split(' ');

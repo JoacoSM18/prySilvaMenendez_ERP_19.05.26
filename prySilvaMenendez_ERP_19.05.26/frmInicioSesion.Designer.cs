@@ -92,11 +92,22 @@
             // cmbPerfiles
             // 
             this.cmbPerfiles.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbPerfiles.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbPerfiles.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbPerfiles.FormattingEnabled = true;
+            this.cmbPerfiles.Items.AddRange(new object[] {
+            "Administrador",
+            "Cliente",
+            "Moderador",
+            "Editor",
+            "Recursos Humanos",
+            "Gerente",
+            "Soporte Tecnico",
+            "Community Manager",
+            "Diseñador",
+            "Vendedor"});
             this.cmbPerfiles.Location = new System.Drawing.Point(324, 196);
             this.cmbPerfiles.Name = "cmbPerfiles";
-            this.cmbPerfiles.Size = new System.Drawing.Size(202, 38);
+            this.cmbPerfiles.Size = new System.Drawing.Size(202, 34);
             this.cmbPerfiles.TabIndex = 5;
             // 
             // lblPerfil
