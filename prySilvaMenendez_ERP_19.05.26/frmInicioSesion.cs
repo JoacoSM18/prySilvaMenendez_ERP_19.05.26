@@ -22,41 +22,55 @@ namespace prySilvaMenendez_ERP_19._05._26
         {
             clsConexion.ConexionBaseDeDatos.Desconectar();
             clsConexion.ConexionBaseDeDatos.Conectar();
-            DataTable tabla = clsConexion.ConexionBaseDeDatos.Consultar("SELECT * FROM Usuario WHERE Gmail = '" + txtNombre.Text + "' AND Contraseña = '" + mskContraseña.Text.Trim() + "'");
-            if (tabla.Rows.Count > 0)
+            if (cmbPerfiles.SelectedItem == null)
             {
-                clsConexion.ConexionBaseDeDatos.AuditarSesion(txtNombre.Text, true);
-                string nombre = tabla.Rows[0]["Nombre"].ToString();
-                string perfil = tabla.Rows[0]["Perfil"].ToString();
-                if (perfil == "Administrador")
+                MessageBox.Show("Seleccione un perfil", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            string[] datos = txtUsuario.Text.Trim().Split(' ');
+            if (datos.Length >= 2)
+            {
+                string nombreIngresado = datos[0];
+                string apellidoIngresado = datos[1];
+                string perfilSeleccionado = cmbPerfiles.SelectedItem.ToString();
+                DataTable tabla = clsConexion.ConexionBaseDeDatos.Consultar("SELECT * FROM Usuario WHERE Nombre = '" + nombreIngresado + "' AND Apellido = '" + apellidoIngresado + "' AND Contraseña = '" + mskContraseña.Text.Trim() + "' AND Perfil = '" + perfilSeleccionado + "'");
+                if (tabla.Rows.Count > 0)
                 {
-                    frmAdmin admin = new frmAdmin();
-                    admin.ShowDialog();
-                }
-                else if (perfil == "Recursos Humanos")
-                {
-                    frmRRHH rrhh = new frmRRHH(nombre, perfil);
-                    rrhh.ShowDialog();
+                    clsConexion.ConexionBaseDeDatos.AuditarSesion(txtUsuario.Text, true);
+                    string nombre = tabla.Rows[0]["Nombre"].ToString() + " " + tabla.Rows[0]["Apellido"].ToString();
+                    string perfilUsuario = tabla.Rows[0]["Perfil"].ToString();
+                    if (perfilUsuario == "Administrador")
+                    {
+                        frmAdmin admin = new frmAdmin();
+                        admin.ShowDialog();
+                    }
+                    else if (perfilUsuario == "Recursos Humanos")
+                    {
+                        frmRRHH rrhh = new frmRRHH(nombre, perfilUsuario);
+                        rrhh.ShowDialog();
+                    }
+                    else
+                    {
+                        frmPrincipal principal = new frmPrincipal(nombre, perfilUsuario);
+                        principal.ShowDialog();
+                    }
+                    this.Close();
                 }
                 else
                 {
-                    frmPrincipal Principal = new frmPrincipal(nombre, perfil);
-                    Principal.ShowDialog();
-                    this.Close();
+                    clsConexion.ConexionBaseDeDatos.AuditarSesion(txtUsuario.Text, false);
+                    intentos--;
+                    MessageBox.Show("Usuario o Contraseña Incorrectos, Te Quedan " + intentos + " Intentos Disponibles", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    if (intentos <= 0)
+                    {
+                        this.Close();
+                    }
                 }
             }
             else
             {
-                clsConexion.ConexionBaseDeDatos.AuditarSesion(txtNombre.Text, false);
-                intentos--;
-                MessageBox.Show("Usuario o Contraseña Incorrectos, Te Quedan " + intentos + " Intentos Disponibles", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                if (intentos <= 0) 
-                {
-                    this.Close();
-                }
+                MessageBox.Show("Ingrese Nombre y Apellido", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-
-            
         }
         private void frmInicioSesion_Load(object sender, EventArgs e)
         {

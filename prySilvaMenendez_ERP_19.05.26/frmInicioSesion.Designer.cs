@@ -30,9 +30,11 @@
         {
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblContraseña = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
             this.mskContraseña = new System.Windows.Forms.MaskedTextBox();
             this.btnIniciarSesion = new System.Windows.Forms.Button();
+            this.cmbPerfiles = new System.Windows.Forms.ComboBox();
+            this.lblPerfil = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblUsuario
@@ -50,26 +52,26 @@
             // 
             this.lblContraseña.AutoSize = true;
             this.lblContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContraseña.Location = new System.Drawing.Point(86, 172);
+            this.lblContraseña.Location = new System.Drawing.Point(86, 125);
             this.lblContraseña.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblContraseña.Name = "lblContraseña";
             this.lblContraseña.Size = new System.Drawing.Size(152, 30);
             this.lblContraseña.TabIndex = 1;
             this.lblContraseña.Text = "Contraseña:";
             // 
-            // txtNombre
+            // txtUsuario
             // 
-            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(324, 43);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(202, 37);
-            this.txtNombre.TabIndex = 2;
+            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.Location = new System.Drawing.Point(324, 43);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(202, 37);
+            this.txtUsuario.TabIndex = 2;
             // 
             // mskContraseña
             // 
             this.mskContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskContraseña.Location = new System.Drawing.Point(324, 165);
+            this.mskContraseña.Location = new System.Drawing.Point(324, 118);
             this.mskContraseña.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.mskContraseña.Name = "mskContraseña";
             this.mskContraseña.Size = new System.Drawing.Size(265, 37);
@@ -78,7 +80,7 @@
             // btnIniciarSesion
             // 
             this.btnIniciarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIniciarSesion.Location = new System.Drawing.Point(534, 297);
+            this.btnIniciarSesion.Location = new System.Drawing.Point(530, 286);
             this.btnIniciarSesion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnIniciarSesion.Name = "btnIniciarSesion";
             this.btnIniciarSesion.Size = new System.Drawing.Size(195, 49);
@@ -87,14 +89,37 @@
             this.btnIniciarSesion.UseVisualStyleBackColor = true;
             this.btnIniciarSesion.Click += new System.EventHandler(this.btnIniciarSesion_Click);
             // 
+            // cmbPerfiles
+            // 
+            this.cmbPerfiles.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPerfiles.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbPerfiles.FormattingEnabled = true;
+            this.cmbPerfiles.Location = new System.Drawing.Point(324, 196);
+            this.cmbPerfiles.Name = "cmbPerfiles";
+            this.cmbPerfiles.Size = new System.Drawing.Size(202, 38);
+            this.cmbPerfiles.TabIndex = 5;
+            // 
+            // lblPerfil
+            // 
+            this.lblPerfil.AutoSize = true;
+            this.lblPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPerfil.Location = new System.Drawing.Point(86, 204);
+            this.lblPerfil.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPerfil.Name = "lblPerfil";
+            this.lblPerfil.Size = new System.Drawing.Size(79, 30);
+            this.lblPerfil.TabIndex = 6;
+            this.lblPerfil.Text = "Perfil:";
+            // 
             // frmInicioSesion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(782, 400);
+            this.ClientSize = new System.Drawing.Size(782, 369);
+            this.Controls.Add(this.lblPerfil);
+            this.Controls.Add(this.cmbPerfiles);
             this.Controls.Add(this.btnIniciarSesion);
             this.Controls.Add(this.mskContraseña);
-            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.lblContraseña);
             this.Controls.Add(this.lblUsuario);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -111,8 +136,10 @@
 
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.Label lblContraseña;
-        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.MaskedTextBox mskContraseña;
         private System.Windows.Forms.Button btnIniciarSesion;
+        private System.Windows.Forms.ComboBox cmbPerfiles;
+        private System.Windows.Forms.Label lblPerfil;
     }
 }
