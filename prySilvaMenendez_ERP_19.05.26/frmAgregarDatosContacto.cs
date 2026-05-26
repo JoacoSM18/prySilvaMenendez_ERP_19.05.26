@@ -21,5 +21,16 @@ namespace prySilvaMenendez_ERP_19._05._26
         {
 
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnVerTodo_Click(object sender, EventArgs e)
+        {
+            frmDatosContacto datosContacto = new frmDatosContacto();
+            datosContacto.ShowDialog();
+        }
     }
 }

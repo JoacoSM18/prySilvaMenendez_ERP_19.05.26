@@ -64,6 +64,18 @@
     <Compile Include="frmAdmin.Designer.cs">
       <DependentUpon>frmAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDatosAuditoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDatosAuditoria.Designer.cs">
+      <DependentUpon>frmDatosAuditoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDatosContacto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDatosContacto.Designer.cs">
+      <DependentUpon>frmDatosContacto.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmInicioSesion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +98,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAdmin.resx">
       <DependentUpon>frmAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDatosAuditoria.resx">
+      <DependentUpon>frmDatosAuditoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDatosContacto.resx">
+      <DependentUpon>frmDatosContacto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmInicioSesion.resx">
       <DependentUpon>frmInicioSesion.cs</DependentUpon>

@@ -1,0 +1,62 @@
+﻿namespace prySilvaMenendez_ERP_19._05._26
+{
+    partial class frmDatosContacto
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDatosContacto));
+            this.dgvDatosContacto = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDatosContacto)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // dgvDatosContacto
+            // 
+            this.dgvDatosContacto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDatosContacto.Location = new System.Drawing.Point(11, 15);
+            this.dgvDatosContacto.Name = "dgvDatosContacto";
+            this.dgvDatosContacto.Size = new System.Drawing.Size(623, 540);
+            this.dgvDatosContacto.TabIndex = 0;
+            // 
+            // frmDatosContacto
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(648, 565);
+            this.Controls.Add(this.dgvDatosContacto);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "frmDatosContacto";
+            this.Text = "Datos de Contacto de los Usuarios";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDatosContacto)).EndInit();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.DataGridView dgvDatosContacto;
+    }
+}

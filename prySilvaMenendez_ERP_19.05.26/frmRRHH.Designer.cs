@@ -96,7 +96,7 @@
             "Diseñador",
             "Vendedor"});
             this.cmbPerfiles.Location = new System.Drawing.Point(64, 145);
-            this.cmbPerfiles.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbPerfiles.Margin = new System.Windows.Forms.Padding(2);
             this.cmbPerfiles.Name = "cmbPerfiles";
             this.cmbPerfiles.Size = new System.Drawing.Size(121, 28);
             this.cmbPerfiles.TabIndex = 11;
@@ -104,26 +104,26 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(78, 109);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(94, 26);
-            this.txtNombre.TabIndex = 10;
+            this.txtNombre.TabIndex = 2;
             // 
             // txtApellido
             // 
             this.txtApellido.Location = new System.Drawing.Point(78, 73);
-            this.txtApellido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtApellido.Margin = new System.Windows.Forms.Padding(2);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(94, 26);
-            this.txtApellido.TabIndex = 9;
+            this.txtApellido.TabIndex = 1;
             // 
             // txtDNI
             // 
             this.txtDNI.Location = new System.Drawing.Point(78, 39);
-            this.txtDNI.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDNI.Margin = new System.Windows.Forms.Padding(2);
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(94, 26);
-            this.txtDNI.TabIndex = 8;
+            this.txtDNI.TabIndex = 0;
             // 
             // lblAgregarPerfil
             // 
@@ -138,11 +138,11 @@
             // btnAgregar
             // 
             this.btnAgregar.Location = new System.Drawing.Point(469, 181);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(94, 28);
             this.btnAgregar.TabIndex = 6;
-            this.btnAgregar.Text = "AGREGAR";
+            this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
@@ -175,8 +175,108 @@
             // cmbLocalidades
             // 
             this.cmbLocalidades.FormattingEnabled = true;
+            this.cmbLocalidades.Items.AddRange(new object[] {
+            "Alta Gracia",
+            "",
+            "Arroyito",
+            "",
+            "Bell Ville",
+            "",
+            "Capilla del Monte",
+            "",
+            "Carlos Paz",
+            "",
+            "Colonia Caroya",
+            "",
+            "Cosquín",
+            "",
+            "Cruz del Eje",
+            "",
+            "Deán Funes",
+            "",
+            "Embalse",
+            "",
+            "General Cabrera",
+            "",
+            "General Deheza",
+            "",
+            "Huinca Renancó",
+            "",
+            "Jesús María",
+            "",
+            "La Calera",
+            "",
+            "La Carlota",
+            "",
+            "La Cumbre",
+            "",
+            "La Falda",
+            "",
+            "Laborde",
+            "",
+            "Laboulaye",
+            "",
+            "Las Varillas",
+            "",
+            "Leones",
+            "",
+            "Malagueño",
+            "",
+            "Marcos Juárez",
+            "",
+            "Mina Clavero",
+            "",
+            "Monte Cristo",
+            "",
+            "Morteros",
+            "",
+            "Oliva",
+            "",
+            "Oncativo",
+            "",
+            "Río Ceballos",
+            "",
+            "Río Cuarto",
+            "",
+            "Río Segundo",
+            "",
+            "Río Tercero",
+            "",
+            "Salsipuedes",
+            "",
+            "San Francisco",
+            "",
+            "Santa Rosa de Calamuchita",
+            "",
+            "Tanti",
+            "",
+            "Unquillo",
+            "",
+            "Valle Hermoso",
+            "",
+            "Vicuña Mackenna",
+            "",
+            "Villa Allende",
+            "",
+            "Villa Carlos Paz",
+            "",
+            "Villa Dolores",
+            "",
+            "Villa General Belgrano",
+            "",
+            "Villa María",
+            "",
+            "Villa Nueva",
+            "",
+            "Villa del Rosario",
+            "",
+            "Villa Cura Brochero",
+            "",
+            "Villa Giardino",
+            "",
+            "Villa Rumipal"});
             this.cmbLocalidades.Location = new System.Drawing.Point(84, 56);
-            this.cmbLocalidades.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbLocalidades.Margin = new System.Windows.Forms.Padding(2);
             this.cmbLocalidades.Name = "cmbLocalidades";
             this.cmbLocalidades.Size = new System.Drawing.Size(138, 28);
             this.cmbLocalidades.TabIndex = 6;
@@ -210,7 +310,7 @@
             "Tierra del Fueg",
             "Tucumán"});
             this.cmbsProvincias.Location = new System.Drawing.Point(84, 21);
-            this.cmbsProvincias.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbsProvincias.Margin = new System.Windows.Forms.Padding(2);
             this.cmbsProvincias.Name = "cmbsProvincias";
             this.cmbsProvincias.Size = new System.Drawing.Size(130, 28);
             this.cmbsProvincias.TabIndex = 5;
@@ -218,10 +318,10 @@
             // txtDireccion
             // 
             this.txtDireccion.Location = new System.Drawing.Point(84, 92);
-            this.txtDireccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDireccion.Margin = new System.Windows.Forms.Padding(2);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(138, 26);
-            this.txtDireccion.TabIndex = 4;
+            this.txtDireccion.TabIndex = 3;
             // 
             // lblGeo
             // 
@@ -322,19 +422,19 @@
             this.cmbUsuarios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbUsuarios.FormattingEnabled = true;
             this.cmbUsuarios.Location = new System.Drawing.Point(9, 56);
-            this.cmbUsuarios.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbUsuarios.Margin = new System.Windows.Forms.Padding(2);
             this.cmbUsuarios.Name = "cmbUsuarios";
             this.cmbUsuarios.Size = new System.Drawing.Size(177, 28);
             this.cmbUsuarios.TabIndex = 1;
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(188, 86);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminar.Location = new System.Drawing.Point(201, 103);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(97, 30);
             this.btnEliminar.TabIndex = 0;
-            this.btnEliminar.Text = "ELIMINAR";
+            this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 

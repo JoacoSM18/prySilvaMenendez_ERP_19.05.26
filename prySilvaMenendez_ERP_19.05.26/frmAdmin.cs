@@ -39,5 +39,11 @@ namespace prySilvaMenendez_ERP_19._05._26
             frmRRHH RRHH = new frmRRHH(nombreUsuario, perfilUsuario);
             RRHH.ShowDialog();
         }
+
+        private void btnVerAuditoria_Click(object sender, EventArgs e)
+        {
+            frmDatosAuditoria datosAuditoria = new frmDatosAuditoria();
+            datosAuditoria.ShowDialog();
+        }
     }
 }

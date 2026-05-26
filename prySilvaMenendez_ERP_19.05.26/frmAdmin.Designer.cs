@@ -34,9 +34,9 @@
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblBienvenida = new System.Windows.Forms.Label();
             this.grbAcciones = new System.Windows.Forms.GroupBox();
+            this.btnVerAuditoria = new System.Windows.Forms.Button();
             this.btnVerDatosContacto = new System.Windows.Forms.Button();
             this.btnRRHH = new System.Windows.Forms.Button();
-            this.btnVerAuditoria = new System.Windows.Forms.Button();
             this.grbAcciones.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -92,37 +92,13 @@
             this.grbAcciones.Controls.Add(this.btnRRHH);
             this.grbAcciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbAcciones.Location = new System.Drawing.Point(31, 99);
-            this.grbAcciones.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grbAcciones.Margin = new System.Windows.Forms.Padding(2);
             this.grbAcciones.Name = "grbAcciones";
-            this.grbAcciones.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grbAcciones.Padding = new System.Windows.Forms.Padding(2);
             this.grbAcciones.Size = new System.Drawing.Size(417, 368);
             this.grbAcciones.TabIndex = 13;
             this.grbAcciones.TabStop = false;
             this.grbAcciones.Text = "Acciones";
-            // 
-            // btnVerDatosContacto
-            // 
-            this.btnVerDatosContacto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVerDatosContacto.Location = new System.Drawing.Point(206, 64);
-            this.btnVerDatosContacto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnVerDatosContacto.Name = "btnVerDatosContacto";
-            this.btnVerDatosContacto.Size = new System.Drawing.Size(197, 68);
-            this.btnVerDatosContacto.TabIndex = 1;
-            this.btnVerDatosContacto.Text = "Agregar Datos de Contacto de los Usuarios";
-            this.btnVerDatosContacto.UseVisualStyleBackColor = true;
-            this.btnVerDatosContacto.Click += new System.EventHandler(this.btnVerDatosContacto_Click);
-            // 
-            // btnRRHH
-            // 
-            this.btnRRHH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRRHH.Location = new System.Drawing.Point(12, 64);
-            this.btnRRHH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnRRHH.Name = "btnRRHH";
-            this.btnRRHH.Size = new System.Drawing.Size(167, 68);
-            this.btnRRHH.TabIndex = 0;
-            this.btnRRHH.Text = "Ingresar al Área de Recursos Humanos";
-            this.btnRRHH.UseVisualStyleBackColor = true;
-            this.btnRRHH.Click += new System.EventHandler(this.btnRRHH_Click);
             // 
             // btnVerAuditoria
             // 
@@ -134,6 +110,31 @@
             this.btnVerAuditoria.TabIndex = 2;
             this.btnVerAuditoria.Text = "Ver Información Auditoría de Sesion";
             this.btnVerAuditoria.UseVisualStyleBackColor = true;
+            this.btnVerAuditoria.Click += new System.EventHandler(this.btnVerAuditoria_Click);
+            // 
+            // btnVerDatosContacto
+            // 
+            this.btnVerDatosContacto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerDatosContacto.Location = new System.Drawing.Point(206, 64);
+            this.btnVerDatosContacto.Margin = new System.Windows.Forms.Padding(2);
+            this.btnVerDatosContacto.Name = "btnVerDatosContacto";
+            this.btnVerDatosContacto.Size = new System.Drawing.Size(197, 68);
+            this.btnVerDatosContacto.TabIndex = 1;
+            this.btnVerDatosContacto.Text = "Agregar Datos de Contacto de los Usuarios";
+            this.btnVerDatosContacto.UseVisualStyleBackColor = true;
+            this.btnVerDatosContacto.Click += new System.EventHandler(this.btnVerDatosContacto_Click);
+            // 
+            // btnRRHH
+            // 
+            this.btnRRHH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRRHH.Location = new System.Drawing.Point(12, 64);
+            this.btnRRHH.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRRHH.Name = "btnRRHH";
+            this.btnRRHH.Size = new System.Drawing.Size(167, 68);
+            this.btnRRHH.TabIndex = 0;
+            this.btnRRHH.Text = "Ingresar al Área de Recursos Humanos";
+            this.btnRRHH.UseVisualStyleBackColor = true;
+            this.btnRRHH.Click += new System.EventHandler(this.btnRRHH_Click);
             // 
             // frmAdmin
             // 
