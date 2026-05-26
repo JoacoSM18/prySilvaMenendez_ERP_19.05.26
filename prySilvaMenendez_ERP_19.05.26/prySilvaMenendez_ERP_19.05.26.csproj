@@ -37,7 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System">
-      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
     </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -127,5 +127,6 @@
     </Content>
     <Content Include="construction_architecture_building_startup_company_headquarter_enterprise_icon_261567.ico" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
