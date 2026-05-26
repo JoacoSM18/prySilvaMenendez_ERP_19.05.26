@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace prySilvaMenendez_ERP_19._05._26
 {
@@ -17,7 +18,7 @@ namespace prySilvaMenendez_ERP_19._05._26
             public static string error;
             public static bool Conectar()
             {
-                string ruta = @"C:\Users\Alumno\source\repos\prySilvaMenendez_ERP_19.05.26\BaseDatos\SilvaMenendez.accdb";
+                string ruta = @"C:\Users\Alumno\source\repos\prySilvaMenendez_ERP_19.05.26\prySilvaMenendez_ERP_19.05.26\BaseDatos";
                 string cadena = "Provider=Microsoft.ACE.OLEDB.16.0;Data Source=" + ruta;
                 try
                 {
@@ -28,6 +29,7 @@ namespace prySilvaMenendez_ERP_19._05._26
                 catch (Exception ex)
                 {
                     error = ex.Message;
+                    MessageBox.Show(ex.Message);
                     return false;
                 }
             }
