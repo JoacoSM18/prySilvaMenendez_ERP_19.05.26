@@ -55,12 +55,14 @@ namespace prySilvaMenendez_ERP_19._05._26
             {
                 try
                 {
-                    string sql = "INSERT INTO AuditoriaInicioSesion (Usuario, FechayHora, IntentoFallido) " + "VALUES ('" + usuario + "', '" + DateTime.Now.ToString() + "', " + acceso + ")";
+                    string sql = "INSERT INTO AuditoriaInicioSesion (FechayHora, Usuario, AccesoCorrecto) " + "VALUES (#" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "#, '" + usuario + "', " + acceso + ")";
                     OleDbCommand cmd = new OleDbCommand(sql, conexion);
                     cmd.ExecuteNonQuery();
                 }
                 catch (Exception ex)
                 {
+                    MessageBox.Show(ex.Message);
+
                     error = ex.Message;
                 }
             }

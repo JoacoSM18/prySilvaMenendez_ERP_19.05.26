@@ -122,8 +122,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="construction_architecture_building_startup_company_headquarter_enterprise_icon_261567.ico" />
     <Content Include="BaseDatos\SilvaMenendez.accdb" />
+    <Content Include="construction_architecture_building_startup_company_headquarter_enterprise_icon_261567.ico" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
