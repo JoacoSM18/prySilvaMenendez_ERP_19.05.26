@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInicioSesion));
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblContraseña = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
@@ -74,6 +75,7 @@
             this.mskContraseña.Location = new System.Drawing.Point(324, 118);
             this.mskContraseña.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.mskContraseña.Name = "mskContraseña";
+            this.mskContraseña.PasswordChar = '*';
             this.mskContraseña.Size = new System.Drawing.Size(265, 37);
             this.mskContraseña.TabIndex = 3;
             // 
@@ -107,7 +109,7 @@
             "Vendedor"});
             this.cmbPerfiles.Location = new System.Drawing.Point(324, 196);
             this.cmbPerfiles.Name = "cmbPerfiles";
-            this.cmbPerfiles.Size = new System.Drawing.Size(202, 34);
+            this.cmbPerfiles.Size = new System.Drawing.Size(234, 34);
             this.cmbPerfiles.TabIndex = 5;
             // 
             // lblPerfil
@@ -133,6 +135,7 @@
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.lblContraseña);
             this.Controls.Add(this.lblUsuario);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmInicioSesion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

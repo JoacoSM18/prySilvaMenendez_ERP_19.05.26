@@ -20,17 +20,57 @@ namespace prySilvaMenendez_ERP_19._05._26
             nombreUsuario = nombre;
             perfilUsuario = perfil;
         }
-
-        private void lblNombre_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void frmRRHH_Load(object sender, EventArgs e)
         {
             lblUsuario.Text = nombreUsuario;
             lblPerfil.Text = perfilUsuario;
             lblFechaHora.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
+            clsConexion.ConexionBaseDeDatos.Desconectar();
+            clsConexion.ConexionBaseDeDatos.Conectar();
+            DataTable tabla = clsConexion.ConexionBaseDeDatos.Consultar("SELECT Nombre, Apellido FROM Usuario");
+            foreach (DataRow fila in tabla.Rows)
+            {
+                string usuario = fila["Nombre"].ToString() + " " + fila["Apellido"].ToString();
+                cmbUsuarios.Items.Add(usuario);
+            }
+
+        }
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            clsConexion.ConexionBaseDeDatos.Desconectar();
+            clsConexion.ConexionBaseDeDatos.Conectar();
+            if (cmbPerfiles.SelectedItem == null)
+            {
+                MessageBox.Show("Seleccione un perfil");
+                return;
+            }
+            string nombre = txtNombre.Text.Trim();
+            string apellido = txtApellido.Text.Trim();
+            string perfil = cmbPerfiles.SelectedItem.ToString();
+            clsConexion.ConexionBaseDeDatos.Consultar("INSERT INTO Usuario (Nombre, Apellido, Perfil) VALUES ('" + nombre + "', '" + apellido + "', '" + perfil + "')" );
+            MessageBox.Show("Usuario Agregado Correctamente","Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (cmbUsuarios.SelectedItem == null)
+            {
+                MessageBox.Show("Seleccione un Usuario", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            string usuarioSeleccionado = cmbUsuarios.SelectedItem.ToString();
+            string[] datos = usuarioSeleccionado.Split(' ');
+            string nombre = datos[0];
+            string apellido = datos[1];
+            DialogResult resultado = MessageBox.Show("¿Está Seguro que Desea Eliminar este Usuario?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (resultado == DialogResult.Yes)
+            {
+                clsConexion.ConexionBaseDeDatos.Desconectar();
+                clsConexion.ConexionBaseDeDatos.Conectar();
+                clsConexion.ConexionBaseDeDatos.Consultar("DELETE FROM Usuario WHERE Nombre = '" + nombre + "' AND Apellido = '" + apellido + "'");
+                MessageBox.Show("Usuario Eliminado Correctamente");
+                cmbUsuarios.Items.Remove(usuarioSeleccionado);
+            }
         }
     }
 }

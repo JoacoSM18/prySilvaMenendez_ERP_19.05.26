@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>construction_architecture_building_startup_company_headquarter_enterprise_icon_261567.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System">
       <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
@@ -49,6 +52,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsConexion.cs" />
+    <Compile Include="frmAgregarDatosContacto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarDatosContacto.Designer.cs">
+      <DependentUpon>frmAgregarDatosContacto.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +96,9 @@
     <EmbeddedResource Include="frmRRHH.resx">
       <DependentUpon>frmRRHH.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAgregarDatosContacto.resx">
+      <DependentUpon>frmAgregarDatosContacto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -113,6 +125,7 @@
     <Content Include="BaseDatos\SilvaMenendez.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="construction_architecture_building_startup_company_headquarter_enterprise_icon_261567.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

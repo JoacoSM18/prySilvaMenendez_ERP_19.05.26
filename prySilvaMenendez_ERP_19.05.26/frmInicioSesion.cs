@@ -41,7 +41,7 @@ namespace prySilvaMenendez_ERP_19._05._26
                     string perfilUsuario = tabla.Rows[0]["Perfil"].ToString();
                     if (perfilUsuario == "Administrador")
                     {
-                        frmAdmin admin = new frmAdmin();
+                        frmAdmin admin = new frmAdmin(nombre, perfilUsuario);
                         admin.ShowDialog();
                     }
                     else if (perfilUsuario == "Recursos Humanos")
