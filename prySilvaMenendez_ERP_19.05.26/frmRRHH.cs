@@ -48,6 +48,7 @@ namespace prySilvaMenendez_ERP_19._05._26
             string apellido = txtApellido.Text.Trim();
             string perfil = cmbPerfiles.SelectedItem.ToString();
             clsConexion.ConexionBaseDeDatos.Consultar("INSERT INTO Usuario (Nombre, Apellido, Perfil) VALUES ('" + nombre + "', '" + apellido + "', '" + perfil + "')" );
+            clsConexion.ConexionBaseDeDatos.AuditarAccion(nombreUsuario,"Agregó un usuario");
             MessageBox.Show("Usuario Agregado Correctamente","Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -68,6 +69,7 @@ namespace prySilvaMenendez_ERP_19._05._26
                 clsConexion.ConexionBaseDeDatos.Desconectar();
                 clsConexion.ConexionBaseDeDatos.Conectar();
                 clsConexion.ConexionBaseDeDatos.Consultar("DELETE FROM Usuario WHERE Nombre = '" + nombre + "' AND Apellido = '" + apellido + "'");
+                clsConexion.ConexionBaseDeDatos.AuditarAccion(nombreUsuario,"Eliminó un usuario");
                 MessageBox.Show("Usuario Eliminado Correctamente");
                 cmbUsuarios.Items.Remove(usuarioSeleccionado);
             }

@@ -41,16 +41,19 @@ namespace prySilvaMenendez_ERP_19._05._26
                     string perfilUsuario = tabla.Rows[0]["Perfil"].ToString();
                     if (perfilUsuario == "Administrador")
                     {
+                        clsConexion.ConexionBaseDeDatos.AuditarAccion(nombre,"Ingresó a Administración");
                         frmAdmin admin = new frmAdmin(nombre, perfilUsuario);
                         admin.ShowDialog();
                     }
                     else if (perfilUsuario == "Recursos Humanos")
                     {
+                        clsConexion.ConexionBaseDeDatos.AuditarAccion(nombre,"Ingresó a Recursos Humanos");
                         frmRRHH rrhh = new frmRRHH(nombre, perfilUsuario);
                         rrhh.ShowDialog();
                     }
                     else
                     {
+                        clsConexion.ConexionBaseDeDatos.AuditarAccion(nombre, "Ingresó al Sistema");
                         frmPrincipal principal = new frmPrincipal(nombre, perfilUsuario);
                         principal.ShowDialog();
                     }

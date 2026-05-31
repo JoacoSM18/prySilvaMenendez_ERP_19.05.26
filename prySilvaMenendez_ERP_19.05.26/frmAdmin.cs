@@ -30,18 +30,21 @@ namespace prySilvaMenendez_ERP_19._05._26
 
         private void btnVerDatosContacto_Click(object sender, EventArgs e)
         {
+            clsConexion.ConexionBaseDeDatos.AuditarAccion(nombreUsuario,"Ingresó a Datos de Contacto");
             frmAgregarDatosContacto AgregarDatosContacto = new frmAgregarDatosContacto();
             AgregarDatosContacto.ShowDialog();
         }
 
         private void btnRRHH_Click(object sender, EventArgs e)
         {
+            clsConexion.ConexionBaseDeDatos.AuditarAccion(nombreUsuario, "Ingresó a Recursos Humanos");
             frmRRHH RRHH = new frmRRHH(nombreUsuario, perfilUsuario);
             RRHH.ShowDialog();
         }
 
         private void btnVerAuditoria_Click(object sender, EventArgs e)
         {
+            clsConexion.ConexionBaseDeDatos.AuditarAccion(nombreUsuario, "Ingresó a Datos de Auditoria");
             frmDatosAuditoria datosAuditoria = new frmDatosAuditoria();
             datosAuditoria.ShowDialog();
         }
