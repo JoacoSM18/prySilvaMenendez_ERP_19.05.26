@@ -33,7 +33,6 @@ namespace prySilvaMenendez_ERP_19._05._26
                 string usuario = fila["Nombre"].ToString() + " " + fila["Apellido"].ToString();
                 cmbUsuarios.Items.Add(usuario);
             }
-
         }
         private void btnAgregar_Click(object sender, EventArgs e)
         {
@@ -47,8 +46,12 @@ namespace prySilvaMenendez_ERP_19._05._26
             string nombre = txtNombre.Text.Trim();
             string apellido = txtApellido.Text.Trim();
             string perfil = cmbPerfiles.SelectedItem.ToString();
-            clsConexion.ConexionBaseDeDatos.Consultar("INSERT INTO Usuario (Nombre, Apellido, Perfil) VALUES ('" + nombre + "', '" + apellido + "', '" + perfil + "')" );
-            clsConexion.ConexionBaseDeDatos.AuditarAccion(nombreUsuario,"Agregó un usuario");
+            string dni = txtDNI.Text.Trim();
+            string provincia = cmbsProvincias.SelectedItem.ToString();
+            string localidad = cmbLocalidades.SelectedItem.ToString();
+            string direccion = txtDireccion.Text.Trim();
+            clsConexion.ConexionBaseDeDatos.Consultar("INSERT INTO Usuario (Nombre, Apellido, Perfil, DNI, Provincia, Localidad, Direccion) VALUES ('" + nombre + "', '" + apellido + "', '" + perfil + "', '" + dni + "', '" + provincia + "', '" + localidad + "', '" + direccion + "')" );
+            clsConexion.ConexionBaseDeDatos.AuditarAccion(nombreUsuario,"Agregó un Usuario");
             MessageBox.Show("Usuario Agregado Correctamente","Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -69,7 +72,7 @@ namespace prySilvaMenendez_ERP_19._05._26
                 clsConexion.ConexionBaseDeDatos.Desconectar();
                 clsConexion.ConexionBaseDeDatos.Conectar();
                 clsConexion.ConexionBaseDeDatos.Consultar("DELETE FROM Usuario WHERE Nombre = '" + nombre + "' AND Apellido = '" + apellido + "'");
-                clsConexion.ConexionBaseDeDatos.AuditarAccion(nombreUsuario,"Eliminó un usuario");
+                clsConexion.ConexionBaseDeDatos.AuditarAccion(nombreUsuario,"Eliminó un Usuario");
                 MessageBox.Show("Usuario Eliminado Correctamente");
                 cmbUsuarios.Items.Remove(usuarioSeleccionado);
             }

@@ -19,7 +19,7 @@ namespace prySilvaMenendez_ERP_19._05._26
 
         private void frmDatosAuditoria_Load(object sender, EventArgs e)
         {
-
+            DataTable tabla = clsConexion.ConexionBaseDeDatos.Consultar("SELECT * FROM AuditoriaInicioSesion"); dgvDatosAuditoriaSesion.DataSource = tabla;
         }
     }
 }

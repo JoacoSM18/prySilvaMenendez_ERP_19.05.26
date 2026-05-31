@@ -28,10 +28,10 @@ namespace prySilvaMenendez_ERP_19._05._26
             lblFechaHora.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
         }
 
-        private void btnVerDatosContacto_Click(object sender, EventArgs e)
+        private void btnAgregarDatosContacto_Click(object sender, EventArgs e)
         {
-            clsConexion.ConexionBaseDeDatos.AuditarAccion(nombreUsuario,"Ingresó a Datos de Contacto");
-            frmAgregarDatosContacto AgregarDatosContacto = new frmAgregarDatosContacto();
+            clsConexion.ConexionBaseDeDatos.AuditarAccion(nombreUsuario,"Ingresó a la Sección para Agregar Datos de Contacto");
+            frmAgregarDatosContacto AgregarDatosContacto = new frmAgregarDatosContacto(nombreUsuario, perfilUsuario);
             AgregarDatosContacto.ShowDialog();
         }
 

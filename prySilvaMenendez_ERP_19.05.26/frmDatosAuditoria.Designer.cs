@@ -40,14 +40,14 @@
             this.dgvDatosAuditoriaSesion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvDatosAuditoriaSesion.Name = "dgvDatosAuditoriaSesion";
             this.dgvDatosAuditoriaSesion.RowHeadersWidth = 62;
-            this.dgvDatosAuditoriaSesion.Size = new System.Drawing.Size(954, 872);
+            this.dgvDatosAuditoriaSesion.Size = new System.Drawing.Size(875, 872);
             this.dgvDatosAuditoriaSesion.TabIndex = 0;
             // 
             // frmDatosAuditoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(978, 908);
+            this.ClientSize = new System.Drawing.Size(907, 908);
             this.Controls.Add(this.dgvDatosAuditoriaSesion);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
