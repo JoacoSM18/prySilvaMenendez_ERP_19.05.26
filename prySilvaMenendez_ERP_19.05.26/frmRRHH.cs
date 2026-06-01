@@ -34,10 +34,11 @@ namespace prySilvaMenendez_ERP_19._05._26
                 string usuario = fila["Nombre"].ToString() + " " + fila["Apellido"].ToString();
                 cmbUsuarios.Items.Add(usuario);
             }
-            DataTable tablaLocalidades = clsConexion.ConexionBaseDeDatos.Consultar("SELECT Localidad FROM Localidades");
+            DataTable tablaLocalidades = clsConexion.ConexionBaseDeDatos.Consultar("SELECT Localidades FROM Localidades");
+            MessageBox.Show("Filas: " + tablaLocalidades.Rows.Count.ToString());
             foreach (DataRow fila in tablaLocalidades.Rows)
             {
-                cmbLocalidades.Items.Add(fila["Nombre"].ToString());
+                cmbLocalidades.Items.Add(fila["Localidades"].ToString());
             }
         }
         private void btnAgregar_Click(object sender, EventArgs e)
