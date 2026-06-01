@@ -22,6 +22,7 @@ namespace prySilvaMenendez_ERP_19._05._26
         }
         private void frmRRHH_Load(object sender, EventArgs e)
         {
+
             lblUsuario.Text = nombreUsuario;
             lblPerfil.Text = perfilUsuario;
             lblFechaHora.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
@@ -32,6 +33,11 @@ namespace prySilvaMenendez_ERP_19._05._26
             {
                 string usuario = fila["Nombre"].ToString() + " " + fila["Apellido"].ToString();
                 cmbUsuarios.Items.Add(usuario);
+            }
+            DataTable tablaLocalidades = clsConexion.ConexionBaseDeDatos.Consultar("SELECT Localidad FROM Localidades");
+            foreach (DataRow fila in tablaLocalidades.Rows)
+            {
+                cmbLocalidades.Items.Add(fila["Nombre"].ToString());
             }
         }
         private void btnAgregar_Click(object sender, EventArgs e)
