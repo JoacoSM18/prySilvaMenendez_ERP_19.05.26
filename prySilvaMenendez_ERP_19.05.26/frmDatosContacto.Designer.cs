@@ -36,22 +36,21 @@
             // dgvDatosContacto
             // 
             this.dgvDatosContacto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDatosContacto.Location = new System.Drawing.Point(16, 23);
-            this.dgvDatosContacto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dgvDatosContacto.Location = new System.Drawing.Point(11, 15);
             this.dgvDatosContacto.Name = "dgvDatosContacto";
             this.dgvDatosContacto.RowHeadersWidth = 62;
-            this.dgvDatosContacto.Size = new System.Drawing.Size(934, 831);
+            this.dgvDatosContacto.Size = new System.Drawing.Size(623, 540);
             this.dgvDatosContacto.TabIndex = 0;
             // 
             // frmDatosContacto
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(972, 869);
+            this.ClientSize = new System.Drawing.Size(648, 565);
             this.Controls.Add(this.dgvDatosContacto);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmDatosContacto";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Datos de Contacto de los Usuarios";
             this.Load += new System.EventHandler(this.frmDatosContacto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatosContacto)).EndInit();

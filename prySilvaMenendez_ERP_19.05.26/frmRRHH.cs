@@ -35,7 +35,6 @@ namespace prySilvaMenendez_ERP_19._05._26
                 cmbUsuarios.Items.Add(usuario);
             }
             DataTable tablaLocalidades = clsConexion.ConexionBaseDeDatos.Consultar("SELECT Localidades FROM Localidades");
-            MessageBox.Show("Filas: " + tablaLocalidades.Rows.Count.ToString());
             foreach (DataRow fila in tablaLocalidades.Rows)
             {
                 cmbLocalidades.Items.Add(fila["Localidades"].ToString());

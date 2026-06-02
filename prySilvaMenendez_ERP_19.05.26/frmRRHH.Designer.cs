@@ -184,6 +184,7 @@
             // 
             // cmbsProvincias
             // 
+            this.cmbsProvincias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbsProvincias.FormattingEnabled = true;
             this.cmbsProvincias.Items.AddRange(new object[] {
             "Buenos Aires",
