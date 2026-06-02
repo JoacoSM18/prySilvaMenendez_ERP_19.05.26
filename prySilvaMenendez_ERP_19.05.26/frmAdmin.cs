@@ -45,7 +45,7 @@ namespace prySilvaMenendez_ERP_19._05._26
         private void btnVerAuditoria_Click(object sender, EventArgs e)
         {
             clsConexion.ConexionBaseDeDatos.AuditarAccion(nombreUsuario, "Ingresó a Datos de Auditoria");
-            frmDatosAuditoria datosAuditoria = new frmDatosAuditoria();
+            frmDatosAuditoria datosAuditoria = new frmDatosAuditoria(nombreUsuario,perfilUsuario);
             datosAuditoria.ShowDialog();
         }
     }

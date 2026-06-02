@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDatosAuditoria));
             this.dgvDatosAuditoriaSesion = new System.Windows.Forms.DataGridView();
+            this.btnAtras = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatosAuditoriaSesion)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,12 +43,25 @@
             this.dgvDatosAuditoriaSesion.Size = new System.Drawing.Size(583, 567);
             this.dgvDatosAuditoriaSesion.TabIndex = 0;
             // 
+            // btnAtras
+            // 
+            this.btnAtras.BackColor = System.Drawing.Color.Red;
+            this.btnAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtras.Location = new System.Drawing.Point(8, 610);
+            this.btnAtras.Name = "btnAtras";
+            this.btnAtras.Size = new System.Drawing.Size(75, 32);
+            this.btnAtras.TabIndex = 9;
+            this.btnAtras.Text = "Atras";
+            this.btnAtras.UseVisualStyleBackColor = false;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
+            // 
             // frmDatosAuditoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Wheat;
-            this.ClientSize = new System.Drawing.Size(605, 590);
+            this.ClientSize = new System.Drawing.Size(605, 654);
+            this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.dgvDatosAuditoriaSesion);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmDatosAuditoria";
@@ -62,5 +76,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvDatosAuditoriaSesion;
+        private System.Windows.Forms.Button btnAtras;
     }
 }
