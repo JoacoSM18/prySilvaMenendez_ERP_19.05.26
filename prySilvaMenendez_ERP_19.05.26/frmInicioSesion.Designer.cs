@@ -36,6 +36,7 @@
             this.btnIniciarSesion = new System.Windows.Forms.Button();
             this.cmbPerfiles = new System.Windows.Forms.ComboBox();
             this.lblPerfil = new System.Windows.Forms.Label();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblUsuario
@@ -103,7 +104,7 @@
             "Diseñador",
             "Vendedor"});
             this.cmbPerfiles.Location = new System.Drawing.Point(216, 127);
-            this.cmbPerfiles.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbPerfiles.Margin = new System.Windows.Forms.Padding(2);
             this.cmbPerfiles.Name = "cmbPerfiles";
             this.cmbPerfiles.Size = new System.Drawing.Size(157, 26);
             this.cmbPerfiles.TabIndex = 5;
@@ -118,12 +119,25 @@
             this.lblPerfil.TabIndex = 6;
             this.lblPerfil.Text = "Perfil:";
             // 
+            // btnSalir
+            // 
+            this.btnSalir.BackColor = System.Drawing.Color.Crimson;
+            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.Location = new System.Drawing.Point(59, 186);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(75, 32);
+            this.btnSalir.TabIndex = 7;
+            this.btnSalir.Text = "SALIR";
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
             // frmInicioSesion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Wheat;
             this.ClientSize = new System.Drawing.Size(521, 240);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.lblPerfil);
             this.Controls.Add(this.cmbPerfiles);
             this.Controls.Add(this.btnIniciarSesion);
@@ -150,5 +164,6 @@
         private System.Windows.Forms.Button btnIniciarSesion;
         private System.Windows.Forms.ComboBox cmbPerfiles;
         private System.Windows.Forms.Label lblPerfil;
+        private System.Windows.Forms.Button btnSalir;
     }
 }

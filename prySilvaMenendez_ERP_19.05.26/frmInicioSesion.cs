@@ -79,5 +79,10 @@ namespace prySilvaMenendez_ERP_19._05._26
         {
 
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
