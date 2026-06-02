@@ -43,26 +43,26 @@
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.statuslblEstado});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 660);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 428);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Padding = new System.Windows.Forms.Padding(2, 0, 21, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(1035, 32);
+            this.statusStrip1.Size = new System.Drawing.Size(690, 22);
             this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // statuslblEstado
             // 
             this.statuslblEstado.Name = "statuslblEstado";
-            this.statuslblEstado.Size = new System.Drawing.Size(288, 25);
+            this.statuslblEstado.Size = new System.Drawing.Size(187, 17);
             this.statuslblEstado.Text = "Estado de Conexion Base de Datos";
             // 
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.Location = new System.Drawing.Point(12, 9);
+            this.lblUsuario.Location = new System.Drawing.Point(8, 6);
+            this.lblUsuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(87, 26);
+            this.lblUsuario.Size = new System.Drawing.Size(60, 18);
             this.lblUsuario.TabIndex = 1;
             this.lblUsuario.Text = "Usuario";
             // 
@@ -70,9 +70,10 @@
             // 
             this.lblPerfil.AutoSize = true;
             this.lblPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPerfil.Location = new System.Drawing.Point(12, 46);
+            this.lblPerfil.Location = new System.Drawing.Point(8, 30);
+            this.lblPerfil.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPerfil.Name = "lblPerfil";
-            this.lblPerfil.Size = new System.Drawing.Size(62, 26);
+            this.lblPerfil.Size = new System.Drawing.Size(41, 18);
             this.lblPerfil.TabIndex = 2;
             this.lblPerfil.Text = "Perfil";
             // 
@@ -80,23 +81,24 @@
             // 
             this.lblFechaHora.AutoSize = true;
             this.lblFechaHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaHora.Location = new System.Drawing.Point(12, 85);
+            this.lblFechaHora.Location = new System.Drawing.Point(8, 55);
+            this.lblFechaHora.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFechaHora.Name = "lblFechaHora";
-            this.lblFechaHora.Size = new System.Drawing.Size(142, 26);
+            this.lblFechaHora.Size = new System.Drawing.Size(97, 18);
             this.lblFechaHora.TabIndex = 3;
             this.lblFechaHora.Text = "Fecha y Hora";
             // 
             // frmPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1035, 692);
+            this.BackColor = System.Drawing.Color.Wheat;
+            this.ClientSize = new System.Drawing.Size(690, 450);
             this.Controls.Add(this.lblFechaHora);
             this.Controls.Add(this.lblPerfil);
             this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.statusStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main ERP";

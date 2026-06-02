@@ -36,21 +36,20 @@
             // dgvDatosAuditoriaSesion
             // 
             this.dgvDatosAuditoriaSesion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDatosAuditoriaSesion.Location = new System.Drawing.Point(12, 22);
-            this.dgvDatosAuditoriaSesion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dgvDatosAuditoriaSesion.Location = new System.Drawing.Point(8, 14);
             this.dgvDatosAuditoriaSesion.Name = "dgvDatosAuditoriaSesion";
             this.dgvDatosAuditoriaSesion.RowHeadersWidth = 62;
-            this.dgvDatosAuditoriaSesion.Size = new System.Drawing.Size(875, 872);
+            this.dgvDatosAuditoriaSesion.Size = new System.Drawing.Size(583, 567);
             this.dgvDatosAuditoriaSesion.TabIndex = 0;
             // 
             // frmDatosAuditoria
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(907, 908);
+            this.BackColor = System.Drawing.Color.Wheat;
+            this.ClientSize = new System.Drawing.Size(605, 590);
             this.Controls.Add(this.dgvDatosAuditoriaSesion);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmDatosAuditoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Datos de Auditoria de Sesion";
