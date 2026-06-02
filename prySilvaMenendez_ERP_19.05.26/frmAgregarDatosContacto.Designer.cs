@@ -42,6 +42,8 @@
             this.btnVerTodo = new System.Windows.Forms.Button();
             this.chkActivo = new System.Windows.Forms.CheckBox();
             this.lblActivo = new System.Windows.Forms.Label();
+            this.cmbUsuarios = new System.Windows.Forms.ComboBox();
+            this.lblUusario = new System.Windows.Forms.Label();
             this.grbContacto.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,10 +58,10 @@
             this.grbContacto.Controls.Add(this.lblTelefono);
             this.grbContacto.Controls.Add(this.lblGmail);
             this.grbContacto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbContacto.Location = new System.Drawing.Point(20, 19);
-            this.grbContacto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grbContacto.Location = new System.Drawing.Point(30, 114);
+            this.grbContacto.Margin = new System.Windows.Forms.Padding(2);
             this.grbContacto.Name = "grbContacto";
-            this.grbContacto.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grbContacto.Padding = new System.Windows.Forms.Padding(2);
             this.grbContacto.Size = new System.Drawing.Size(469, 179);
             this.grbContacto.TabIndex = 0;
             this.grbContacto.TabStop = false;
@@ -86,7 +88,7 @@
             // txtNombreRedSocial
             // 
             this.txtNombreRedSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreRedSocial.Location = new System.Drawing.Point(285, 139);
+            this.txtNombreRedSocial.Location = new System.Drawing.Point(272, 139);
             this.txtNombreRedSocial.Name = "txtNombreRedSocial";
             this.txtNombreRedSocial.Size = new System.Drawing.Size(143, 24);
             this.txtNombreRedSocial.TabIndex = 6;
@@ -154,8 +156,8 @@
             // btnAgregar
             // 
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Location = new System.Drawing.Point(407, 241);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregar.Location = new System.Drawing.Point(417, 336);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(82, 30);
             this.btnAgregar.TabIndex = 2;
@@ -166,8 +168,8 @@
             // btnVerTodo
             // 
             this.btnVerTodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVerTodo.Location = new System.Drawing.Point(175, 241);
-            this.btnVerTodo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVerTodo.Location = new System.Drawing.Point(185, 336);
+            this.btnVerTodo.Margin = new System.Windows.Forms.Padding(2);
             this.btnVerTodo.Name = "btnVerTodo";
             this.btnVerTodo.Size = new System.Drawing.Size(171, 30);
             this.btnVerTodo.TabIndex = 3;
@@ -180,8 +182,8 @@
             this.chkActivo.AutoSize = true;
             this.chkActivo.BackColor = System.Drawing.SystemColors.Control;
             this.chkActivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkActivo.Location = new System.Drawing.Point(106, 223);
-            this.chkActivo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkActivo.Location = new System.Drawing.Point(116, 318);
+            this.chkActivo.Margin = new System.Windows.Forms.Padding(2);
             this.chkActivo.Name = "chkActivo";
             this.chkActivo.Size = new System.Drawing.Size(15, 14);
             this.chkActivo.TabIndex = 4;
@@ -191,26 +193,47 @@
             // 
             this.lblActivo.AutoSize = true;
             this.lblActivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblActivo.Location = new System.Drawing.Point(33, 220);
+            this.lblActivo.Location = new System.Drawing.Point(43, 315);
             this.lblActivo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblActivo.Name = "lblActivo";
             this.lblActivo.Size = new System.Drawing.Size(52, 18);
             this.lblActivo.TabIndex = 5;
             this.lblActivo.Text = "Activo:";
             // 
+            // cmbUsuarios
+            // 
+            this.cmbUsuarios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbUsuarios.FormattingEnabled = true;
+            this.cmbUsuarios.Location = new System.Drawing.Point(46, 74);
+            this.cmbUsuarios.Name = "cmbUsuarios";
+            this.cmbUsuarios.Size = new System.Drawing.Size(121, 21);
+            this.cmbUsuarios.TabIndex = 6;
+            // 
+            // lblUusario
+            // 
+            this.lblUusario.AutoSize = true;
+            this.lblUusario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUusario.Location = new System.Drawing.Point(43, 42);
+            this.lblUusario.Name = "lblUusario";
+            this.lblUusario.Size = new System.Drawing.Size(271, 18);
+            this.lblUusario.TabIndex = 7;
+            this.lblUusario.Text = "Elija un Usuario para Agregar sus Datos";
+            // 
             // frmAgregarDatosContacto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Wheat;
-            this.ClientSize = new System.Drawing.Size(533, 292);
+            this.ClientSize = new System.Drawing.Size(533, 383);
+            this.Controls.Add(this.lblUusario);
+            this.Controls.Add(this.cmbUsuarios);
             this.Controls.Add(this.lblActivo);
             this.Controls.Add(this.chkActivo);
             this.Controls.Add(this.btnVerTodo);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.grbContacto);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmAgregarDatosContacto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar Datos de Contactos de los Usuarios";
@@ -237,5 +260,7 @@
         private System.Windows.Forms.MaskedTextBox mskTelefono;
         private System.Windows.Forms.TextBox txtNombreRedSocial;
         private System.Windows.Forms.ComboBox cmbRedesSociales;
+        private System.Windows.Forms.ComboBox cmbUsuarios;
+        private System.Windows.Forms.Label lblUusario;
     }
 }

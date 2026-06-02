@@ -20,6 +20,17 @@ namespace prySilvaMenendez_ERP_19._05._26
             nombreUsuario = nombre;
             perfilUsuario = perfil;
         }
+        private void frmAgregarDatosContacto_Load(object sender, EventArgs e)
+        {
+            clsConexion.ConexionBaseDeDatos.Desconectar();
+            clsConexion.ConexionBaseDeDatos.Conectar();
+            DataTable tabla = clsConexion.ConexionBaseDeDatos.Consultar("SELECT Nombre, Apellido FROM Usuario");
+            foreach (DataRow fila in tabla.Rows)
+            {
+                string usuario = fila["Nombre"].ToString() + " " + fila["Apellido"].ToString();
+                cmbUsuarios.Items.Add(usuario);
+            }
+        }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
@@ -31,11 +42,6 @@ namespace prySilvaMenendez_ERP_19._05._26
             clsConexion.ConexionBaseDeDatos.AuditarAccion(nombreUsuario, "Ingresó a Datos de Contacto");
             frmDatosContacto datosContacto = new frmDatosContacto();
             datosContacto.ShowDialog();
-        }
-
-        private void frmAgregarDatosContacto_Load(object sender, EventArgs e)
-        {
-             
         }
 
         private void mskTelefono_Enter(object sender, EventArgs e)

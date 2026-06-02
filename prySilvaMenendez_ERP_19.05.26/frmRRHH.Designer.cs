@@ -79,6 +79,7 @@
             this.grbAgregar.TabIndex = 0;
             this.grbAgregar.TabStop = false;
             this.grbAgregar.Text = "Agregar Usuario";
+            this.grbAgregar.Enter += new System.EventHandler(this.grbAgregar_Enter);
             // 
             // cmbPerfiles
             // 
