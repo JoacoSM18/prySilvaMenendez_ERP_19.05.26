@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static prySilvaMenendez_ERP_19._05._26.clsConexion;
 
 namespace prySilvaMenendez_ERP_19._05._26
 {
@@ -43,6 +44,21 @@ namespace prySilvaMenendez_ERP_19._05._26
                 MessageBox.Show("Por Favor Complete Todos los Campos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
+            clsConexion.ConexionBaseDeDatos.Desconectar();
+            clsConexion.ConexionBaseDeDatos.Conectar();
+            if (cmbUsuarios.SelectedItem == null)
+            {
+                MessageBox.Show("Seleccione un Perfil");
+                return;
+            }
+            string gmail = txtGmail.Text.Trim();
+            string telefono = mskTelefono.Text.Trim();
+            string redsocial = cmbRedesSociales.SelectedItem.ToString();
+            string nombreredsocial = txtNombreRedSocial.Text.Trim();
+            string activo = chkActivo.Checked ? "true" : "false";
+            clsConexion.ConexionBaseDeDatos.Consultar("INSERT INTO Usuario (Gmail, Telefono, RedSocial, NombreRedSocial, Activo) VALUES ('" + gmail + "', '" + telefono + "', '" + redsocial + "', '" + nombreredsocial + "', " + activo + ")");
+            clsConexion.ConexionBaseDeDatos.AuditarAccion(nombreUsuario, "Agregó un Usuario");
+            MessageBox.Show("Usuario Agregado Correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnVerTodo_Click(object sender, EventArgs e)
