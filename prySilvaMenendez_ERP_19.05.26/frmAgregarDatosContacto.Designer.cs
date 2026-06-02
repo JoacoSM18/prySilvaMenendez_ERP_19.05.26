@@ -59,7 +59,7 @@
             this.grbContacto.Controls.Add(this.lblTelefono);
             this.grbContacto.Controls.Add(this.lblGmail);
             this.grbContacto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbContacto.Location = new System.Drawing.Point(30, 114);
+            this.grbContacto.Location = new System.Drawing.Point(30, 84);
             this.grbContacto.Margin = new System.Windows.Forms.Padding(2);
             this.grbContacto.Name = "grbContacto";
             this.grbContacto.Padding = new System.Windows.Forms.Padding(2);
@@ -156,11 +156,11 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Location = new System.Drawing.Point(417, 336);
+            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.Location = new System.Drawing.Point(431, 307);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(82, 30);
+            this.btnAgregar.Size = new System.Drawing.Size(68, 30);
             this.btnAgregar.TabIndex = 2;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
@@ -168,13 +168,13 @@
             // 
             // btnVerTodo
             // 
-            this.btnVerTodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVerTodo.Location = new System.Drawing.Point(185, 336);
+            this.btnVerTodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerTodo.Location = new System.Drawing.Point(285, 342);
             this.btnVerTodo.Margin = new System.Windows.Forms.Padding(2);
             this.btnVerTodo.Name = "btnVerTodo";
-            this.btnVerTodo.Size = new System.Drawing.Size(171, 30);
+            this.btnVerTodo.Size = new System.Drawing.Size(214, 30);
             this.btnVerTodo.TabIndex = 3;
-            this.btnVerTodo.Text = "Ver Todos los Datos";
+            this.btnVerTodo.Text = "Ver Todos Datos de Contacto";
             this.btnVerTodo.UseVisualStyleBackColor = true;
             this.btnVerTodo.Click += new System.EventHandler(this.btnVerTodo_Click);
             // 
@@ -183,7 +183,7 @@
             this.chkActivo.AutoSize = true;
             this.chkActivo.BackColor = System.Drawing.SystemColors.Control;
             this.chkActivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkActivo.Location = new System.Drawing.Point(121, 307);
+            this.chkActivo.Location = new System.Drawing.Point(121, 277);
             this.chkActivo.Margin = new System.Windows.Forms.Padding(2);
             this.chkActivo.Name = "chkActivo";
             this.chkActivo.Size = new System.Drawing.Size(15, 14);
@@ -194,7 +194,7 @@
             // 
             this.lblActivo.AutoSize = true;
             this.lblActivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblActivo.Location = new System.Drawing.Point(48, 304);
+            this.lblActivo.Location = new System.Drawing.Point(48, 274);
             this.lblActivo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblActivo.Name = "lblActivo";
             this.lblActivo.Size = new System.Drawing.Size(52, 18);
@@ -204,17 +204,18 @@
             // cmbUsuarios
             // 
             this.cmbUsuarios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbUsuarios.FormattingEnabled = true;
-            this.cmbUsuarios.Location = new System.Drawing.Point(46, 74);
+            this.cmbUsuarios.Location = new System.Drawing.Point(46, 44);
             this.cmbUsuarios.Name = "cmbUsuarios";
-            this.cmbUsuarios.Size = new System.Drawing.Size(121, 21);
+            this.cmbUsuarios.Size = new System.Drawing.Size(121, 26);
             this.cmbUsuarios.TabIndex = 6;
             // 
             // lblUusario
             // 
             this.lblUusario.AutoSize = true;
             this.lblUusario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUusario.Location = new System.Drawing.Point(43, 42);
+            this.lblUusario.Location = new System.Drawing.Point(43, 12);
             this.lblUusario.Name = "lblUusario";
             this.lblUusario.Size = new System.Drawing.Size(271, 18);
             this.lblUusario.TabIndex = 7;
@@ -222,9 +223,9 @@
             // 
             // btnAtras
             // 
-            this.btnAtras.BackColor = System.Drawing.Color.Red;
-            this.btnAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtras.Location = new System.Drawing.Point(30, 336);
+            this.btnAtras.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtras.Location = new System.Drawing.Point(19, 307);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(75, 30);
             this.btnAtras.TabIndex = 8;

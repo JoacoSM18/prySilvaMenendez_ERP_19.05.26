@@ -67,6 +67,9 @@ namespace prySilvaMenendez_ERP_19._05._26
                     clsConexion.ConexionBaseDeDatos.AuditarSesion(txtUsuario.Text, false);
                     intentos--;
                     MessageBox.Show("Usuario o Contraseña Incorrectos, Te Quedan " + intentos + " Intentos Disponibles", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    txtUsuario.Clear();
+                    mskContraseña.Clear();
+                    cmbPerfiles.SelectedIndex = -1;
                     if (intentos <= 0)
                     {
                         this.Close();

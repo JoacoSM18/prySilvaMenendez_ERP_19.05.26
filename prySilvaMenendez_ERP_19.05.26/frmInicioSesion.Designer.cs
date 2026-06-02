@@ -91,7 +91,7 @@
             // cmbPerfiles
             // 
             this.cmbPerfiles.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbPerfiles.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbPerfiles.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbPerfiles.FormattingEnabled = true;
             this.cmbPerfiles.Items.AddRange(new object[] {
             "Administrador",
@@ -107,7 +107,7 @@
             this.cmbPerfiles.Location = new System.Drawing.Point(216, 127);
             this.cmbPerfiles.Margin = new System.Windows.Forms.Padding(2);
             this.cmbPerfiles.Name = "cmbPerfiles";
-            this.cmbPerfiles.Size = new System.Drawing.Size(157, 26);
+            this.cmbPerfiles.Size = new System.Drawing.Size(157, 28);
             this.cmbPerfiles.TabIndex = 5;
             // 
             // lblPerfil
@@ -122,7 +122,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.BackColor = System.Drawing.Color.Red;
+            this.btnSalir.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.Location = new System.Drawing.Point(59, 186);
             this.btnSalir.Name = "btnSalir";
