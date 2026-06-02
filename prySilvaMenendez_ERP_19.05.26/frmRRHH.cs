@@ -22,7 +22,6 @@ namespace prySilvaMenendez_ERP_19._05._26
         }
         private void frmRRHH_Load(object sender, EventArgs e)
         {
-
             lblUsuario.Text = nombreUsuario;
             lblPerfil.Text = perfilUsuario;
             lblFechaHora.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
@@ -42,6 +41,17 @@ namespace prySilvaMenendez_ERP_19._05._26
         }
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txtDNI.Text) ||
+                string.IsNullOrWhiteSpace(txtNombre.Text) ||
+                string.IsNullOrWhiteSpace(txtApellido.Text) ||
+                string.IsNullOrWhiteSpace(txtDireccion.Text) ||
+                cmbLocalidades.SelectedIndex == -1 ||
+                cmbsProvincias.SelectedIndex == -1 ||
+                cmbUsuarios.SelectedIndex == -1)
+            {
+                MessageBox.Show("Por Favor Complete Todos los Campos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
             clsConexion.ConexionBaseDeDatos.Desconectar();
             clsConexion.ConexionBaseDeDatos.Conectar();
             if (cmbPerfiles.SelectedItem == null)

@@ -34,7 +34,15 @@ namespace prySilvaMenendez_ERP_19._05._26
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-
+            if (string.IsNullOrWhiteSpace(txtGmail.Text) ||
+                string.IsNullOrWhiteSpace(txtNombreRedSocial.Text) ||
+                string.IsNullOrWhiteSpace(mskTelefono.Text) ||
+                cmbRedesSociales.SelectedIndex == -1 ||
+                cmbUsuarios.SelectedIndex == -1)
+            {
+                MessageBox.Show("Por Favor Complete Todos los Campos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
         }
 
         private void btnVerTodo_Click(object sender, EventArgs e)
