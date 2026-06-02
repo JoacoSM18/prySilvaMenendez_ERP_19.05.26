@@ -55,6 +55,7 @@
             this.lblFechaHora = new System.Windows.Forms.Label();
             this.lblPerfil = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
+            this.btnAtras = new System.Windows.Forms.Button();
             this.grbAgregar.SuspendLayout();
             this.lblDomicilio.SuspendLayout();
             this.grbEliminar.SuspendLayout();
@@ -374,12 +375,25 @@
             this.lblUsuario.TabIndex = 4;
             this.lblUsuario.Text = "Usuario";
             // 
+            // btnAtras
+            // 
+            this.btnAtras.BackColor = System.Drawing.Color.Red;
+            this.btnAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtras.Location = new System.Drawing.Point(17, 467);
+            this.btnAtras.Name = "btnAtras";
+            this.btnAtras.Size = new System.Drawing.Size(134, 32);
+            this.btnAtras.TabIndex = 7;
+            this.btnAtras.Text = "Atras";
+            this.btnAtras.UseVisualStyleBackColor = false;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
+            // 
             // frmRRHH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Wheat;
-            this.ClientSize = new System.Drawing.Size(618, 469);
+            this.ClientSize = new System.Drawing.Size(618, 511);
+            this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.lblFechaHora);
             this.Controls.Add(this.lblPerfil);
             this.Controls.Add(this.lblUsuario);
@@ -429,5 +443,6 @@
         private System.Windows.Forms.ComboBox cmbsProvincias;
         private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.Label lblCoordenadasGeo;
+        private System.Windows.Forms.Button btnAtras;
     }
 }

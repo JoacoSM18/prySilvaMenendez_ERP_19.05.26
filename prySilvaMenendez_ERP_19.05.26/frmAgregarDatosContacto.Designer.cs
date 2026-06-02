@@ -44,6 +44,7 @@
             this.lblActivo = new System.Windows.Forms.Label();
             this.cmbUsuarios = new System.Windows.Forms.ComboBox();
             this.lblUusario = new System.Windows.Forms.Label();
+            this.btnAtras = new System.Windows.Forms.Button();
             this.grbContacto.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -182,7 +183,7 @@
             this.chkActivo.AutoSize = true;
             this.chkActivo.BackColor = System.Drawing.SystemColors.Control;
             this.chkActivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkActivo.Location = new System.Drawing.Point(116, 318);
+            this.chkActivo.Location = new System.Drawing.Point(121, 307);
             this.chkActivo.Margin = new System.Windows.Forms.Padding(2);
             this.chkActivo.Name = "chkActivo";
             this.chkActivo.Size = new System.Drawing.Size(15, 14);
@@ -193,7 +194,7 @@
             // 
             this.lblActivo.AutoSize = true;
             this.lblActivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblActivo.Location = new System.Drawing.Point(43, 315);
+            this.lblActivo.Location = new System.Drawing.Point(48, 304);
             this.lblActivo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblActivo.Name = "lblActivo";
             this.lblActivo.Size = new System.Drawing.Size(52, 18);
@@ -219,12 +220,25 @@
             this.lblUusario.TabIndex = 7;
             this.lblUusario.Text = "Elija un Usuario para Agregar sus Datos";
             // 
+            // btnAtras
+            // 
+            this.btnAtras.BackColor = System.Drawing.Color.Red;
+            this.btnAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtras.Location = new System.Drawing.Point(30, 336);
+            this.btnAtras.Name = "btnAtras";
+            this.btnAtras.Size = new System.Drawing.Size(75, 30);
+            this.btnAtras.TabIndex = 8;
+            this.btnAtras.Text = "Atras";
+            this.btnAtras.UseVisualStyleBackColor = false;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
+            // 
             // frmAgregarDatosContacto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Wheat;
             this.ClientSize = new System.Drawing.Size(533, 383);
+            this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.lblUusario);
             this.Controls.Add(this.cmbUsuarios);
             this.Controls.Add(this.lblActivo);
@@ -262,5 +276,6 @@
         private System.Windows.Forms.ComboBox cmbRedesSociales;
         private System.Windows.Forms.ComboBox cmbUsuarios;
         private System.Windows.Forms.Label lblUusario;
+        private System.Windows.Forms.Button btnAtras;
     }
 }

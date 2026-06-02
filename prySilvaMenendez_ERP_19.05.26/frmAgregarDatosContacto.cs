@@ -78,5 +78,12 @@ namespace prySilvaMenendez_ERP_19._05._26
         {
             mskTelefono.Select(0, 0);
         }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            frmAdmin admin = new frmAdmin(nombreUsuario, perfilUsuario);
+            admin.ShowDialog();
+            this.Close();
+        }
     }
 }

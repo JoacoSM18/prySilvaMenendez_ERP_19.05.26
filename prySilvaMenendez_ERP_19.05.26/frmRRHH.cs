@@ -22,6 +22,10 @@ namespace prySilvaMenendez_ERP_19._05._26
         }
         private void frmRRHH_Load(object sender, EventArgs e)
         {
+            if (perfilUsuario == "Recursos Humanos")
+            {
+                btnAtras.Text = "Cerrar Sesión";
+            }
             lblUsuario.Text = nombreUsuario;
             lblPerfil.Text = perfilUsuario;
             lblFechaHora.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
@@ -104,6 +108,22 @@ namespace prySilvaMenendez_ERP_19._05._26
         private void grbAgregar_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            if (perfilUsuario == "Administrador")
+            {
+                frmAdmin admin = new frmAdmin(nombreUsuario, perfilUsuario);
+                admin.Show();
+                this.Close();
+            }
+            else if (perfilUsuario == "Recursos Humanos")
+            {
+                frmInicioSesion inicioSesion = new frmInicioSesion();
+                inicioSesion.Show();
+                this.Close();
+            }
         }
     }
 }
