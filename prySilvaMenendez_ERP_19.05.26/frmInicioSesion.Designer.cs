@@ -37,6 +37,7 @@
             this.cmbPerfiles = new System.Windows.Forms.ComboBox();
             this.lblPerfil = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.chkMostrar = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // lblUsuario
@@ -131,12 +132,24 @@
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // chkMostrar
+            // 
+            this.chkMostrar.AutoSize = true;
+            this.chkMostrar.Location = new System.Drawing.Point(400, 84);
+            this.chkMostrar.Name = "chkMostrar";
+            this.chkMostrar.Size = new System.Drawing.Size(118, 17);
+            this.chkMostrar.TabIndex = 8;
+            this.chkMostrar.Text = "Mostrar Contraseña";
+            this.chkMostrar.UseVisualStyleBackColor = true;
+            this.chkMostrar.CheckedChanged += new System.EventHandler(this.chkMostrar_CheckedChanged);
+            // 
             // frmInicioSesion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Wheat;
             this.ClientSize = new System.Drawing.Size(521, 240);
+            this.Controls.Add(this.chkMostrar);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.lblPerfil);
             this.Controls.Add(this.cmbPerfiles);
@@ -165,5 +178,6 @@
         private System.Windows.Forms.ComboBox cmbPerfiles;
         private System.Windows.Forms.Label lblPerfil;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.CheckBox chkMostrar;
     }
 }

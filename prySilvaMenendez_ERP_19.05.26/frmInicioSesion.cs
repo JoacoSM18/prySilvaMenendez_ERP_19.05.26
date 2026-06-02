@@ -87,5 +87,17 @@ namespace prySilvaMenendez_ERP_19._05._26
         {
             this.Close();
         }
+
+        private void chkMostrar_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkMostrar.Checked)
+            {
+                mskContraseña.PasswordChar = '\0';
+            }
+            else
+            {
+                mskContraseña.PasswordChar = '*';
+            }
+        }
     }
 }
