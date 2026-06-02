@@ -59,6 +59,12 @@ namespace prySilvaMenendez_ERP_19._05._26
             clsConexion.ConexionBaseDeDatos.Consultar("INSERT INTO Usuario (Gmail, Telefono, RedSocial, NombreRedSocial, Activo) VALUES ('" + gmail + "', '" + telefono + "', '" + redsocial + "', '" + nombreredsocial + "', " + activo + ")");
             clsConexion.ConexionBaseDeDatos.AuditarAccion(nombreUsuario, "Agregó un Usuario");
             MessageBox.Show("Usuario Agregado Correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            txtGmail.Text = "";
+            mskTelefono.Text = "";
+            txtNombreRedSocial.Text = "";
+            cmbRedesSociales.SelectedIndex = -1;
+            cmbUsuarios.SelectedIndex = -1;
+            chkActivo.Checked = false;
         }
 
         private void btnVerTodo_Click(object sender, EventArgs e)
