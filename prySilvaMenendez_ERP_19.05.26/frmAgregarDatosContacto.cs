@@ -70,7 +70,7 @@ namespace prySilvaMenendez_ERP_19._05._26
         private void btnVerTodo_Click(object sender, EventArgs e)
         {
             clsConexion.ConexionBaseDeDatos.AuditarAccion(nombreUsuario, "Ingresó a Datos de Contacto");
-            frmDatosContacto datosContacto = new frmDatosContacto();
+            frmDatosContacto datosContacto = new frmDatosContacto(nombreUsuario, perfilUsuario);
             datosContacto.ShowDialog();
         }
 

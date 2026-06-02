@@ -12,14 +12,25 @@ namespace prySilvaMenendez_ERP_19._05._26
 {
     public partial class frmDatosContacto : Form
     {
-        public frmDatosContacto()
+        string nombreUsuario;
+        string perfilUsuario;
+        public frmDatosContacto(string nombre, string perfil)
         {
             InitializeComponent();
+            nombreUsuario = nombre;
+            perfilUsuario = perfil;
         }
 
         private void frmDatosContacto_Load(object sender, EventArgs e)
         {
             DataTable tabla = clsConexion.ConexionBaseDeDatos.Consultar("SELECT * FROM Usuario"); dgvDatosContacto.DataSource = tabla;
+        }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            frmAgregarDatosContacto datosContacto = new frmAgregarDatosContacto(nombreUsuario, perfilUsuario);
+            datosContacto.ShowDialog();
+            this.Close();
         }
     }
 }
