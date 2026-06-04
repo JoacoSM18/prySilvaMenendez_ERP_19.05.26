@@ -128,6 +128,7 @@
             this.Name = "frmDatosAuditoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Datos de Auditoria de Sesion";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmDatosAuditoria_FormClosing);
             this.Load += new System.EventHandler(this.frmDatosAuditoria_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatosAuditoriaSesion)).EndInit();
             this.statusStrip1.ResumeLayout(false);

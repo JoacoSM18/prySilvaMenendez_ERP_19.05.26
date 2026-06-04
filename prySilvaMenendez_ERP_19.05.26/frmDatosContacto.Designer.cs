@@ -128,6 +128,7 @@
             this.Name = "frmDatosContacto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Datos de Contacto de los Usuarios";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmDatosContacto_FormClosing);
             this.Load += new System.EventHandler(this.frmDatosContacto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatosContacto)).EndInit();
             this.statusStrip1.ResumeLayout(false);

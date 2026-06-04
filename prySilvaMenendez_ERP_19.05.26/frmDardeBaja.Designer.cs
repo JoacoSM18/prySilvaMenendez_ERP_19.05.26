@@ -166,6 +166,7 @@
             this.Name = "frmDardeBaja";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Eliminar un Usuario";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmDardeBaja_FormClosing);
             this.Load += new System.EventHandler(this.frmDardeBaja_Load);
             this.statuslblEstado.ResumeLayout(false);
             this.statuslblEstado.PerformLayout();

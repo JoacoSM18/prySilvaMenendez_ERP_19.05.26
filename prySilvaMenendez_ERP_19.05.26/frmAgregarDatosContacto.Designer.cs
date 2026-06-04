@@ -312,6 +312,7 @@
             this.Name = "frmAgregarDatosContacto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar Datos de Contactos de los Usuarios";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmAgregarDatosContacto_FormClosing);
             this.Load += new System.EventHandler(this.frmAgregarDatosContacto_Load);
             this.grbContacto.ResumeLayout(false);
             this.grbContacto.PerformLayout();

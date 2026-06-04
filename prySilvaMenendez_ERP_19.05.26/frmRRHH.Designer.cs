@@ -387,6 +387,7 @@
             this.Name = "frmRRHH";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Recursos Humanos";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmRRHH_FormClosing);
             this.Load += new System.EventHandler(this.frmRRHH_Load);
             this.grbAgregar.ResumeLayout(false);
             this.grbAgregar.PerformLayout();
