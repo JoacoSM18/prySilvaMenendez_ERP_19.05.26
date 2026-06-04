@@ -24,6 +24,18 @@ namespace prySilvaMenendez_ERP_19._05._26
         private void frmDatosAuditoria_Load(object sender, EventArgs e)
         {
             DataTable tabla = clsConexion.ConexionBaseDeDatos.Consultar("SELECT * FROM AuditoriaInicioSesion"); dgvDatosAuditoriaSesion.DataSource = tabla;
+            bool conectado = clsConexion.ConexionBaseDeDatos.Conectar();
+            if (conectado)
+            {
+                statuslblEstado.Text = "Conectado a la Base de Datos";
+                statuslblEstado.BackColor = Color.Green;
+
+            }
+            else
+            {
+                statuslblEstado.Text = "Error al Conectar a la Base de Datos";
+                statuslblEstado.BackColor = Color.Red;
+            }
         }
 
         private void btnAtras_Click(object sender, EventArgs e)
