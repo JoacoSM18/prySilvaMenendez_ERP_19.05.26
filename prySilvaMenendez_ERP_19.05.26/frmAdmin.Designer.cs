@@ -40,6 +40,7 @@
             this.btnRRHH = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.statuslblEstado = new System.Windows.Forms.ToolStripStatusLabel();
+            this.btnAtras = new System.Windows.Forms.Button();
             this.grbAcciones.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -100,7 +101,7 @@
             this.grbAcciones.Margin = new System.Windows.Forms.Padding(2);
             this.grbAcciones.Name = "grbAcciones";
             this.grbAcciones.Padding = new System.Windows.Forms.Padding(2);
-            this.grbAcciones.Size = new System.Drawing.Size(417, 368);
+            this.grbAcciones.Size = new System.Drawing.Size(417, 330);
             this.grbAcciones.TabIndex = 13;
             this.grbAcciones.TabStop = false;
             this.grbAcciones.Text = "Acciones";
@@ -171,12 +172,25 @@
             this.statuslblEstado.Size = new System.Drawing.Size(215, 17);
             this.statuslblEstado.Text = "Estado de Conexion de la Base de Datos";
             // 
+            // btnAtras
+            // 
+            this.btnAtras.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtras.Location = new System.Drawing.Point(12, 450);
+            this.btnAtras.Name = "btnAtras";
+            this.btnAtras.Size = new System.Drawing.Size(75, 30);
+            this.btnAtras.TabIndex = 15;
+            this.btnAtras.Text = "Atras";
+            this.btnAtras.UseVisualStyleBackColor = false;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
+            // 
             // frmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Wheat;
             this.ClientSize = new System.Drawing.Size(485, 514);
+            this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.grbAcciones);
             this.Controls.Add(this.lblBienvenida);
@@ -209,5 +223,6 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel statuslblEstado;
         private System.Windows.Forms.Button btnEliminarUsuario;
+        private System.Windows.Forms.Button btnAtras;
     }
 }

@@ -76,5 +76,10 @@ namespace prySilvaMenendez_ERP_19._05._26
             eliminarUsuario.ShowDialog();
             this.Close();
         }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
