@@ -37,6 +37,7 @@
             this.lblAgregarPerfil = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.lblDomicilio = new System.Windows.Forms.GroupBox();
+            this.lblMensaje = new System.Windows.Forms.Label();
             this.lblCoordenadasGeo = new System.Windows.Forms.Label();
             this.cmbLocalidades = new System.Windows.Forms.ComboBox();
             this.cmbsProvincias = new System.Windows.Forms.ComboBox();
@@ -148,6 +149,7 @@
             // 
             // lblDomicilio
             // 
+            this.lblDomicilio.Controls.Add(this.lblMensaje);
             this.lblDomicilio.Controls.Add(this.lblCoordenadasGeo);
             this.lblDomicilio.Controls.Add(this.cmbLocalidades);
             this.lblDomicilio.Controls.Add(this.cmbsProvincias);
@@ -162,6 +164,16 @@
             this.lblDomicilio.TabIndex = 5;
             this.lblDomicilio.TabStop = false;
             this.lblDomicilio.Text = "Domicilio";
+            // 
+            // lblMensaje
+            // 
+            this.lblMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMensaje.Location = new System.Drawing.Point(227, 56);
+            this.lblMensaje.Name = "lblMensaje";
+            this.lblMensaje.Size = new System.Drawing.Size(117, 34);
+            this.lblMensaje.TabIndex = 8;
+            this.lblMensaje.Text = "No Disponible Para Su Provincia";
+            this.lblMensaje.Visible = false;
             // 
             // lblCoordenadasGeo
             // 
@@ -216,6 +228,7 @@
             this.cmbsProvincias.Name = "cmbsProvincias";
             this.cmbsProvincias.Size = new System.Drawing.Size(138, 28);
             this.cmbsProvincias.TabIndex = 5;
+            this.cmbsProvincias.SelectedIndexChanged += new System.EventHandler(this.cmbsProvincias_SelectedIndexChanged);
             // 
             // txtDireccion
             // 
@@ -413,5 +426,6 @@
         private System.Windows.Forms.Button btnAtras;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel statuslblEstado;
+        private System.Windows.Forms.Label lblMensaje;
     }
 }

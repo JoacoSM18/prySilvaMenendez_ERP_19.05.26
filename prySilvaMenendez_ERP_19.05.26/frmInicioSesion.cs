@@ -39,7 +39,7 @@ namespace prySilvaMenendez_ERP_19._05._26
 
             if (usuarioCompleto.Length < 2)
             {
-                MessageBox.Show("Ingrese la inicial del Nombre Seguida del Apellido","Formato Incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Ingrese la Inicial del Nombre Seguida del Apellido","Formato Incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtUsuario.Clear();
                 txtUsuario.Focus();
                 return;

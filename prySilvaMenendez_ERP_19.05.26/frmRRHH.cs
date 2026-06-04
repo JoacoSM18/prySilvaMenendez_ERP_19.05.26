@@ -107,5 +107,25 @@ namespace prySilvaMenendez_ERP_19._05._26
                 this.Close();
             }
         }
+
+        private void cmbsProvincias_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbsProvincias.SelectedItem == null)
+            {
+                return;
+            }
+            if (cmbsProvincias.SelectedItem.ToString() != "Córdoba")
+            {
+                cmbLocalidades.Items.Clear();
+                cmbLocalidades.Enabled = false;
+                cmbLocalidades.SelectedIndex = -1;
+                lblMensaje.Visible = true;
+            }
+            else
+            {
+                cmbLocalidades.Enabled = true;
+                lblMensaje.Visible = false;
+            }
+        }
     }
 }
