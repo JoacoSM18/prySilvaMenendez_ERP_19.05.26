@@ -91,9 +91,10 @@ namespace prySilvaMenendez_ERP_19._05._26
         {
 
         }
-
+        bool cerrando = false;
         private void btnAtras_Click(object sender, EventArgs e)
         {
+            cerrando = true;
             this.Close();
         }
 
@@ -119,7 +120,7 @@ namespace prySilvaMenendez_ERP_19._05._26
 
         private void frmRRHH_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (e.CloseReason == CloseReason.UserClosing)
+            if (e.CloseReason == CloseReason.UserClosing && !cerrando)
             {
                 DialogResult resultado = MessageBox.Show("¿Desea Cerrar Sesión?", "Cerrar Sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (resultado == DialogResult.No)
