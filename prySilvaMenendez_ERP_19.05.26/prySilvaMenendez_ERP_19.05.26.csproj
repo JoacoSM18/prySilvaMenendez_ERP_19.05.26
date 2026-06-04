@@ -77,6 +77,12 @@
     <Compile Include="frmDatosContacto.Designer.cs">
       <DependentUpon>frmDatosContacto.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEliminarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEliminarUsuario.Designer.cs">
+      <DependentUpon>frmEliminarUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmInicioSesion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +111,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDatosContacto.resx">
       <DependentUpon>frmDatosContacto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEliminarUsuario.resx">
+      <DependentUpon>frmEliminarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmInicioSesion.resx">
       <DependentUpon>frmInicioSesion.cs</DependentUpon>

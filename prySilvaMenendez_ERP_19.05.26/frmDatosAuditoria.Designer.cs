@@ -33,6 +33,9 @@
             this.btnAtras = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.statuslblEstado = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lblFechaHora = new System.Windows.Forms.Label();
+            this.lblPerfil = new System.Windows.Forms.Label();
+            this.lblUsuario = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatosAuditoriaSesion)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -40,10 +43,10 @@
             // dgvDatosAuditoriaSesion
             // 
             this.dgvDatosAuditoriaSesion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDatosAuditoriaSesion.Location = new System.Drawing.Point(8, 14);
+            this.dgvDatosAuditoriaSesion.Location = new System.Drawing.Point(8, 59);
             this.dgvDatosAuditoriaSesion.Name = "dgvDatosAuditoriaSesion";
             this.dgvDatosAuditoriaSesion.RowHeadersWidth = 62;
-            this.dgvDatosAuditoriaSesion.Size = new System.Drawing.Size(583, 552);
+            this.dgvDatosAuditoriaSesion.Size = new System.Drawing.Size(583, 507);
             this.dgvDatosAuditoriaSesion.TabIndex = 0;
             // 
             // btnAtras
@@ -76,12 +79,48 @@
             this.statuslblEstado.Size = new System.Drawing.Size(215, 17);
             this.statuslblEstado.Text = "Estado de Conexion de la Base de Datos";
             // 
+            // lblFechaHora
+            // 
+            this.lblFechaHora.AutoSize = true;
+            this.lblFechaHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaHora.Location = new System.Drawing.Point(11, 30);
+            this.lblFechaHora.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblFechaHora.Name = "lblFechaHora";
+            this.lblFechaHora.Size = new System.Drawing.Size(71, 13);
+            this.lblFechaHora.TabIndex = 13;
+            this.lblFechaHora.Text = "Fecha y Hora";
+            // 
+            // lblPerfil
+            // 
+            this.lblPerfil.AutoSize = true;
+            this.lblPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPerfil.Location = new System.Drawing.Point(11, 17);
+            this.lblPerfil.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPerfil.Name = "lblPerfil";
+            this.lblPerfil.Size = new System.Drawing.Size(30, 13);
+            this.lblPerfil.TabIndex = 12;
+            this.lblPerfil.Text = "Perfil";
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.Location = new System.Drawing.Point(11, 4);
+            this.lblUsuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(43, 13);
+            this.lblUsuario.TabIndex = 11;
+            this.lblUsuario.Text = "Usuario";
+            // 
             // frmDatosAuditoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Wheat;
             this.ClientSize = new System.Drawing.Size(605, 654);
+            this.Controls.Add(this.lblFechaHora);
+            this.Controls.Add(this.lblPerfil);
+            this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.dgvDatosAuditoriaSesion);
@@ -104,5 +143,8 @@
         private System.Windows.Forms.Button btnAtras;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel statuslblEstado;
+        private System.Windows.Forms.Label lblFechaHora;
+        private System.Windows.Forms.Label lblPerfil;
+        private System.Windows.Forms.Label lblUsuario;
     }
 }

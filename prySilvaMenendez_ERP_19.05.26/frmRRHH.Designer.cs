@@ -48,10 +48,6 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblApellido = new System.Windows.Forms.Label();
             this.lblDNI = new System.Windows.Forms.Label();
-            this.grbEliminar = new System.Windows.Forms.GroupBox();
-            this.lblEliminar = new System.Windows.Forms.Label();
-            this.cmbUsuarios = new System.Windows.Forms.ComboBox();
-            this.btnEliminar = new System.Windows.Forms.Button();
             this.lblFechaHora = new System.Windows.Forms.Label();
             this.lblPerfil = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
@@ -60,7 +56,6 @@
             this.statuslblEstado = new System.Windows.Forms.ToolStripStatusLabel();
             this.grbAgregar.SuspendLayout();
             this.lblDomicilio.SuspendLayout();
-            this.grbEliminar.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -300,81 +295,36 @@
             this.lblDNI.TabIndex = 0;
             this.lblDNI.Text = "DNI:";
             // 
-            // grbEliminar
-            // 
-            this.grbEliminar.Controls.Add(this.lblEliminar);
-            this.grbEliminar.Controls.Add(this.cmbUsuarios);
-            this.grbEliminar.Controls.Add(this.btnEliminar);
-            this.grbEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbEliminar.Location = new System.Drawing.Point(8, 296);
-            this.grbEliminar.Name = "grbEliminar";
-            this.grbEliminar.Size = new System.Drawing.Size(303, 148);
-            this.grbEliminar.TabIndex = 1;
-            this.grbEliminar.TabStop = false;
-            this.grbEliminar.Text = "Eliminar Usuario";
-            // 
-            // lblEliminar
-            // 
-            this.lblEliminar.AutoSize = true;
-            this.lblEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEliminar.Location = new System.Drawing.Point(2, 31);
-            this.lblEliminar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblEliminar.Name = "lblEliminar";
-            this.lblEliminar.Size = new System.Drawing.Size(248, 17);
-            this.lblEliminar.TabIndex = 2;
-            this.lblEliminar.Text = "Seleccione un Usuario para Eliminarlo";
-            // 
-            // cmbUsuarios
-            // 
-            this.cmbUsuarios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbUsuarios.FormattingEnabled = true;
-            this.cmbUsuarios.Location = new System.Drawing.Point(9, 56);
-            this.cmbUsuarios.Margin = new System.Windows.Forms.Padding(2);
-            this.cmbUsuarios.Name = "cmbUsuarios";
-            this.cmbUsuarios.Size = new System.Drawing.Size(177, 28);
-            this.cmbUsuarios.TabIndex = 1;
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Location = new System.Drawing.Point(201, 103);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(97, 30);
-            this.btnEliminar.TabIndex = 0;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
             // lblFechaHora
             // 
             this.lblFechaHora.AutoSize = true;
-            this.lblFechaHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFechaHora.Location = new System.Drawing.Point(10, 32);
             this.lblFechaHora.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFechaHora.Name = "lblFechaHora";
-            this.lblFechaHora.Size = new System.Drawing.Size(88, 16);
+            this.lblFechaHora.Size = new System.Drawing.Size(71, 13);
             this.lblFechaHora.TabIndex = 6;
             this.lblFechaHora.Text = "Fecha y Hora";
             // 
             // lblPerfil
             // 
             this.lblPerfil.AutoSize = true;
-            this.lblPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPerfil.Location = new System.Drawing.Point(10, 16);
             this.lblPerfil.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPerfil.Name = "lblPerfil";
-            this.lblPerfil.Size = new System.Drawing.Size(37, 16);
+            this.lblPerfil.Size = new System.Drawing.Size(30, 13);
             this.lblPerfil.TabIndex = 5;
             this.lblPerfil.Text = "Perfil";
             // 
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.Location = new System.Drawing.Point(10, 1);
             this.lblUsuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(54, 16);
+            this.lblUsuario.Size = new System.Drawing.Size(43, 13);
             this.lblUsuario.TabIndex = 4;
             this.lblUsuario.Text = "Usuario";
             // 
@@ -382,7 +332,7 @@
             // 
             this.btnAtras.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtras.Location = new System.Drawing.Point(18, 450);
+            this.btnAtras.Location = new System.Drawing.Point(9, 306);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(134, 32);
             this.btnAtras.TabIndex = 7;
@@ -395,7 +345,7 @@
             this.statusStrip1.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.statuslblEstado});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 508);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 372);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(618, 22);
             this.statusStrip1.TabIndex = 8;
@@ -413,13 +363,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Wheat;
-            this.ClientSize = new System.Drawing.Size(618, 530);
+            this.ClientSize = new System.Drawing.Size(618, 394);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.lblFechaHora);
             this.Controls.Add(this.lblPerfil);
             this.Controls.Add(this.lblUsuario);
-            this.Controls.Add(this.grbEliminar);
             this.Controls.Add(this.grbAgregar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmRRHH";
@@ -430,8 +379,6 @@
             this.grbAgregar.PerformLayout();
             this.lblDomicilio.ResumeLayout(false);
             this.lblDomicilio.PerformLayout();
-            this.grbEliminar.ResumeLayout(false);
-            this.grbEliminar.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -443,7 +390,6 @@
 
         private System.Windows.Forms.GroupBox grbAgregar;
         private System.Windows.Forms.Label lblDNI;
-        private System.Windows.Forms.GroupBox grbEliminar;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblApellido;
         private System.Windows.Forms.Label lblFechaHora;
@@ -455,14 +401,11 @@
         private System.Windows.Forms.Label lblDireccion;
         private System.Windows.Forms.Label lblLocalidad;
         private System.Windows.Forms.Label lblProvincia;
-        private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.ComboBox cmbUsuarios;
         private System.Windows.Forms.ComboBox cmbPerfiles;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.TextBox txtDNI;
         private System.Windows.Forms.Label lblAgregarPerfil;
-        private System.Windows.Forms.Label lblEliminar;
         private System.Windows.Forms.ComboBox cmbLocalidades;
         private System.Windows.Forms.ComboBox cmbsProvincias;
         private System.Windows.Forms.TextBox txtDireccion;

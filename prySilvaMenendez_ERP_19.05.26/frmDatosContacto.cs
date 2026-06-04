@@ -24,6 +24,9 @@ namespace prySilvaMenendez_ERP_19._05._26
         private void frmDatosContacto_Load(object sender, EventArgs e)
         {
             DataTable tabla = clsConexion.ConexionBaseDeDatos.Consultar("SELECT * FROM Usuario"); dgvDatosContacto.DataSource = tabla;
+            lblUsuario.Text = nombreUsuario;
+            lblPerfil.Text = perfilUsuario;
+            lblFechaHora.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
             bool conectado = clsConexion.ConexionBaseDeDatos.Conectar();
             if (conectado)
             {

@@ -62,8 +62,7 @@ namespace prySilvaMenendez_ERP_19._05._26
                 string.IsNullOrWhiteSpace(txtApellido.Text) ||
                 string.IsNullOrWhiteSpace(txtDireccion.Text) ||
                 cmbLocalidades.SelectedIndex == -1 ||
-                cmbsProvincias.SelectedIndex == -1 ||
-                cmbUsuarios.SelectedIndex == -1)
+                cmbsProvincias.SelectedIndex == -1)
             {
                 MessageBox.Show("Por Favor Complete Todos los Campos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
@@ -92,29 +91,6 @@ namespace prySilvaMenendez_ERP_19._05._26
             cmbLocalidades.SelectedIndex = -1;
             cmbsProvincias.SelectedIndex = -1;
             cmbPerfiles.SelectedIndex = -1;
-        }
-
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            if (cmbUsuarios.SelectedItem == null)
-            {
-                MessageBox.Show("Seleccione un Usuario", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                return;
-            }
-            string usuarioSeleccionado = cmbUsuarios.SelectedItem.ToString();
-            string[] datos = usuarioSeleccionado.Split(' ');
-            string nombre = datos[0];
-            string apellido = datos[1];
-            DialogResult resultado = MessageBox.Show("¿Está Seguro que Desea Eliminar este Usuario?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (resultado == DialogResult.Yes)
-            {
-                clsConexion.ConexionBaseDeDatos.Desconectar();
-                clsConexion.ConexionBaseDeDatos.Conectar();
-                clsConexion.ConexionBaseDeDatos.Consultar("DELETE FROM Usuario WHERE Nombre = '" + nombre + "' AND Apellido = '" + apellido + "'");
-                clsConexion.ConexionBaseDeDatos.AuditarAccion(nombreUsuario,"Eliminó un Usuario");
-                MessageBox.Show("Usuario Eliminado Correctamente");
-                cmbUsuarios.Items.Remove(usuarioSeleccionado);
-            }
         }
 
         private void grbAgregar_Enter(object sender, EventArgs e)
