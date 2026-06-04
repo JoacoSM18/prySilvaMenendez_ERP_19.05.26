@@ -72,7 +72,7 @@ namespace prySilvaMenendez_ERP_19._05._26
         private void btnEliminarUsuario_Click(object sender, EventArgs e)
         {
             clsConexion.ConexionBaseDeDatos.AuditarAccion(nombreUsuario, "Ingresó a la Sección para Eliminar un Usuario");
-            frmEliminarUsuario eliminarUsuario = new frmEliminarUsuario(nombreUsuario, perfilUsuario);
+            frmDardeBaja eliminarUsuario = new frmDardeBaja(nombreUsuario, perfilUsuario);
             eliminarUsuario.ShowDialog();
             this.Close();
         }

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -10,18 +12,17 @@ using System.Windows.Forms;
 
 namespace prySilvaMenendez_ERP_19._05._26
 {
-    public partial class frmEliminarUsuario : Form
+    public partial class frmDardeBaja : Form
     {
         string nombreUsuario;
         string perfilUsuario;
-        public frmEliminarUsuario(string nombre, string perfil)
+        public frmDardeBaja(string nombre, string perfil)
         {
             InitializeComponent();
             nombreUsuario = nombre;
             perfilUsuario = perfil;
         }
-
-        private void frmEliminarUsuario_Load(object sender, EventArgs e)
+        private void frmDardeBaja_Load(object sender, EventArgs e)
         {
             lblUsuario.Text = nombreUsuario;
             lblPerfil.Text = perfilUsuario;
@@ -31,14 +32,13 @@ namespace prySilvaMenendez_ERP_19._05._26
             {
                 statuslblEstado.Text = "Conectado a la Base de Datos";
                 statuslblEstado.BackColor = Color.Green;
-
             }
             else
             {
                 statuslblEstado.Text = "Error al Conectar a la Base de Datos";
                 statuslblEstado.BackColor = Color.Red;
             }
-            DataTable tabla = clsConexion.ConexionBaseDeDatos.Consultar("SELECT Nombre, Apellido FROM Usuario");
+            DataTable tabla = clsConexion.ConexionBaseDeDatos.Consultar("SELECT Nombre, Apellido FROM Usuario WHERE Activo = True");
             foreach (DataRow fila in tabla.Rows)
             {
                 string usuario = fila["Nombre"].ToString() + " " + fila["Apellido"].ToString();
@@ -57,31 +57,26 @@ namespace prySilvaMenendez_ERP_19._05._26
             string[] datos = usuarioSeleccionado.Split(' ');
             string nombre = datos[0];
             string apellido = datos[1];
-            DialogResult resultado = MessageBox.Show("¿Está Seguro que Desea Eliminar este Usuario?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult resultado = MessageBox.Show("¿Está Seguro que Desea Dar de Baja este Usuario?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (resultado == DialogResult.Yes)
             {
                 clsConexion.ConexionBaseDeDatos.Desconectar();
                 clsConexion.ConexionBaseDeDatos.Conectar();
-                clsConexion.ConexionBaseDeDatos.Consultar("DELETE FROM Usuario WHERE Nombre = '" + nombre + "' AND Apellido = '" + apellido + "'");
-                clsConexion.ConexionBaseDeDatos.AuditarAccion(nombreUsuario, "Eliminó un Usuario");
-                MessageBox.Show("Usuario Eliminado Correctamente");
-                cmbUsuarios.Items.Remove(usuarioSeleccionado);
-            }
-        }
 
-        private void btnAtras_Click(object sender, EventArgs e)
-        {
-            if (perfilUsuario == "Administrador")
-            {
-                frmAdmin admin = new frmAdmin(nombreUsuario, perfilUsuario);
-                admin.Show();
-                this.Close();
-            }
-            else if (perfilUsuario == "Recursos Humanos")
-            {
-                frmInicioSesion inicioSesion = new frmInicioSesion();
-                inicioSesion.Show();
-                this.Close();
+                try
+                {
+                    string sql = "UPDATE Usuario SET Activo = False WHERE Nombre = '" + nombre + "' AND Apellido = '" + apellido + "'";
+                    OleDbCommand cmd = new OleDbCommand(sql, clsConexion.ConexionBaseDeDatos.conexion);
+                    cmd.ExecuteNonQuery();
+
+                    clsConexion.ConexionBaseDeDatos.AuditarAccion(nombreUsuario, "Dió de Baja un Usuario");
+                    MessageBox.Show("Usuario Dado de Baja Correctamente");
+                    cmbUsuarios.Items.Remove(usuarioSeleccionado);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error Al Dar de Baja: " + ex.Message);
+                }
             }
         }
     }

@@ -1,6 +1,6 @@
 ﻿namespace prySilvaMenendez_ERP_19._05._26
 {
-    partial class frmEliminarUsuario
+    partial class frmDardeBaja
     {
         /// <summary>
         /// Required designer variable.
@@ -102,7 +102,6 @@
             this.btnAtras.TabIndex = 18;
             this.btnAtras.Text = "Atras";
             this.btnAtras.UseVisualStyleBackColor = false;
-            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
             // grbEliminar
             // 
@@ -164,7 +163,7 @@
             this.Name = "frmEliminarUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Eliminar un Usuario";
-            this.Load += new System.EventHandler(this.frmEliminarUsuario_Load);
+            this.Load += new System.EventHandler(this.frmDardeBaja_Load);
             this.statuslblEstado.ResumeLayout(false);
             this.statuslblEstado.PerformLayout();
             this.grbEliminar.ResumeLayout(false);
