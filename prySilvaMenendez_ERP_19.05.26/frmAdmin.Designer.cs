@@ -105,7 +105,6 @@
             this.grbAcciones.TabIndex = 13;
             this.grbAcciones.TabStop = false;
             this.grbAcciones.Text = "Acciones";
-            this.grbAcciones.Enter += new System.EventHandler(this.grbAcciones_Enter);
             // 
             // btnEliminarUsuario
             // 

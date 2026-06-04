@@ -345,9 +345,9 @@
             // 
             this.btnAtras.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtras.Location = new System.Drawing.Point(9, 306);
+            this.btnAtras.Location = new System.Drawing.Point(9, 325);
             this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(134, 32);
+            this.btnAtras.Size = new System.Drawing.Size(72, 32);
             this.btnAtras.TabIndex = 7;
             this.btnAtras.Text = "Atras";
             this.btnAtras.UseVisualStyleBackColor = false;
