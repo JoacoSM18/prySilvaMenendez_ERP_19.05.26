@@ -22,12 +22,6 @@ namespace prySilvaMenendez_ERP_19._05._26
         {
             clsConexion.ConexionBaseDeDatos.Desconectar();
             clsConexion.ConexionBaseDeDatos.Conectar();
-            if (cmbPerfiles.SelectedItem == null)
-            {
-                MessageBox.Show("Seleccione un Perfil", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                return;
-            }
-
             string usuarioCompleto = txtUsuario.Text.Trim();
             if (usuarioCompleto.Contains(" "))
             {
@@ -52,6 +46,12 @@ namespace prySilvaMenendez_ERP_19._05._26
                 txtUsuario.Focus();
                 return;
             }
+
+            if (cmbPerfiles.SelectedItem == null)
+            {
+                MessageBox.Show("Seleccione un Perfil", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             string inicial = usuarioCompleto.Substring(0, 1);
             string apellido = usuarioCompleto.Substring(1);
             string perfilSeleccionado = cmbPerfiles.SelectedItem.ToString();
@@ -59,7 +59,7 @@ namespace prySilvaMenendez_ERP_19._05._26
             if (tabla.Rows.Count > 0)
             {
                 clsConexion.ConexionBaseDeDatos.AuditarSesion(txtUsuario.Text, true);
-                string nombre = tabla.Rows[0]["Nombre"].ToString() + " " + tabla.Rows[0]["Apellido"].ToString();
+                string nombre = tabla.Rows[0]["Nombre"].ToString().Substring(0, 1) + tabla.Rows[0]["Apellido"].ToString();
                 string perfilUsuario = tabla.Rows[0]["Perfil"].ToString();
                 if (perfilUsuario == "Administrador")
                 {
@@ -87,12 +87,10 @@ namespace prySilvaMenendez_ERP_19._05._26
             {
                 clsConexion.ConexionBaseDeDatos.AuditarSesion(txtUsuario.Text, false);
                 intentos--;
-                MessageBox.Show("Usuario o Contraseña Incorrectos, Te Quedan " + intentos + " Intentos Disponibles",
-                    "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Usuario o Contraseña Incorrectos, Te Quedan " + intentos + " Intentos Disponibles","Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 txtUsuario.Clear();
                 mskContraseña.Clear();
                 cmbPerfiles.SelectedIndex = -1;
-
                 if (intentos <= 0)
                 {
                     this.Close();
@@ -101,6 +99,7 @@ namespace prySilvaMenendez_ERP_19._05._26
         }
         private void frmInicioSesion_Load(object sender, EventArgs e)
         {
+
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
