@@ -27,63 +27,80 @@ namespace prySilvaMenendez_ERP_19._05._26
                 MessageBox.Show("Seleccione un Perfil", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            string[] datos = txtUsuario.Text.Trim().Split(' ');
-            if (datos.Length >= 2)
+
+            string usuarioCompleto = txtUsuario.Text.Trim();
+            if (usuarioCompleto.Contains(" "))
             {
-                string nombreIngresado = datos[0];
-                string apellidoIngresado = datos[1];
-                string perfilSeleccionado = cmbPerfiles.SelectedItem.ToString();
-                DataTable tabla = clsConexion.ConexionBaseDeDatos.Consultar("SELECT * FROM Usuario WHERE Nombre = '" + nombreIngresado + "' AND Apellido = '" + apellidoIngresado + "' AND Contraseña = '" + mskContraseña.Text.Trim() + "' AND Perfil = '" + perfilSeleccionado + "'");
-                if (tabla.Rows.Count > 0)
+                MessageBox.Show("El Usuario Debe Escribirse Sin Espacios","Formato Incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtUsuario.Clear();
+                txtUsuario.Focus();
+                return;
+            }
+
+            if (usuarioCompleto.Length < 2)
+            {
+                MessageBox.Show("Ingrese la inicial del Nombre Seguida del Apellido","Formato Incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtUsuario.Clear();
+                txtUsuario.Focus();
+                return;
+            }
+
+            if (!char.IsUpper(usuarioCompleto[0]))
+            {
+                MessageBox.Show("La Inicial del Nombre Debe Ser MAYÚSCULA","Formato Incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtUsuario.Clear();
+                txtUsuario.Focus();
+                return;
+            }
+            string inicial = usuarioCompleto.Substring(0, 1);
+            string apellido = usuarioCompleto.Substring(1);
+            string perfilSeleccionado = cmbPerfiles.SelectedItem.ToString();
+            DataTable tabla = clsConexion.ConexionBaseDeDatos.Consultar("SELECT * FROM Usuario WHERE LEFT(Nombre, 1) = '" + inicial + "' " +"AND Apellido = '" + apellido + "' " +"AND Contraseña = '" + mskContraseña.Text.Trim() + "' " +"AND Perfil = '" + perfilSeleccionado + "' " +"AND Activo = True");
+            if (tabla.Rows.Count > 0)
+            {
+                clsConexion.ConexionBaseDeDatos.AuditarSesion(txtUsuario.Text, true);
+                string nombre = tabla.Rows[0]["Nombre"].ToString() + " " + tabla.Rows[0]["Apellido"].ToString();
+                string perfilUsuario = tabla.Rows[0]["Perfil"].ToString();
+                if (perfilUsuario == "Administrador")
                 {
-                    clsConexion.ConexionBaseDeDatos.AuditarSesion(txtUsuario.Text, true);
-                    string nombre = tabla.Rows[0]["Nombre"].ToString() + " " + tabla.Rows[0]["Apellido"].ToString();
-                    string perfilUsuario = tabla.Rows[0]["Perfil"].ToString();
-                    if (perfilUsuario == "Administrador")
-                    {
-                        clsConexion.ConexionBaseDeDatos.AuditarAccion(nombre,"Ingresó a Administración");
-                        frmAdmin admin = new frmAdmin(nombre, perfilUsuario);
-                        admin.ShowDialog();
-                        this.Close();
-                    }
-                    else if (perfilUsuario == "Recursos Humanos")
-                    {
-                        clsConexion.ConexionBaseDeDatos.AuditarAccion(nombre,"Ingresó a Recursos Humanos");
-                        frmRRHH rrhh = new frmRRHH(nombre, perfilUsuario);
-                        rrhh.ShowDialog();
-                        this.Close();
-                    }
-                    else
-                    {
-                        clsConexion.ConexionBaseDeDatos.AuditarAccion(nombre, "Ingresó al Sistema");
-                        frmPrincipal principal = new frmPrincipal(nombre, perfilUsuario);
-                        principal.ShowDialog();
-                        this.Close();
-                    }
+                    clsConexion.ConexionBaseDeDatos.AuditarAccion(nombre, "Ingresó a Administración");
+                    frmAdmin admin = new frmAdmin(nombre, perfilUsuario);
+                    admin.ShowDialog();
+                    this.Close();
+                }
+                else if (perfilUsuario == "Recursos Humanos")
+                {
+                    clsConexion.ConexionBaseDeDatos.AuditarAccion(nombre, "Ingresó a Recursos Humanos");
+                    frmRRHH rrhh = new frmRRHH(nombre, perfilUsuario);
+                    rrhh.ShowDialog();
                     this.Close();
                 }
                 else
                 {
-                    clsConexion.ConexionBaseDeDatos.AuditarSesion(txtUsuario.Text, false);
-                    intentos--;
-                    MessageBox.Show("Usuario o Contraseña Incorrectos, Te Quedan " + intentos + " Intentos Disponibles", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    txtUsuario.Clear();
-                    mskContraseña.Clear();
-                    cmbPerfiles.SelectedIndex = -1;
-                    if (intentos <= 0)
-                    {
-                        this.Close();
-                    }
+                    clsConexion.ConexionBaseDeDatos.AuditarAccion(nombre, "Ingresó al Sistema");
+                    frmPrincipal principal = new frmPrincipal(nombre, perfilUsuario);
+                    principal.ShowDialog();
+                    this.Close();
                 }
             }
             else
             {
-                MessageBox.Show("Ingrese Nombre y Apellido", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                clsConexion.ConexionBaseDeDatos.AuditarSesion(txtUsuario.Text, false);
+                intentos--;
+                MessageBox.Show("Usuario o Contraseña Incorrectos, Te Quedan " + intentos + " Intentos Disponibles",
+                    "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                txtUsuario.Clear();
+                mskContraseña.Clear();
+                cmbPerfiles.SelectedIndex = -1;
+
+                if (intentos <= 0)
+                {
+                    this.Close();
+                }
             }
         }
         private void frmInicioSesion_Load(object sender, EventArgs e)
         {
-
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
