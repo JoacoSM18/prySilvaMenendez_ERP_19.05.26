@@ -45,6 +45,7 @@ namespace prySilvaMenendez_ERP_19._05._26
             clsConexion.ConexionBaseDeDatos.AuditarAccion(nombreUsuario,"Ingresó a la Sección para Agregar Datos de Contacto");
             frmAgregarDatosContacto AgregarDatosContacto = new frmAgregarDatosContacto(nombreUsuario, perfilUsuario);
             AgregarDatosContacto.ShowDialog();
+            this.Close();
         }
 
         private void btnRRHH_Click(object sender, EventArgs e)
@@ -52,6 +53,7 @@ namespace prySilvaMenendez_ERP_19._05._26
             clsConexion.ConexionBaseDeDatos.AuditarAccion(nombreUsuario, "Ingresó a Recursos Humanos");
             frmRRHH RRHH = new frmRRHH(nombreUsuario, perfilUsuario);
             RRHH.ShowDialog();
+            this.Close();
         }
 
         private void btnVerAuditoria_Click(object sender, EventArgs e)
@@ -59,11 +61,20 @@ namespace prySilvaMenendez_ERP_19._05._26
             clsConexion.ConexionBaseDeDatos.AuditarAccion(nombreUsuario, "Ingresó a Datos de Auditoria");
             frmDatosAuditoria datosAuditoria = new frmDatosAuditoria(nombreUsuario,perfilUsuario);
             datosAuditoria.ShowDialog();
+            this.Close();
         }
 
         private void grbAcciones_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnEliminarUsuario_Click(object sender, EventArgs e)
+        {
+            clsConexion.ConexionBaseDeDatos.AuditarAccion(nombreUsuario, "Ingresó a la Sección para Eliminar un Usuario");
+            frmEliminarUsuario eliminarUsuario = new frmEliminarUsuario(nombreUsuario, perfilUsuario);
+            eliminarUsuario.ShowDialog();
+            this.Close();
         }
     }
 }

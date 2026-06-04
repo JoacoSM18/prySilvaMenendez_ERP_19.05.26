@@ -68,5 +68,21 @@ namespace prySilvaMenendez_ERP_19._05._26
                 cmbUsuarios.Items.Remove(usuarioSeleccionado);
             }
         }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            if (perfilUsuario == "Administrador")
+            {
+                frmAdmin admin = new frmAdmin(nombreUsuario, perfilUsuario);
+                admin.Show();
+                this.Close();
+            }
+            else if (perfilUsuario == "Recursos Humanos")
+            {
+                frmInicioSesion inicioSesion = new frmInicioSesion();
+                inicioSesion.Show();
+                this.Close();
+            }
+        }
     }
 }

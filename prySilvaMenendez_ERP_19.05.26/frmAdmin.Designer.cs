@@ -34,6 +34,7 @@
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblBienvenida = new System.Windows.Forms.Label();
             this.grbAcciones = new System.Windows.Forms.GroupBox();
+            this.btnEliminarUsuario = new System.Windows.Forms.Button();
             this.btnVerAuditoria = new System.Windows.Forms.Button();
             this.btnAgregarDatosContacto = new System.Windows.Forms.Button();
             this.btnRRHH = new System.Windows.Forms.Button();
@@ -90,6 +91,7 @@
             // 
             // grbAcciones
             // 
+            this.grbAcciones.Controls.Add(this.btnEliminarUsuario);
             this.grbAcciones.Controls.Add(this.btnVerAuditoria);
             this.grbAcciones.Controls.Add(this.btnAgregarDatosContacto);
             this.grbAcciones.Controls.Add(this.btnRRHH);
@@ -104,10 +106,22 @@
             this.grbAcciones.Text = "Acciones";
             this.grbAcciones.Enter += new System.EventHandler(this.grbAcciones_Enter);
             // 
+            // btnEliminarUsuario
+            // 
+            this.btnEliminarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarUsuario.Location = new System.Drawing.Point(12, 164);
+            this.btnEliminarUsuario.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEliminarUsuario.Name = "btnEliminarUsuario";
+            this.btnEliminarUsuario.Size = new System.Drawing.Size(167, 55);
+            this.btnEliminarUsuario.TabIndex = 3;
+            this.btnEliminarUsuario.Text = "Eliminar un Usuario";
+            this.btnEliminarUsuario.UseVisualStyleBackColor = true;
+            this.btnEliminarUsuario.Click += new System.EventHandler(this.btnEliminarUsuario_Click);
+            // 
             // btnVerAuditoria
             // 
             this.btnVerAuditoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVerAuditoria.Location = new System.Drawing.Point(12, 152);
+            this.btnVerAuditoria.Location = new System.Drawing.Point(220, 150);
             this.btnVerAuditoria.Margin = new System.Windows.Forms.Padding(2);
             this.btnVerAuditoria.Name = "btnVerAuditoria";
             this.btnVerAuditoria.Size = new System.Drawing.Size(167, 82);
@@ -194,5 +208,6 @@
         private System.Windows.Forms.Button btnVerAuditoria;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel statuslblEstado;
+        private System.Windows.Forms.Button btnEliminarUsuario;
     }
 }

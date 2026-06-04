@@ -43,12 +43,6 @@ namespace prySilvaMenendez_ERP_19._05._26
             lblFechaHora.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
             clsConexion.ConexionBaseDeDatos.Desconectar();
             clsConexion.ConexionBaseDeDatos.Conectar();
-            DataTable tabla = clsConexion.ConexionBaseDeDatos.Consultar("SELECT Nombre, Apellido FROM Usuario");
-            foreach (DataRow fila in tabla.Rows)
-            {
-                string usuario = fila["Nombre"].ToString() + " " + fila["Apellido"].ToString();
-                cmbUsuarios.Items.Add(usuario);
-            }
             DataTable tablaLocalidades = clsConexion.ConexionBaseDeDatos.Consultar("SELECT Localidades FROM Localidades");
             foreach (DataRow fila in tablaLocalidades.Rows)
             {
