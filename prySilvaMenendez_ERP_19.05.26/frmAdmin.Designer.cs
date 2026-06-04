@@ -37,14 +37,17 @@
             this.btnVerAuditoria = new System.Windows.Forms.Button();
             this.btnAgregarDatosContacto = new System.Windows.Forms.Button();
             this.btnRRHH = new System.Windows.Forms.Button();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.statuslblEstado = new System.Windows.Forms.ToolStripStatusLabel();
             this.grbAcciones.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblFechaHora
             // 
             this.lblFechaHora.AutoSize = true;
             this.lblFechaHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaHora.Location = new System.Drawing.Point(2, 31);
+            this.lblFechaHora.Location = new System.Drawing.Point(11, 32);
             this.lblFechaHora.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFechaHora.Name = "lblFechaHora";
             this.lblFechaHora.Size = new System.Drawing.Size(88, 16);
@@ -55,7 +58,7 @@
             // 
             this.lblPerfil.AutoSize = true;
             this.lblPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPerfil.Location = new System.Drawing.Point(2, 16);
+            this.lblPerfil.Location = new System.Drawing.Point(11, 17);
             this.lblPerfil.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPerfil.Name = "lblPerfil";
             this.lblPerfil.Size = new System.Drawing.Size(37, 16);
@@ -66,7 +69,7 @@
             // 
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.Location = new System.Drawing.Point(2, 0);
+            this.lblUsuario.Location = new System.Drawing.Point(11, 1);
             this.lblUsuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(54, 16);
@@ -92,19 +95,20 @@
             this.grbAcciones.Controls.Add(this.btnRRHH);
             this.grbAcciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbAcciones.Location = new System.Drawing.Point(31, 99);
-            this.grbAcciones.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grbAcciones.Margin = new System.Windows.Forms.Padding(2);
             this.grbAcciones.Name = "grbAcciones";
-            this.grbAcciones.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grbAcciones.Padding = new System.Windows.Forms.Padding(2);
             this.grbAcciones.Size = new System.Drawing.Size(417, 368);
             this.grbAcciones.TabIndex = 13;
             this.grbAcciones.TabStop = false;
             this.grbAcciones.Text = "Acciones";
+            this.grbAcciones.Enter += new System.EventHandler(this.grbAcciones_Enter);
             // 
             // btnVerAuditoria
             // 
             this.btnVerAuditoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerAuditoria.Location = new System.Drawing.Point(12, 152);
-            this.btnVerAuditoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVerAuditoria.Margin = new System.Windows.Forms.Padding(2);
             this.btnVerAuditoria.Name = "btnVerAuditoria";
             this.btnVerAuditoria.Size = new System.Drawing.Size(167, 82);
             this.btnVerAuditoria.TabIndex = 2;
@@ -116,7 +120,7 @@
             // 
             this.btnAgregarDatosContacto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarDatosContacto.Location = new System.Drawing.Point(206, 64);
-            this.btnAgregarDatosContacto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregarDatosContacto.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregarDatosContacto.Name = "btnAgregarDatosContacto";
             this.btnAgregarDatosContacto.Size = new System.Drawing.Size(197, 68);
             this.btnAgregarDatosContacto.TabIndex = 1;
@@ -128,7 +132,7 @@
             // 
             this.btnRRHH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRRHH.Location = new System.Drawing.Point(12, 64);
-            this.btnRRHH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRRHH.Margin = new System.Windows.Forms.Padding(2);
             this.btnRRHH.Name = "btnRRHH";
             this.btnRRHH.Size = new System.Drawing.Size(167, 68);
             this.btnRRHH.TabIndex = 0;
@@ -136,12 +140,30 @@
             this.btnRRHH.UseVisualStyleBackColor = true;
             this.btnRRHH.Click += new System.EventHandler(this.btnRRHH_Click);
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.statuslblEstado});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 492);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(485, 22);
+            this.statusStrip1.TabIndex = 14;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // statuslblEstado
+            // 
+            this.statuslblEstado.Name = "statuslblEstado";
+            this.statuslblEstado.Size = new System.Drawing.Size(215, 17);
+            this.statuslblEstado.Text = "Estado de Conexion de la Base de Datos";
+            // 
             // frmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Wheat;
             this.ClientSize = new System.Drawing.Size(485, 514);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.grbAcciones);
             this.Controls.Add(this.lblBienvenida);
             this.Controls.Add(this.lblFechaHora);
@@ -153,6 +175,8 @@
             this.Text = "Administrador";
             this.Load += new System.EventHandler(this.frmAdmin_Load);
             this.grbAcciones.ResumeLayout(false);
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -168,5 +192,7 @@
         private System.Windows.Forms.Button btnAgregarDatosContacto;
         private System.Windows.Forms.Button btnRRHH;
         private System.Windows.Forms.Button btnVerAuditoria;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel statuslblEstado;
     }
 }

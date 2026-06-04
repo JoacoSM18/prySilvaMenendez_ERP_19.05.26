@@ -26,6 +26,18 @@ namespace prySilvaMenendez_ERP_19._05._26
             lblUsuario.Text = nombreUsuario;
             lblPerfil.Text = perfilUsuario;
             lblFechaHora.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
+            bool conectado = clsConexion.ConexionBaseDeDatos.Conectar();
+            if (conectado)
+            {
+                statuslblEstado.Text = "Conectado a la Base de Datos";
+                statuslblEstado.BackColor = Color.Green;
+
+            }
+            else
+            {
+                statuslblEstado.Text = "Error al Conectar a la Base de Datos";
+                statuslblEstado.BackColor = Color.Red;
+            }
         }
 
         private void btnAgregarDatosContacto_Click(object sender, EventArgs e)
@@ -47,6 +59,11 @@ namespace prySilvaMenendez_ERP_19._05._26
             clsConexion.ConexionBaseDeDatos.AuditarAccion(nombreUsuario, "Ingresó a Datos de Auditoria");
             frmDatosAuditoria datosAuditoria = new frmDatosAuditoria(nombreUsuario,perfilUsuario);
             datosAuditoria.ShowDialog();
+        }
+
+        private void grbAcciones_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
