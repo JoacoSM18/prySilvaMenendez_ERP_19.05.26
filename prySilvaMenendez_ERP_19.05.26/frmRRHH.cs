@@ -34,10 +34,6 @@ namespace prySilvaMenendez_ERP_19._05._26
                 statuslblEstado.Text = "Error al Conectar a la Base de Datos";
                 statuslblEstado.BackColor = Color.Red;
             }
-            if (perfilUsuario == "Recursos Humanos")
-            {
-                btnAtras.Text = "Cerrar Sesión";
-            }
             lblUsuario.Text = nombreUsuario;
             lblPerfil.Text = perfilUsuario;
             lblFechaHora.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
@@ -106,7 +102,6 @@ namespace prySilvaMenendez_ERP_19._05._26
             }
             if (cmbsProvincias.SelectedItem.ToString() != "Córdoba")
             {
-                cmbLocalidades.Items.Clear();
                 cmbLocalidades.Enabled = false;
                 cmbLocalidades.SelectedIndex = -1;
                 lblMensaje.Visible = true;
