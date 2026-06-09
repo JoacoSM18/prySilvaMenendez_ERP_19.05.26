@@ -14,6 +14,8 @@ namespace prySilvaMenendez_ERP_19._05._26
     {
         string nombreUsuario;
         string perfilUsuario;
+        bool cerrarSesion = false;
+
         public frmAdmin(string nombre, string perfil)
         {
             InitializeComponent();
@@ -31,7 +33,6 @@ namespace prySilvaMenendez_ERP_19._05._26
             {
                 statuslblEstado.Text = "Conectado a la Base de Datos";
                 statuslblEstado.BackColor = Color.Green;
-
             }
             else
             {
@@ -42,7 +43,7 @@ namespace prySilvaMenendez_ERP_19._05._26
 
         private void btnAgregarDatosContacto_Click(object sender, EventArgs e)
         {
-            clsConexion.ConexionBaseDeDatos.AuditarAccion(nombreUsuario,"Ingresó a la Sección para Agregar Datos de Contacto");
+            clsConexion.ConexionBaseDeDatos.AuditarAccion(nombreUsuario, "Ingresó a la Sección para Agregar Datos de Contacto");
             frmAgregarDatosContacto AgregarDatosContacto = new frmAgregarDatosContacto(nombreUsuario, perfilUsuario);
             this.Hide();
             AgregarDatosContacto.ShowDialog();
@@ -61,7 +62,7 @@ namespace prySilvaMenendez_ERP_19._05._26
         private void btnVerAuditoria_Click(object sender, EventArgs e)
         {
             clsConexion.ConexionBaseDeDatos.AuditarAccion(nombreUsuario, "Ingresó a Datos de Auditoria");
-            frmDatosAuditoria datosAuditoria = new frmDatosAuditoria(nombreUsuario,perfilUsuario);
+            frmDatosAuditoria datosAuditoria = new frmDatosAuditoria(nombreUsuario, perfilUsuario);
             this.Hide();
             datosAuditoria.ShowDialog();
             this.Show();
@@ -78,12 +79,13 @@ namespace prySilvaMenendez_ERP_19._05._26
 
         private void btnAtras_Click(object sender, EventArgs e)
         {
+            cerrarSesion = true;
             this.Close();
         }
 
         private void frmAdmin_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (e.CloseReason == CloseReason.UserClosing)
+            if (!cerrarSesion)
             {
                 DialogResult resultado = MessageBox.Show("¿Desea Cerrar Sesión?", "Cerrar Sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (resultado == DialogResult.No)
@@ -92,9 +94,14 @@ namespace prySilvaMenendez_ERP_19._05._26
                 }
                 else
                 {
-                    Application.Exit();
+                    cerrarSesion = true;
                 }
             }
+        }
+
+        private void grbAcciones_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

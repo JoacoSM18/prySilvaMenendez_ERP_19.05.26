@@ -16,12 +16,15 @@ namespace prySilvaMenendez_ERP_19._05._26
     {
         string nombreUsuario;
         string perfilUsuario;
+        bool volviendo = false;
+
         public frmDardeBaja(string nombre, string perfil)
         {
             InitializeComponent();
             nombreUsuario = nombre;
             perfilUsuario = perfil;
         }
+
         private void frmDardeBaja_Load(object sender, EventArgs e)
         {
             lblUsuario.Text = nombreUsuario;
@@ -62,13 +65,11 @@ namespace prySilvaMenendez_ERP_19._05._26
             {
                 clsConexion.ConexionBaseDeDatos.Desconectar();
                 clsConexion.ConexionBaseDeDatos.Conectar();
-
                 try
                 {
                     string sql = "UPDATE Usuario SET Activo = False WHERE Nombre = '" + nombre + "' AND Apellido = '" + apellido + "'";
                     OleDbCommand cmd = new OleDbCommand(sql, clsConexion.ConexionBaseDeDatos.conexion);
                     cmd.ExecuteNonQuery();
-
                     clsConexion.ConexionBaseDeDatos.AuditarAccion(nombreUsuario, "Dió de Baja un Usuario");
                     MessageBox.Show("Usuario Dado de Baja Correctamente");
                     cmbUsuarios.Items.Remove(usuarioSeleccionado);
@@ -82,12 +83,13 @@ namespace prySilvaMenendez_ERP_19._05._26
 
         private void btnAtras_Click(object sender, EventArgs e)
         {
+            volviendo = true;
             this.Close();
         }
 
         private void frmDardeBaja_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (e.CloseReason == CloseReason.UserClosing)
+            if (!volviendo)
             {
                 DialogResult resultado = MessageBox.Show("¿Desea Cerrar Sesión?", "Cerrar Sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (resultado == DialogResult.No)
@@ -96,9 +98,10 @@ namespace prySilvaMenendez_ERP_19._05._26
                 }
                 else
                 {
-                    Application.Exit();
+                    volviendo = true;
                 }
             }
         }
     }
+
 }

@@ -14,6 +14,8 @@ namespace prySilvaMenendez_ERP_19._05._26
     {
         string nombreUsuario;
         string perfilUsuario;
+        bool volviendo = false;
+
         public frmDatosAuditoria(string nombre, string perfil)
         {
             InitializeComponent();
@@ -23,7 +25,8 @@ namespace prySilvaMenendez_ERP_19._05._26
 
         private void frmDatosAuditoria_Load(object sender, EventArgs e)
         {
-            DataTable tabla = clsConexion.ConexionBaseDeDatos.Consultar("SELECT * FROM AuditoriaInicioSesion"); dgvDatosAuditoriaSesion.DataSource = tabla;
+            DataTable tabla = clsConexion.ConexionBaseDeDatos.Consultar("SELECT * FROM AuditoriaInicioSesion");
+            dgvDatosAuditoriaSesion.DataSource = tabla;
             lblUsuario.Text = nombreUsuario;
             lblPerfil.Text = perfilUsuario;
             lblFechaHora.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
@@ -32,7 +35,6 @@ namespace prySilvaMenendez_ERP_19._05._26
             {
                 statuslblEstado.Text = "Conectado a la Base de Datos";
                 statuslblEstado.BackColor = Color.Green;
-
             }
             else
             {
@@ -43,12 +45,13 @@ namespace prySilvaMenendez_ERP_19._05._26
 
         private void btnAtras_Click(object sender, EventArgs e)
         {
+            volviendo = true;
             this.Close();
         }
 
         private void frmDatosAuditoria_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (e.CloseReason == CloseReason.UserClosing)
+            if (!volviendo)
             {
                 DialogResult resultado = MessageBox.Show("¿Desea Cerrar Sesión?", "Cerrar Sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (resultado == DialogResult.No)
@@ -57,7 +60,7 @@ namespace prySilvaMenendez_ERP_19._05._26
                 }
                 else
                 {
-                    Application.Exit();
+                    volviendo = true;
                 }
             }
         }

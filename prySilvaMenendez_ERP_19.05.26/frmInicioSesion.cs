@@ -67,10 +67,13 @@ namespace prySilvaMenendez_ERP_19._05._26
                     frmAdmin admin = new frmAdmin(nombre, perfilUsuario);
                     this.Hide();
                     admin.ShowDialog();
-                    this.Show();
-                    txtUsuario.Clear();
-                    mskContraseña.Clear();
-                    cmbPerfiles.SelectedIndex = -1;
+                    if (!this.IsDisposed)
+                    {
+                        this.Show();
+                        txtUsuario.Clear();
+                        mskContraseña.Clear();
+                        cmbPerfiles.SelectedIndex = -1;
+                    }
                 }
                 else if (perfilUsuario == "Recursos Humanos")
                 {
@@ -78,10 +81,13 @@ namespace prySilvaMenendez_ERP_19._05._26
                     frmRRHH rrhh = new frmRRHH(nombre, perfilUsuario);
                     this.Hide();
                     rrhh.ShowDialog();
-                    this.Show();
-                    txtUsuario.Clear();
-                    mskContraseña.Clear();
-                    cmbPerfiles.SelectedIndex = -1;
+                    if (!this.IsDisposed)
+                    {
+                        this.Show();
+                        txtUsuario.Clear();
+                        mskContraseña.Clear();
+                        cmbPerfiles.SelectedIndex = -1;
+                    }
                 }
                 else
                 {
@@ -89,10 +95,13 @@ namespace prySilvaMenendez_ERP_19._05._26
                     frmPrincipal principal = new frmPrincipal(nombre, perfilUsuario);
                     this.Hide();
                     principal.ShowDialog();
-                    this.Show();
-                    txtUsuario.Clear();
-                    mskContraseña.Clear();
-                    cmbPerfiles.SelectedIndex = -1;
+                    if (!this.IsDisposed)
+                    {
+                        this.Show();
+                        txtUsuario.Clear();
+                        mskContraseña.Clear();
+                        cmbPerfiles.SelectedIndex = -1;
+                    }
                 }
             }
             else
