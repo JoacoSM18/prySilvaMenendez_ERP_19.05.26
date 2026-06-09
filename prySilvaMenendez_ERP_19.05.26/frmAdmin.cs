@@ -40,7 +40,6 @@ namespace prySilvaMenendez_ERP_19._05._26
                 statuslblEstado.BackColor = Color.Red;
             }
         }
-
         private void btnAgregarDatosContacto_Click(object sender, EventArgs e)
         {
             clsConexion.ConexionBaseDeDatos.AuditarAccion(nombreUsuario, "Ingresó a la Sección para Agregar Datos de Contacto");
@@ -49,7 +48,6 @@ namespace prySilvaMenendez_ERP_19._05._26
             AgregarDatosContacto.ShowDialog();
             this.Show();
         }
-
         private void btnRRHH_Click(object sender, EventArgs e)
         {
             clsConexion.ConexionBaseDeDatos.AuditarAccion(nombreUsuario, "Ingresó a Recursos Humanos");
@@ -58,7 +56,6 @@ namespace prySilvaMenendez_ERP_19._05._26
             RRHH.ShowDialog();
             this.Show();
         }
-
         private void btnVerAuditoria_Click(object sender, EventArgs e)
         {
             clsConexion.ConexionBaseDeDatos.AuditarAccion(nombreUsuario, "Ingresó a Datos de Auditoria");
@@ -67,7 +64,6 @@ namespace prySilvaMenendez_ERP_19._05._26
             datosAuditoria.ShowDialog();
             this.Show();
         }
-
         private void btnEliminarUsuario_Click(object sender, EventArgs e)
         {
             clsConexion.ConexionBaseDeDatos.AuditarAccion(nombreUsuario, "Ingresó a la Sección para Eliminar un Usuario");
@@ -76,13 +72,11 @@ namespace prySilvaMenendez_ERP_19._05._26
             eliminarUsuario.ShowDialog();
             this.Show();
         }
-
         private void btnAtras_Click(object sender, EventArgs e)
         {
             cerrarSesion = true;
             this.Close();
         }
-
         private void frmAdmin_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (!cerrarSesion)
@@ -97,11 +91,6 @@ namespace prySilvaMenendez_ERP_19._05._26
                     cerrarSesion = true;
                 }
             }
-        }
-
-        private void grbAcciones_Enter(object sender, EventArgs e)
-        {
-
         }
     }
 }
