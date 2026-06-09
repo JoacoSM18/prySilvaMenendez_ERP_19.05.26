@@ -14,11 +14,108 @@ namespace prySilvaMenendez_ERP_19._05._26
     {
         string nombreUsuario;
         string perfilUsuario;
+        private string lastCoordinates = "";
         public frmRRHH(string nombre, string perfil)
         {
             InitializeComponent();
             nombreUsuario = nombre;
             perfilUsuario = perfil;
+        }
+
+        private async void txtDireccion_Leave(object sender, EventArgs e)
+        {
+            // When the user leaves the address textbox, try to geocode the full address
+            string direccion = txtDireccion.Text.Trim();
+            if (string.IsNullOrWhiteSpace(direccion))
+            {
+                lblCoordenadasGeo.Text = "";
+                lastCoordinates = "";
+                return;
+            }
+
+            // Build a query using address, locality and province if selected
+            StringBuilder query = new StringBuilder();
+            query.Append(direccion);
+            if (cmbLocalidades.SelectedItem != null)
+            {
+                query.Append(", ").Append(cmbLocalidades.SelectedItem.ToString());
+            }
+            if (cmbsProvincias.SelectedItem != null)
+            {
+                query.Append(", ").Append(cmbsProvincias.SelectedItem.ToString());
+            }
+
+            try
+            {
+                // Use OpenStreetMap Nominatim API for geocoding (no key required)
+                string url = "https://nominatim.openstreetmap.org/search?q=" + Uri.EscapeDataString(query.ToString()) + "&format=json&limit=1";
+                using (var client = new System.Net.Http.HttpClient())
+                {
+                    client.DefaultRequestHeaders.UserAgent.ParseAdd("prySilvaMenendez_ERP/1.0");
+                    var resp = await client.GetAsync(url);
+                    if (!resp.IsSuccessStatusCode)
+                    {
+                        lblCoordenadasGeo.Text = "No se pudo obtener coordenadas";
+                        lastCoordinates = "";
+                        return;
+                    }
+                    string content = await resp.Content.ReadAsStringAsync();
+                    // Parse minimal JSON to extract lat and lon
+                    // Expecting an array with at least one object {"lat":"...","lon":"..."}
+                    if (string.IsNullOrWhiteSpace(content) || content == "[]")
+                    {
+                        lblCoordenadasGeo.Text = "No encontrado";
+                        lastCoordinates = "";
+                        return;
+                    }
+                    // crude parsing without adding JSON libs
+                    int latIndex = content.IndexOf("\"lat\":\"");
+                    int lonIndex = content.IndexOf("\"lon\":\"");
+                    if (latIndex >= 0 && lonIndex >= 0)
+                    {
+                        int latStart = latIndex + 7;
+                        int latEnd = content.IndexOf('"', latStart);
+                        int lonStart = lonIndex + 7;
+                        int lonEnd = content.IndexOf('"', lonStart);
+                        if (latEnd > latStart && lonEnd > lonStart)
+                        {
+                            string lat = content.Substring(latStart, latEnd - latStart);
+                            string lon = content.Substring(lonStart, lonEnd - lonStart);
+                            lastCoordinates = lat + "," + lon;
+                            lblCoordenadasGeo.Text = lastCoordinates;
+                            return;
+                        }
+                    }
+                    lblCoordenadasGeo.Text = "No se pudo parsear respuesta";
+                    lastCoordinates = "";
+                }
+            }
+            catch (Exception ex)
+            {
+                lblCoordenadasGeo.Text = "Error: " + ex.Message;
+                lastCoordinates = "";
+            }
+        }
+
+        private void btnMostrarMaps_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(lastCoordinates))
+            {
+                MessageBox.Show("No hay coordenadas para mostrar. Asegúrese de que la dirección fue geocodificada.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            // Build Google Maps url for coordinates
+            // Use https://www.google.com/maps/search/?api=1&query=lat,lon
+            string url = "https://www.google.com/maps/search/?api=1&query=" + Uri.EscapeDataString(lastCoordinates);
+            try
+            {
+                System.Diagnostics.Process.Start(url);
+            }
+            catch
+            {
+                // Fallback for .NET Framework starting process
+                System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo("cmd", "/c start " + url) { CreateNoWindow = true });
+            }
         }
         private void frmRRHH_Load(object sender, EventArgs e)
         {

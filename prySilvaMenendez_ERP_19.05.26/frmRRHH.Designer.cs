@@ -37,6 +37,7 @@
             this.lblAgregarPerfil = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.lblDomicilio = new System.Windows.Forms.GroupBox();
+            this.btnMostrarMaps = new System.Windows.Forms.Button();
             this.lblMensaje = new System.Windows.Forms.Label();
             this.lblCoordenadasGeo = new System.Windows.Forms.Label();
             this.cmbLocalidades = new System.Windows.Forms.ComboBox();
@@ -55,7 +56,6 @@
             this.btnAtras = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.statuslblEstado = new System.Windows.Forms.ToolStripStatusLabel();
-            this.btnMostrarMaps = new System.Windows.Forms.Button();
             this.grbAgregar.SuspendLayout();
             this.lblDomicilio.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -165,6 +165,16 @@
             this.lblDomicilio.TabStop = false;
             this.lblDomicilio.Text = "Domicilio";
             // 
+            // btnMostrarMaps
+            // 
+            this.btnMostrarMaps.Location = new System.Drawing.Point(315, 190);
+            this.btnMostrarMaps.Name = "btnMostrarMaps";
+            this.btnMostrarMaps.Size = new System.Drawing.Size(230, 39);
+            this.btnMostrarMaps.TabIndex = 9;
+            this.btnMostrarMaps.Text = "Mostrar en Maps";
+            this.btnMostrarMaps.UseVisualStyleBackColor = true;
+            this.btnMostrarMaps.Click += new System.EventHandler(this.btnMostrarMaps_Click);
+            // 
             // lblMensaje
             // 
             this.lblMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -234,6 +244,7 @@
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(205, 35);
             this.txtDireccion.TabIndex = 3;
+            this.txtDireccion.Leave += new System.EventHandler(this.txtDireccion_Leave);
             // 
             // lblGeo
             // 
@@ -374,15 +385,6 @@
             this.statuslblEstado.Name = "statuslblEstado";
             this.statuslblEstado.Size = new System.Drawing.Size(331, 25);
             this.statuslblEstado.Text = "Estado de Conexion de la Base de Datos";
-            // 
-            // btnMostrarMaps
-            // 
-            this.btnMostrarMaps.Location = new System.Drawing.Point(344, 190);
-            this.btnMostrarMaps.Name = "btnMostrarMaps";
-            this.btnMostrarMaps.Size = new System.Drawing.Size(201, 39);
-            this.btnMostrarMaps.TabIndex = 9;
-            this.btnMostrarMaps.Text = "Mostrar en Maps";
-            this.btnMostrarMaps.UseVisualStyleBackColor = true;
             // 
             // frmRRHH
             // 
