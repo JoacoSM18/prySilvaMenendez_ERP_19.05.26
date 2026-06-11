@@ -74,11 +74,9 @@
             this.grbAgregar.Controls.Add(this.lblApellido);
             this.grbAgregar.Controls.Add(this.lblDNI);
             this.grbAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbAgregar.Location = new System.Drawing.Point(14, 108);
-            this.grbAgregar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grbAgregar.Location = new System.Drawing.Point(9, 70);
             this.grbAgregar.Name = "grbAgregar";
-            this.grbAgregar.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.grbAgregar.Size = new System.Drawing.Size(889, 329);
+            this.grbAgregar.Size = new System.Drawing.Size(593, 214);
             this.grbAgregar.TabIndex = 0;
             this.grbAgregar.TabStop = false;
             this.grbAgregar.Text = "Agregar Usuario";
@@ -99,46 +97,52 @@
             "Community Manager",
             "Diseñador",
             "Vendedor"});
-            this.cmbPerfiles.Location = new System.Drawing.Point(96, 223);
+            this.cmbPerfiles.Location = new System.Drawing.Point(64, 145);
+            this.cmbPerfiles.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbPerfiles.Name = "cmbPerfiles";
-            this.cmbPerfiles.Size = new System.Drawing.Size(180, 37);
+            this.cmbPerfiles.Size = new System.Drawing.Size(121, 28);
             this.cmbPerfiles.TabIndex = 11;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(117, 168);
+            this.txtNombre.Location = new System.Drawing.Point(78, 109);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(139, 35);
+            this.txtNombre.Size = new System.Drawing.Size(94, 26);
             this.txtNombre.TabIndex = 2;
             // 
             // txtApellido
             // 
-            this.txtApellido.Location = new System.Drawing.Point(117, 112);
+            this.txtApellido.Location = new System.Drawing.Point(78, 73);
+            this.txtApellido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(139, 35);
+            this.txtApellido.Size = new System.Drawing.Size(94, 26);
             this.txtApellido.TabIndex = 1;
             // 
             // txtDNI
             // 
-            this.txtDNI.Location = new System.Drawing.Point(117, 60);
+            this.txtDNI.Location = new System.Drawing.Point(78, 39);
+            this.txtDNI.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDNI.Name = "txtDNI";
-            this.txtDNI.Size = new System.Drawing.Size(139, 35);
+            this.txtDNI.Size = new System.Drawing.Size(94, 26);
             this.txtDNI.TabIndex = 0;
             // 
             // lblAgregarPerfil
             // 
             this.lblAgregarPerfil.AutoSize = true;
-            this.lblAgregarPerfil.Location = new System.Drawing.Point(8, 232);
+            this.lblAgregarPerfil.Location = new System.Drawing.Point(5, 151);
+            this.lblAgregarPerfil.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAgregarPerfil.Name = "lblAgregarPerfil";
-            this.lblAgregarPerfil.Size = new System.Drawing.Size(75, 29);
+            this.lblAgregarPerfil.Size = new System.Drawing.Size(48, 20);
             this.lblAgregarPerfil.TabIndex = 7;
             this.lblAgregarPerfil.Text = "Perfil:";
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(704, 278);
+            this.btnAgregar.Location = new System.Drawing.Point(469, 181);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(141, 43);
+            this.btnAgregar.Size = new System.Drawing.Size(94, 28);
             this.btnAgregar.TabIndex = 6;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
@@ -156,20 +160,19 @@
             this.lblDomicilio.Controls.Add(this.lblDireccion);
             this.lblDomicilio.Controls.Add(this.lblLocalidad);
             this.lblDomicilio.Controls.Add(this.lblProvincia);
-            this.lblDomicilio.Location = new System.Drawing.Point(300, 26);
-            this.lblDomicilio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lblDomicilio.Location = new System.Drawing.Point(200, 17);
             this.lblDomicilio.Name = "lblDomicilio";
-            this.lblDomicilio.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.lblDomicilio.Size = new System.Drawing.Size(570, 235);
+            this.lblDomicilio.Size = new System.Drawing.Size(380, 153);
             this.lblDomicilio.TabIndex = 5;
             this.lblDomicilio.TabStop = false;
             this.lblDomicilio.Text = "Domicilio";
             // 
             // btnMostrarMaps
             // 
-            this.btnMostrarMaps.Location = new System.Drawing.Point(315, 190);
+            this.btnMostrarMaps.Location = new System.Drawing.Point(210, 123);
+            this.btnMostrarMaps.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnMostrarMaps.Name = "btnMostrarMaps";
-            this.btnMostrarMaps.Size = new System.Drawing.Size(230, 39);
+            this.btnMostrarMaps.Size = new System.Drawing.Size(153, 25);
             this.btnMostrarMaps.TabIndex = 9;
             this.btnMostrarMaps.Text = "Mostrar en Maps";
             this.btnMostrarMaps.UseVisualStyleBackColor = true;
@@ -178,19 +181,20 @@
             // lblMensaje
             // 
             this.lblMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMensaje.Location = new System.Drawing.Point(340, 86);
-            this.lblMensaje.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMensaje.Location = new System.Drawing.Point(227, 56);
             this.lblMensaje.Name = "lblMensaje";
-            this.lblMensaje.Size = new System.Drawing.Size(176, 52);
+            this.lblMensaje.Size = new System.Drawing.Size(117, 34);
             this.lblMensaje.TabIndex = 8;
             this.lblMensaje.Text = "No Disponible Para Su Provincia";
             this.lblMensaje.Visible = false;
             // 
             // lblCoordenadasGeo
             // 
-            this.lblCoordenadasGeo.Location = new System.Drawing.Point(122, 194);
+            this.lblCoordenadasGeo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCoordenadasGeo.Location = new System.Drawing.Point(81, 126);
+            this.lblCoordenadasGeo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCoordenadasGeo.Name = "lblCoordenadasGeo";
-            this.lblCoordenadasGeo.Size = new System.Drawing.Size(210, 29);
+            this.lblCoordenadasGeo.Size = new System.Drawing.Size(125, 19);
             this.lblCoordenadasGeo.TabIndex = 7;
             this.lblCoordenadasGeo.Text = " ";
             // 
@@ -198,9 +202,10 @@
             // 
             this.cmbLocalidades.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbLocalidades.FormattingEnabled = true;
-            this.cmbLocalidades.Location = new System.Drawing.Point(126, 86);
+            this.cmbLocalidades.Location = new System.Drawing.Point(84, 56);
+            this.cmbLocalidades.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbLocalidades.Name = "cmbLocalidades";
-            this.cmbLocalidades.Size = new System.Drawing.Size(205, 37);
+            this.cmbLocalidades.Size = new System.Drawing.Size(138, 28);
             this.cmbLocalidades.TabIndex = 6;
             // 
             // cmbsProvincias
@@ -232,17 +237,19 @@
             "Santiago del Estero",
             "Tierra del Fuego",
             "Tucumán"});
-            this.cmbsProvincias.Location = new System.Drawing.Point(126, 32);
+            this.cmbsProvincias.Location = new System.Drawing.Point(84, 21);
+            this.cmbsProvincias.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbsProvincias.Name = "cmbsProvincias";
-            this.cmbsProvincias.Size = new System.Drawing.Size(205, 37);
+            this.cmbsProvincias.Size = new System.Drawing.Size(138, 28);
             this.cmbsProvincias.TabIndex = 5;
             this.cmbsProvincias.SelectedIndexChanged += new System.EventHandler(this.cmbsProvincias_SelectedIndexChanged);
             // 
             // txtDireccion
             // 
-            this.txtDireccion.Location = new System.Drawing.Point(126, 142);
+            this.txtDireccion.Location = new System.Drawing.Point(84, 92);
+            this.txtDireccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(205, 35);
+            this.txtDireccion.Size = new System.Drawing.Size(138, 26);
             this.txtDireccion.TabIndex = 3;
             this.txtDireccion.Leave += new System.EventHandler(this.txtDireccion_Leave);
             // 
@@ -250,10 +257,9 @@
             // 
             this.lblGeo.AutoSize = true;
             this.lblGeo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGeo.Location = new System.Drawing.Point(3, 197);
-            this.lblGeo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblGeo.Location = new System.Drawing.Point(2, 128);
             this.lblGeo.Name = "lblGeo";
-            this.lblGeo.Size = new System.Drawing.Size(59, 26);
+            this.lblGeo.Size = new System.Drawing.Size(41, 18);
             this.lblGeo.TabIndex = 3;
             this.lblGeo.Text = "Geo:";
             // 
@@ -261,10 +267,9 @@
             // 
             this.lblDireccion.AutoSize = true;
             this.lblDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDireccion.Location = new System.Drawing.Point(3, 151);
-            this.lblDireccion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDireccion.Location = new System.Drawing.Point(2, 98);
             this.lblDireccion.Name = "lblDireccion";
-            this.lblDireccion.Size = new System.Drawing.Size(109, 26);
+            this.lblDireccion.Size = new System.Drawing.Size(75, 18);
             this.lblDireccion.TabIndex = 2;
             this.lblDireccion.Text = "Direccion:";
             // 
@@ -272,10 +277,9 @@
             // 
             this.lblLocalidad.AutoSize = true;
             this.lblLocalidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLocalidad.Location = new System.Drawing.Point(3, 95);
-            this.lblLocalidad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblLocalidad.Location = new System.Drawing.Point(2, 62);
             this.lblLocalidad.Name = "lblLocalidad";
-            this.lblLocalidad.Size = new System.Drawing.Size(111, 26);
+            this.lblLocalidad.Size = new System.Drawing.Size(75, 18);
             this.lblLocalidad.TabIndex = 1;
             this.lblLocalidad.Text = "Localidad:";
             // 
@@ -283,10 +287,9 @@
             // 
             this.lblProvincia.AutoSize = true;
             this.lblProvincia.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProvincia.Location = new System.Drawing.Point(3, 38);
-            this.lblProvincia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblProvincia.Location = new System.Drawing.Point(2, 25);
             this.lblProvincia.Name = "lblProvincia";
-            this.lblProvincia.Size = new System.Drawing.Size(108, 26);
+            this.lblProvincia.Size = new System.Drawing.Size(73, 18);
             this.lblProvincia.TabIndex = 0;
             this.lblProvincia.Text = "Provincia:";
             // 
@@ -294,10 +297,9 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(8, 175);
-            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNombre.Location = new System.Drawing.Point(5, 114);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(96, 26);
+            this.lblNombre.Size = new System.Drawing.Size(66, 18);
             this.lblNombre.TabIndex = 2;
             this.lblNombre.Text = "Nombre:";
             // 
@@ -305,10 +307,9 @@
             // 
             this.lblApellido.AutoSize = true;
             this.lblApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApellido.Location = new System.Drawing.Point(8, 122);
-            this.lblApellido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblApellido.Location = new System.Drawing.Point(5, 79);
             this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(96, 26);
+            this.lblApellido.Size = new System.Drawing.Size(63, 18);
             this.lblApellido.TabIndex = 1;
             this.lblApellido.Text = "Apellido:";
             // 
@@ -316,10 +317,9 @@
             // 
             this.lblDNI.AutoSize = true;
             this.lblDNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDNI.Location = new System.Drawing.Point(8, 69);
-            this.lblDNI.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDNI.Location = new System.Drawing.Point(5, 45);
             this.lblDNI.Name = "lblDNI";
-            this.lblDNI.Size = new System.Drawing.Size(56, 26);
+            this.lblDNI.Size = new System.Drawing.Size(37, 18);
             this.lblDNI.TabIndex = 0;
             this.lblDNI.Text = "DNI:";
             // 
@@ -327,9 +327,10 @@
             // 
             this.lblFechaHora.AutoSize = true;
             this.lblFechaHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaHora.Location = new System.Drawing.Point(15, 49);
+            this.lblFechaHora.Location = new System.Drawing.Point(10, 32);
+            this.lblFechaHora.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFechaHora.Name = "lblFechaHora";
-            this.lblFechaHora.Size = new System.Drawing.Size(104, 20);
+            this.lblFechaHora.Size = new System.Drawing.Size(71, 13);
             this.lblFechaHora.TabIndex = 6;
             this.lblFechaHora.Text = "Fecha y Hora";
             // 
@@ -337,9 +338,10 @@
             // 
             this.lblPerfil.AutoSize = true;
             this.lblPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPerfil.Location = new System.Drawing.Point(15, 25);
+            this.lblPerfil.Location = new System.Drawing.Point(10, 16);
+            this.lblPerfil.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPerfil.Name = "lblPerfil";
-            this.lblPerfil.Size = new System.Drawing.Size(44, 20);
+            this.lblPerfil.Size = new System.Drawing.Size(30, 13);
             this.lblPerfil.TabIndex = 5;
             this.lblPerfil.Text = "Perfil";
             // 
@@ -347,9 +349,10 @@
             // 
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.Location = new System.Drawing.Point(15, 2);
+            this.lblUsuario.Location = new System.Drawing.Point(10, 1);
+            this.lblUsuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(64, 20);
+            this.lblUsuario.Size = new System.Drawing.Size(43, 13);
             this.lblUsuario.TabIndex = 4;
             this.lblUsuario.Text = "Usuario";
             // 
@@ -357,10 +360,9 @@
             // 
             this.btnAtras.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtras.Location = new System.Drawing.Point(14, 500);
-            this.btnAtras.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnAtras.Location = new System.Drawing.Point(9, 325);
             this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(108, 49);
+            this.btnAtras.Size = new System.Drawing.Size(72, 32);
             this.btnAtras.TabIndex = 7;
             this.btnAtras.Text = "Atras";
             this.btnAtras.UseVisualStyleBackColor = false;
@@ -372,10 +374,9 @@
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.statuslblEstado});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 574);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 372);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Padding = new System.Windows.Forms.Padding(2, 0, 21, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(927, 32);
+            this.statusStrip1.Size = new System.Drawing.Size(618, 22);
             this.statusStrip1.TabIndex = 8;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -383,15 +384,15 @@
             // 
             this.statuslblEstado.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.statuslblEstado.Name = "statuslblEstado";
-            this.statuslblEstado.Size = new System.Drawing.Size(331, 25);
+            this.statuslblEstado.Size = new System.Drawing.Size(215, 17);
             this.statuslblEstado.Text = "Estado de Conexion de la Base de Datos";
             // 
             // frmRRHH
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Wheat;
-            this.ClientSize = new System.Drawing.Size(927, 606);
+            this.ClientSize = new System.Drawing.Size(618, 394);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.lblFechaHora);
@@ -399,7 +400,6 @@
             this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.grbAgregar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmRRHH";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Recursos Humanos";

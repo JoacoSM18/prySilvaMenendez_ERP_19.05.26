@@ -15,6 +15,9 @@ namespace prySilvaMenendez_ERP_19._05._26
         string nombreUsuario;
         string perfilUsuario;
         private string lastCoordinates = "";
+        private bool isGeocoding = false;
+        private Task<string> geocodeTask = null;
+
         public frmRRHH(string nombre, string perfil)
         {
             InitializeComponent();
@@ -24,51 +27,91 @@ namespace prySilvaMenendez_ERP_19._05._26
 
         private async void txtDireccion_Leave(object sender, EventArgs e)
         {
-            // When the user leaves the address textbox, try to geocode the full address
-            string direccion = txtDireccion.Text.Trim();
-            if (string.IsNullOrWhiteSpace(direccion))
+            await EnsureGeocodedAsync().ConfigureAwait(false);
+        }
+        private Task<string> EnsureGeocodedAsync()
+        {
+            if (isGeocoding && geocodeTask != null)
             {
-                lblCoordenadasGeo.Text = "";
-                lastCoordinates = "";
-                return;
+                return geocodeTask;
             }
 
-            // Build a query using address, locality and province if selected
-            StringBuilder query = new StringBuilder();
-            query.Append(direccion);
-            if (cmbLocalidades.SelectedItem != null)
+            geocodeTask = GeocodeAddressInternalAsync();
+            return geocodeTask;
+        }
+
+        private async Task<string> GeocodeAddressInternalAsync()
+        {
+            if (isGeocoding)
             {
-                query.Append(", ").Append(cmbLocalidades.SelectedItem.ToString());
-            }
-            if (cmbsProvincias.SelectedItem != null)
-            {
-                query.Append(", ").Append(cmbsProvincias.SelectedItem.ToString());
+                if (geocodeTask != null)
+                {
+                    return await geocodeTask;
+                }
             }
 
+            isGeocoding = true;
             try
             {
-                // Use OpenStreetMap Nominatim API for geocoding (no key required)
+                string direccion = string.Empty;
+                if (this.InvokeRequired)
+                {
+                    this.Invoke(new Action(() => direccion = txtDireccion.Text.Trim()));
+                }
+                else
+                {
+                    direccion = txtDireccion.Text.Trim();
+                }
+
+                if (string.IsNullOrWhiteSpace(direccion))
+                {
+                    this.InvokeIfRequired(() => lblCoordenadasGeo.Text = "");
+                    lastCoordinates = "";
+                    return lastCoordinates;
+                }
+
+                StringBuilder query = new StringBuilder();
+                query.Append(direccion);
+                if (cmbLocalidades.SelectedItem != null)
+                {
+                    query.Append(", ").Append(cmbLocalidades.SelectedItem.ToString());
+                }
+                if (cmbsProvincias.SelectedItem != null)
+                {
+                    query.Append(", ").Append(cmbsProvincias.SelectedItem.ToString());
+                }
+
                 string url = "https://nominatim.openstreetmap.org/search?q=" + Uri.EscapeDataString(query.ToString()) + "&format=json&limit=1";
                 using (var client = new System.Net.Http.HttpClient())
                 {
                     client.DefaultRequestHeaders.UserAgent.ParseAdd("prySilvaMenendez_ERP/1.0");
-                    var resp = await client.GetAsync(url);
+                    System.Net.Http.HttpResponseMessage resp = null;
+                    try
+                    {
+                        resp = await client.GetAsync(url);
+                    }
+                    catch (Exception exHttp)
+                    {
+                        this.InvokeIfRequired(() => lblCoordenadasGeo.Text = "Error: " + exHttp.Message);
+                        lastCoordinates = "";
+                        return lastCoordinates;
+                    }
+
                     if (!resp.IsSuccessStatusCode)
                     {
-                        lblCoordenadasGeo.Text = "No se pudo obtener coordenadas";
+                        this.InvokeIfRequired(() => lblCoordenadasGeo.Text = "No se pudo obtener coordenadas");
                         lastCoordinates = "";
-                        return;
+                        return lastCoordinates;
                     }
+
                     string content = await resp.Content.ReadAsStringAsync();
-                    // Parse minimal JSON to extract lat and lon
-                    // Expecting an array with at least one object {"lat":"...","lon":"..."}
                     if (string.IsNullOrWhiteSpace(content) || content == "[]")
                     {
-                        lblCoordenadasGeo.Text = "No encontrado";
+                        this.InvokeIfRequired(() => lblCoordenadasGeo.Text = "No encontrado");
                         lastCoordinates = "";
-                        return;
+                        return lastCoordinates;
                     }
-                    // crude parsing without adding JSON libs
+
                     int latIndex = content.IndexOf("\"lat\":\"");
                     int lonIndex = content.IndexOf("\"lon\":\"");
                     if (latIndex >= 0 && lonIndex >= 0)
@@ -82,38 +125,51 @@ namespace prySilvaMenendez_ERP_19._05._26
                             string lat = content.Substring(latStart, latEnd - latStart);
                             string lon = content.Substring(lonStart, lonEnd - lonStart);
                             lastCoordinates = lat + "," + lon;
-                            lblCoordenadasGeo.Text = lastCoordinates;
-                            return;
+                            this.InvokeIfRequired(() => lblCoordenadasGeo.Text = lastCoordinates);
+                            return lastCoordinates;
                         }
                     }
-                    lblCoordenadasGeo.Text = "No se pudo parsear respuesta";
+
+                    this.InvokeIfRequired(() => lblCoordenadasGeo.Text = "No se pudo parsear respuesta");
                     lastCoordinates = "";
+                    return lastCoordinates;
                 }
             }
             catch (Exception ex)
             {
-                lblCoordenadasGeo.Text = "Error: " + ex.Message;
+                this.InvokeIfRequired(() => lblCoordenadasGeo.Text = "Error: " + ex.Message);
                 lastCoordinates = "";
+                return lastCoordinates;
+            }
+            finally
+            {
+                isGeocoding = false;
+                // una vez completada la tarea, limpiamos geocodeTask para próximas invocaciones
+                geocodeTask = null;
             }
         }
 
-        private void btnMostrarMaps_Click(object sender, EventArgs e)
+        private async void btnMostrarMaps_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(lastCoordinates))
+            string coords = await EnsureGeocodedAsync();
+            if (string.IsNullOrWhiteSpace(coords))
             {
                 MessageBox.Show("No hay coordenadas para mostrar. Asegúrese de que la dirección fue geocodificada.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            // Build Google Maps url for coordinates
-            // Use https://www.google.com/maps/search/?api=1&query=lat,lon
-            string url = "https://www.google.com/maps/search/?api=1&query=" + Uri.EscapeDataString(lastCoordinates);
+
+            string url = "https://www.google.com/maps/search/?api=1&query=" + Uri.EscapeDataString(coords);
             try
             {
-                System.Diagnostics.Process.Start(url);
+                var psi = new System.Diagnostics.ProcessStartInfo
+                {
+                    FileName = url,
+                    UseShellExecute = true
+                };
+                System.Diagnostics.Process.Start(psi);
             }
             catch
             {
-                // Fallback for .NET Framework starting process
                 System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo("cmd", "/c start " + url) { CreateNoWindow = true });
             }
         }
@@ -223,6 +279,21 @@ namespace prySilvaMenendez_ERP_19._05._26
                 {
                     Application.Exit();
                 }
+            }
+        }
+    }
+    static class ControlExtensions
+    {
+        public static void InvokeIfRequired(this Control c, Action action)
+        {
+            if (c == null) return;
+            if (c.InvokeRequired)
+            {
+                c.Invoke(action);
+            }
+            else
+            {
+                action();
             }
         }
     }
