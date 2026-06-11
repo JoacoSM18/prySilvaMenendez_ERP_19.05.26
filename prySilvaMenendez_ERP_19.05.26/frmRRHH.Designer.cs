@@ -76,7 +76,7 @@
             this.grbAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbAgregar.Location = new System.Drawing.Point(9, 70);
             this.grbAgregar.Name = "grbAgregar";
-            this.grbAgregar.Size = new System.Drawing.Size(593, 214);
+            this.grbAgregar.Size = new System.Drawing.Size(593, 217);
             this.grbAgregar.TabIndex = 0;
             this.grbAgregar.TabStop = false;
             this.grbAgregar.Text = "Agregar Usuario";
@@ -98,7 +98,7 @@
             "Diseñador",
             "Vendedor"});
             this.cmbPerfiles.Location = new System.Drawing.Point(64, 145);
-            this.cmbPerfiles.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbPerfiles.Margin = new System.Windows.Forms.Padding(2);
             this.cmbPerfiles.Name = "cmbPerfiles";
             this.cmbPerfiles.Size = new System.Drawing.Size(121, 28);
             this.cmbPerfiles.TabIndex = 11;
@@ -106,7 +106,7 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(78, 109);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(94, 26);
             this.txtNombre.TabIndex = 2;
@@ -114,7 +114,7 @@
             // txtApellido
             // 
             this.txtApellido.Location = new System.Drawing.Point(78, 73);
-            this.txtApellido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtApellido.Margin = new System.Windows.Forms.Padding(2);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(94, 26);
             this.txtApellido.TabIndex = 1;
@@ -122,7 +122,7 @@
             // txtDNI
             // 
             this.txtDNI.Location = new System.Drawing.Point(78, 39);
-            this.txtDNI.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDNI.Margin = new System.Windows.Forms.Padding(2);
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(94, 26);
             this.txtDNI.TabIndex = 0;
@@ -139,8 +139,8 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(469, 181);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregar.Location = new System.Drawing.Point(469, 178);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(94, 28);
             this.btnAgregar.TabIndex = 6;
@@ -162,7 +162,7 @@
             this.lblDomicilio.Controls.Add(this.lblProvincia);
             this.lblDomicilio.Location = new System.Drawing.Point(200, 17);
             this.lblDomicilio.Name = "lblDomicilio";
-            this.lblDomicilio.Size = new System.Drawing.Size(380, 153);
+            this.lblDomicilio.Size = new System.Drawing.Size(380, 156);
             this.lblDomicilio.TabIndex = 5;
             this.lblDomicilio.TabStop = false;
             this.lblDomicilio.Text = "Domicilio";
@@ -170,9 +170,9 @@
             // btnMostrarMaps
             // 
             this.btnMostrarMaps.Location = new System.Drawing.Point(210, 123);
-            this.btnMostrarMaps.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMostrarMaps.Margin = new System.Windows.Forms.Padding(2);
             this.btnMostrarMaps.Name = "btnMostrarMaps";
-            this.btnMostrarMaps.Size = new System.Drawing.Size(153, 25);
+            this.btnMostrarMaps.Size = new System.Drawing.Size(153, 28);
             this.btnMostrarMaps.TabIndex = 9;
             this.btnMostrarMaps.Text = "Mostrar en Maps";
             this.btnMostrarMaps.UseVisualStyleBackColor = true;
@@ -203,7 +203,7 @@
             this.cmbLocalidades.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbLocalidades.FormattingEnabled = true;
             this.cmbLocalidades.Location = new System.Drawing.Point(84, 56);
-            this.cmbLocalidades.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbLocalidades.Margin = new System.Windows.Forms.Padding(2);
             this.cmbLocalidades.Name = "cmbLocalidades";
             this.cmbLocalidades.Size = new System.Drawing.Size(138, 28);
             this.cmbLocalidades.TabIndex = 6;
@@ -238,7 +238,7 @@
             "Tierra del Fuego",
             "Tucumán"});
             this.cmbsProvincias.Location = new System.Drawing.Point(84, 21);
-            this.cmbsProvincias.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbsProvincias.Margin = new System.Windows.Forms.Padding(2);
             this.cmbsProvincias.Name = "cmbsProvincias";
             this.cmbsProvincias.Size = new System.Drawing.Size(138, 28);
             this.cmbsProvincias.TabIndex = 5;
@@ -247,7 +247,7 @@
             // txtDireccion
             // 
             this.txtDireccion.Location = new System.Drawing.Point(84, 92);
-            this.txtDireccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDireccion.Margin = new System.Windows.Forms.Padding(2);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(138, 26);
             this.txtDireccion.TabIndex = 3;
@@ -360,7 +360,7 @@
             // 
             this.btnAtras.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtras.Location = new System.Drawing.Point(9, 325);
+            this.btnAtras.Location = new System.Drawing.Point(9, 303);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(72, 32);
             this.btnAtras.TabIndex = 7;
@@ -374,7 +374,7 @@
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.statuslblEstado});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 372);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 348);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(618, 22);
             this.statusStrip1.TabIndex = 8;
@@ -392,7 +392,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Wheat;
-            this.ClientSize = new System.Drawing.Size(618, 394);
+            this.ClientSize = new System.Drawing.Size(618, 370);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.lblFechaHora);

@@ -144,7 +144,6 @@ namespace prySilvaMenendez_ERP_19._05._26
             finally
             {
                 isGeocoding = false;
-                // una vez completada la tarea, limpiamos geocodeTask para próximas invocaciones
                 geocodeTask = null;
             }
         }
@@ -200,23 +199,53 @@ namespace prySilvaMenendez_ERP_19._05._26
         }
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtDNI.Text) ||
-                string.IsNullOrWhiteSpace(txtNombre.Text) ||
-                string.IsNullOrWhiteSpace(txtApellido.Text) ||
-                string.IsNullOrWhiteSpace(txtDireccion.Text) ||
-                cmbLocalidades.SelectedIndex == -1 ||
-                cmbsProvincias.SelectedIndex == -1)
+            if (string.IsNullOrWhiteSpace(txtDNI.Text))
             {
-                MessageBox.Show("Por Favor Complete Todos los Campos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("El DNI es Obligatorio.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            clsConexion.ConexionBaseDeDatos.Desconectar();
-            clsConexion.ConexionBaseDeDatos.Conectar();
+            if (string.IsNullOrWhiteSpace(txtNombre.Text))
+            {
+                MessageBox.Show("El Nombre es Obligatorio.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(txtApellido.Text))
+            {
+                MessageBox.Show("El Apellido es Obligatorio.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             if (cmbPerfiles.SelectedItem == null)
             {
                 MessageBox.Show("Seleccione un Perfil");
                 return;
             }
+            if (cmbsProvincias.SelectedIndex == -1)
+            {
+                MessageBox.Show("Seleccioná una Provincia.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (cmbLocalidades.SelectedIndex == -1)
+            {
+                MessageBox.Show("Seleccioná una Localidad.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(txtDireccion.Text))
+            {
+                MessageBox.Show("La Dirección es Obligatoria.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (!txtNombre.Text.All(char.IsLetter))
+            {
+                MessageBox.Show("El Nombre Solo Debe Contener Letras.");
+                return;
+            }
+            if (txtContrasena.Text.Length < 7)
+            {
+                MessageBox.Show("La Contraseña Debe Tener al Menos 7 Caracteres.");
+                return;
+            }
+            clsConexion.ConexionBaseDeDatos.Desconectar();
+            clsConexion.ConexionBaseDeDatos.Conectar();
             string nombre = txtNombre.Text.Trim();
             string apellido = txtApellido.Text.Trim();
             string perfil = cmbPerfiles.SelectedItem.ToString();
