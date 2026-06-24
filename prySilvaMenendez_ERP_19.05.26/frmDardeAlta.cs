@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -47,7 +48,40 @@ namespace prySilvaMenendez_ERP_19._05._26
 
         private void btnDardeAlta_Click(object sender, EventArgs e)
         {
+            if (cmbUsuarios.SelectedItem == null)
+            {
+                MessageBox.Show("Seleccione un Usuario", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            string usuarioSeleccionado = cmbUsuarios.SelectedItem.ToString();
+            string[] datos = usuarioSeleccionado.Split(' ');
+            string nombre = datos[0];
+            string apellido = datos[1];
+            DialogResult resultado = MessageBox.Show("¿Está Seguro que Desea Dar de Alta a este Usuario?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (resultado == DialogResult.Yes)
+            {
+                clsConexion.ConexionBaseDeDatos.Desconectar();
+                clsConexion.ConexionBaseDeDatos.Conectar();
+                try
+                {
+                    string sql = "UPDATE Usuario SET Activo = True WHERE Nombre = '" + nombre + "' AND Apellido = '" + apellido + "'";
+                    OleDbCommand cmd = new OleDbCommand(sql, clsConexion.ConexionBaseDeDatos.conexion);
+                    cmd.ExecuteNonQuery();
+                    clsConexion.ConexionBaseDeDatos.AuditarAccion(nombreUsuario, "Dió de Alta un Usuario");
+                    MessageBox.Show("Usuario Dado de Alta Correctamente");
+                    cmbUsuarios.Items.Remove(usuarioSeleccionado);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error Al Dar de Alta: " + ex.Message);
+                }
+            }
+        }
 
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            volviendo = true;
+            this.Close();
         }
     }
 }

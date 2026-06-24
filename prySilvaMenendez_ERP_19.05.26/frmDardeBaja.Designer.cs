@@ -32,14 +32,14 @@
             this.lblFechaHora = new System.Windows.Forms.Label();
             this.lblPerfil = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
-            this.statuslblEstado = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statuslblEstado1 = new System.Windows.Forms.StatusStrip();
+            this.statuslblEstado = new System.Windows.Forms.ToolStripStatusLabel();
             this.btnAtras = new System.Windows.Forms.Button();
             this.grbEliminar = new System.Windows.Forms.GroupBox();
             this.lblEliminar = new System.Windows.Forms.Label();
             this.cmbUsuarios = new System.Windows.Forms.ComboBox();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.statuslblEstado.SuspendLayout();
+            this.statuslblEstado1.SuspendLayout();
             this.grbEliminar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,24 +73,23 @@
             this.lblUsuario.TabIndex = 14;
             this.lblUsuario.Text = "Usuario";
             // 
+            // statuslblEstado1
+            // 
+            this.statuslblEstado1.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.statuslblEstado1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.statuslblEstado1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.statuslblEstado});
+            this.statuslblEstado1.Location = new System.Drawing.Point(0, 459);
+            this.statuslblEstado1.Name = "statuslblEstado1";
+            this.statuslblEstado1.Padding = new System.Windows.Forms.Padding(2, 0, 21, 0);
+            this.statuslblEstado1.Size = new System.Drawing.Size(562, 32);
+            this.statuslblEstado1.TabIndex = 17;
+            // 
             // statuslblEstado
             // 
-            this.statuslblEstado.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.statuslblEstado.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.statuslblEstado.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1});
-            this.statuslblEstado.Location = new System.Drawing.Point(0, 459);
             this.statuslblEstado.Name = "statuslblEstado";
-            this.statuslblEstado.Padding = new System.Windows.Forms.Padding(2, 0, 21, 0);
-            this.statuslblEstado.Size = new System.Drawing.Size(562, 32);
-            this.statuslblEstado.TabIndex = 17;
-            this.statuslblEstado.Text = "statusStrip1";
-            // 
-            // toolStripStatusLabel1
-            // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(331, 25);
-            this.toolStripStatusLabel1.Text = "Estado de Conexion de la Base de Datos";
+            this.statuslblEstado.Size = new System.Drawing.Size(331, 25);
+            this.statuslblEstado.Text = "Estado de Conexion de la Base de Datos";
             // 
             // btnAtras
             // 
@@ -157,7 +156,7 @@
             this.ClientSize = new System.Drawing.Size(562, 491);
             this.Controls.Add(this.grbEliminar);
             this.Controls.Add(this.btnAtras);
-            this.Controls.Add(this.statuslblEstado);
+            this.Controls.Add(this.statuslblEstado1);
             this.Controls.Add(this.lblFechaHora);
             this.Controls.Add(this.lblPerfil);
             this.Controls.Add(this.lblUsuario);
@@ -168,8 +167,8 @@
             this.Text = "Eliminar un Usuario";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmDardeBaja_FormClosing);
             this.Load += new System.EventHandler(this.frmDardeBaja_Load);
-            this.statuslblEstado.ResumeLayout(false);
-            this.statuslblEstado.PerformLayout();
+            this.statuslblEstado1.ResumeLayout(false);
+            this.statuslblEstado1.PerformLayout();
             this.grbEliminar.ResumeLayout(false);
             this.grbEliminar.PerformLayout();
             this.ResumeLayout(false);
@@ -182,8 +181,8 @@
         private System.Windows.Forms.Label lblFechaHora;
         private System.Windows.Forms.Label lblPerfil;
         private System.Windows.Forms.Label lblUsuario;
-        private System.Windows.Forms.StatusStrip statuslblEstado;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.StatusStrip statuslblEstado1;
+        private System.Windows.Forms.ToolStripStatusLabel statuslblEstado;
         private System.Windows.Forms.Button btnAtras;
         private System.Windows.Forms.GroupBox grbEliminar;
         private System.Windows.Forms.Label lblEliminar;
