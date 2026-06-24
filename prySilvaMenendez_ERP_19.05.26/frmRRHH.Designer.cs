@@ -138,7 +138,7 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(704, 274);
+            this.btnAgregar.Location = new System.Drawing.Point(704, 283);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(141, 43);
             this.btnAgregar.TabIndex = 6;
@@ -393,10 +393,10 @@
             // 
             this.btnAgregarDatosContacto.BackColor = System.Drawing.SystemColors.Window;
             this.btnAgregarDatosContacto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarDatosContacto.Location = new System.Drawing.Point(542, 466);
+            this.btnAgregarDatosContacto.Location = new System.Drawing.Point(520, 470);
             this.btnAgregarDatosContacto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAgregarDatosContacto.Name = "btnAgregarDatosContacto";
-            this.btnAgregarDatosContacto.Size = new System.Drawing.Size(362, 50);
+            this.btnAgregarDatosContacto.Size = new System.Drawing.Size(384, 43);
             this.btnAgregarDatosContacto.TabIndex = 9;
             this.btnAgregarDatosContacto.Text = "Agregar Datos de Contacto Avanzados";
             this.btnAgregarDatosContacto.UseVisualStyleBackColor = false;

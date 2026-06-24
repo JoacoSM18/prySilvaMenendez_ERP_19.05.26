@@ -39,7 +39,6 @@
             this.lblTelefono = new System.Windows.Forms.Label();
             this.lblGmail = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.btnVerTodo = new System.Windows.Forms.Button();
             this.chkActivo = new System.Windows.Forms.CheckBox();
             this.lblActivo = new System.Windows.Forms.Label();
             this.cmbUsuarios = new System.Windows.Forms.ComboBox();
@@ -50,12 +49,14 @@
             this.lblFechaHora = new System.Windows.Forms.Label();
             this.lblPerfil = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.grbContacto.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // grbContacto
             // 
+            this.grbContacto.Controls.Add(this.button1);
             this.grbContacto.Controls.Add(this.txtGmail);
             this.grbContacto.Controls.Add(this.mskTelefono);
             this.grbContacto.Controls.Add(this.txtNombreRedSocial);
@@ -169,21 +170,12 @@
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // btnVerTodo
-            // 
-            this.btnVerTodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVerTodo.Location = new System.Drawing.Point(404, 614);
-            this.btnVerTodo.Name = "btnVerTodo";
-            this.btnVerTodo.Size = new System.Drawing.Size(321, 46);
-            this.btnVerTodo.TabIndex = 3;
-            this.btnVerTodo.Text = "Ver Todos Datos de Contacto";
-            this.btnVerTodo.UseVisualStyleBackColor = true;
-            this.btnVerTodo.Click += new System.EventHandler(this.btnVerTodo_Click);
-            // 
             // chkActivo
             // 
             this.chkActivo.AutoSize = true;
             this.chkActivo.BackColor = System.Drawing.SystemColors.Control;
+            this.chkActivo.Checked = true;
+            this.chkActivo.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkActivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkActivo.Location = new System.Drawing.Point(156, 511);
             this.chkActivo.Name = "chkActivo";
@@ -211,6 +203,7 @@
             this.cmbUsuarios.Name = "cmbUsuarios";
             this.cmbUsuarios.Size = new System.Drawing.Size(180, 34);
             this.cmbUsuarios.TabIndex = 6;
+            this.cmbUsuarios.Enter += new System.EventHandler(this.cmbUsuarios_Enter);
             // 
             // lblUusario
             // 
@@ -227,7 +220,7 @@
             // 
             this.btnAtras.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtras.Location = new System.Drawing.Point(12, 562);
+            this.btnAtras.Location = new System.Drawing.Point(21, 562);
             this.btnAtras.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(112, 46);
@@ -242,7 +235,7 @@
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.statuslblEstado});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 686);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 634);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Padding = new System.Windows.Forms.Padding(2, 0, 21, 0);
             this.statusStrip1.Size = new System.Drawing.Size(800, 32);
@@ -285,12 +278,22 @@
             this.lblUsuario.TabIndex = 10;
             this.lblUsuario.Text = "Usuario";
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(459, 152);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(239, 34);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Agregue Otra Red Social";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // frmAgregarDatosContacto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Wheat;
-            this.ClientSize = new System.Drawing.Size(800, 718);
+            this.ClientSize = new System.Drawing.Size(800, 666);
             this.Controls.Add(this.lblFechaHora);
             this.Controls.Add(this.lblPerfil);
             this.Controls.Add(this.lblUsuario);
@@ -300,7 +303,6 @@
             this.Controls.Add(this.cmbUsuarios);
             this.Controls.Add(this.lblActivo);
             this.Controls.Add(this.chkActivo);
-            this.Controls.Add(this.btnVerTodo);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.grbContacto);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -323,7 +325,6 @@
         private System.Windows.Forms.GroupBox grbContacto;
         private System.Windows.Forms.Label lblGmail;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.Button btnVerTodo;
         private System.Windows.Forms.Label lblUsuarioRedSocial;
         private System.Windows.Forms.Label lblRedSocial;
         private System.Windows.Forms.Label lblTelefono;
@@ -341,5 +342,6 @@
         private System.Windows.Forms.Label lblFechaHora;
         private System.Windows.Forms.Label lblPerfil;
         private System.Windows.Forms.Label lblUsuario;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -41,7 +41,7 @@ namespace prySilvaMenendez_ERP_19._05._26
             }
             clsConexion.ConexionBaseDeDatos.Desconectar();
             clsConexion.ConexionBaseDeDatos.Conectar();
-            DataTable tabla = clsConexion.ConexionBaseDeDatos.Consultar("SELECT Nombre, Apellido FROM Usuario");
+            DataTable tabla = clsConexion.ConexionBaseDeDatos.Consultar("SELECT Nombre, Apellido FROM Usuario " + "WHERE (Gmail IS NULL OR Gmail = '') " + "AND (Telefono IS NULL OR Telefono = '') " + "AND (RedSocialPrincipal IS NULL OR RedSocialPrincipal = '') " + "AND (NombreRedSocialPrincipal IS NULL OR NombreRedSocialPrincipal = '')" );
             foreach (DataRow fila in tabla.Rows)
             {
                 string usuario = fila["Nombre"].ToString() + " " + fila["Apellido"].ToString();
@@ -83,9 +83,9 @@ namespace prySilvaMenendez_ERP_19._05._26
             string redsocial = cmbRedesSociales.SelectedItem.ToString();
             string nombreredsocial = txtNombreRedSocial.Text.Trim();
             string activo = chkActivo.Checked ? "true" : "false";
-            clsConexion.ConexionBaseDeDatos.Consultar("INSERT INTO Usuario (Gmail, Telefono, RedSocial, NombreRedSocial, Activo) VALUES ('" + gmail + "', '" + telefono + "', '" + redsocial + "', '" + nombreredsocial + "', " + activo + ")");
-            clsConexion.ConexionBaseDeDatos.AuditarAccion(nombreUsuario, "Agregó un Usuario");
-            MessageBox.Show("Usuario Agregado Correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            clsConexion.ConexionBaseDeDatos.Consultar("INSERT INTO Usuario (Gmail, Telefono, RedSocialPrincipal, NombreRedSocialPrincipal, Activo) VALUES ('" + gmail + "', '" + telefono + "', '" + redsocial + "', '" + nombreredsocial + "', " + activo + ")");
+            clsConexion.ConexionBaseDeDatos.AuditarAccion(nombreUsuario, "Agregó Informacion Avanzado de un Usuario");
+            MessageBox.Show("Informacion Avanzada Agregada Correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             txtGmail.Text = "";
             mskTelefono.Text = "";
             txtNombreRedSocial.Text = "";
@@ -96,9 +96,7 @@ namespace prySilvaMenendez_ERP_19._05._26
 
         private void btnVerTodo_Click(object sender, EventArgs e)
         {
-            clsConexion.ConexionBaseDeDatos.AuditarAccion(nombreUsuario, "Ingresó a Datos de Contacto");
-            frmDatosContacto datosContacto = new frmDatosContacto(nombreUsuario, perfilUsuario);
-            datosContacto.ShowDialog();
+            
         }
 
         private void mskTelefono_Enter(object sender, EventArgs e)
@@ -125,6 +123,14 @@ namespace prySilvaMenendez_ERP_19._05._26
                 {
                     volviendo = true;
                 }
+            }
+        }
+
+        private void cmbUsuarios_Enter(object sender, EventArgs e)
+        {
+            if (cmbUsuarios.Items.Count == 0)
+            {
+                MessageBox.Show ("No Hay Usuarios Disponibles para Agregar Información");
             }
         }
     }

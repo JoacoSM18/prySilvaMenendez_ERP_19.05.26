@@ -66,11 +66,26 @@ namespace prySilvaMenendez_ERP_19._05._26
         }
         private void btnEliminarUsuario_Click(object sender, EventArgs e)
         {
-            clsConexion.ConexionBaseDeDatos.AuditarAccion(nombreUsuario, "Ingresó a la Sección para Eliminar un Usuario");
-            frmDardeBaja eliminarUsuario = new frmDardeBaja(nombreUsuario, perfilUsuario);
+            clsConexion.ConexionBaseDeDatos.AuditarAccion(nombreUsuario, "Ingresó a la Sección para Dar de Baja un Usuario");
+            frmDardeBaja darDeBajaUsuario = new frmDardeBaja(nombreUsuario, perfilUsuario);
             this.Hide();
-            eliminarUsuario.ShowDialog();
+            darDeBajaUsuario.ShowDialog();
             this.Show();
+        }
+        private void btnDardeAltaUsuario_Click(object sender, EventArgs e)
+        {
+            clsConexion.ConexionBaseDeDatos.AuditarAccion(nombreUsuario, "Ingresó a la Sección para Dar de Alta un Usuario");
+            frmDardeAlta darDeAltaUsuario = new frmDardeAlta(nombreUsuario, perfilUsuario);
+            this.Hide();
+            darDeAltaUsuario.ShowDialog();
+            this.Show();
+        }
+
+        private void btnVerTodo_Click(object sender, EventArgs e)
+        {
+            clsConexion.ConexionBaseDeDatos.AuditarAccion(nombreUsuario, "Ingresó a Datos de Contacto");
+            frmDatosContacto datosContacto = new frmDatosContacto(nombreUsuario, perfilUsuario);
+            datosContacto.ShowDialog();
         }
         private void btnAtras_Click(object sender, EventArgs e)
         {
