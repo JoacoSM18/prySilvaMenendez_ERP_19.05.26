@@ -65,11 +65,9 @@
             this.grbContacto.Controls.Add(this.lblTelefono);
             this.grbContacto.Controls.Add(this.lblGmail);
             this.grbContacto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbContacto.Location = new System.Drawing.Point(14, 139);
-            this.grbContacto.Margin = new System.Windows.Forms.Padding(2);
+            this.grbContacto.Location = new System.Drawing.Point(21, 214);
             this.grbContacto.Name = "grbContacto";
-            this.grbContacto.Padding = new System.Windows.Forms.Padding(2);
-            this.grbContacto.Size = new System.Drawing.Size(469, 179);
+            this.grbContacto.Size = new System.Drawing.Size(704, 275);
             this.grbContacto.TabIndex = 0;
             this.grbContacto.TabStop = false;
             this.grbContacto.Text = "Contacto";
@@ -77,27 +75,30 @@
             // txtGmail
             // 
             this.txtGmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGmail.Location = new System.Drawing.Point(125, 26);
+            this.txtGmail.Location = new System.Drawing.Point(188, 40);
+            this.txtGmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtGmail.Name = "txtGmail";
-            this.txtGmail.Size = new System.Drawing.Size(141, 24);
+            this.txtGmail.Size = new System.Drawing.Size(210, 32);
             this.txtGmail.TabIndex = 8;
             // 
             // mskTelefono
             // 
             this.mskTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskTelefono.Location = new System.Drawing.Point(125, 64);
+            this.mskTelefono.Location = new System.Drawing.Point(188, 98);
+            this.mskTelefono.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.mskTelefono.Mask = "000-000-0000";
             this.mskTelefono.Name = "mskTelefono";
-            this.mskTelefono.Size = new System.Drawing.Size(96, 24);
+            this.mskTelefono.Size = new System.Drawing.Size(142, 32);
             this.mskTelefono.TabIndex = 7;
             this.mskTelefono.Enter += new System.EventHandler(this.mskTelefono_Enter);
             // 
             // txtNombreRedSocial
             // 
             this.txtNombreRedSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreRedSocial.Location = new System.Drawing.Point(272, 139);
+            this.txtNombreRedSocial.Location = new System.Drawing.Point(408, 214);
+            this.txtNombreRedSocial.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtNombreRedSocial.Name = "txtNombreRedSocial";
-            this.txtNombreRedSocial.Size = new System.Drawing.Size(143, 24);
+            this.txtNombreRedSocial.Size = new System.Drawing.Size(212, 32);
             this.txtNombreRedSocial.TabIndex = 6;
             // 
             // cmbRedesSociales
@@ -111,19 +112,19 @@
             "Twitter",
             "Tik Tok",
             "Telegram"});
-            this.cmbRedesSociales.Location = new System.Drawing.Point(125, 99);
+            this.cmbRedesSociales.Location = new System.Drawing.Point(188, 152);
+            this.cmbRedesSociales.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbRedesSociales.Name = "cmbRedesSociales";
-            this.cmbRedesSociales.Size = new System.Drawing.Size(141, 26);
+            this.cmbRedesSociales.Size = new System.Drawing.Size(210, 34);
             this.cmbRedesSociales.TabIndex = 5;
             // 
             // lblUsuarioRedSocial
             // 
             this.lblUsuarioRedSocial.AutoSize = true;
             this.lblUsuarioRedSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuarioRedSocial.Location = new System.Drawing.Point(13, 145);
-            this.lblUsuarioRedSocial.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUsuarioRedSocial.Location = new System.Drawing.Point(20, 223);
             this.lblUsuarioRedSocial.Name = "lblUsuarioRedSocial";
-            this.lblUsuarioRedSocial.Size = new System.Drawing.Size(238, 18);
+            this.lblUsuarioRedSocial.Size = new System.Drawing.Size(349, 26);
             this.lblUsuarioRedSocial.TabIndex = 4;
             this.lblUsuarioRedSocial.Text = "Nombre de Usuario en Red Social:\r\n";
             // 
@@ -131,10 +132,9 @@
             // 
             this.lblRedSocial.AutoSize = true;
             this.lblRedSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRedSocial.Location = new System.Drawing.Point(13, 107);
-            this.lblRedSocial.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblRedSocial.Location = new System.Drawing.Point(20, 165);
             this.lblRedSocial.Name = "lblRedSocial";
-            this.lblRedSocial.Size = new System.Drawing.Size(80, 18);
+            this.lblRedSocial.Size = new System.Drawing.Size(118, 26);
             this.lblRedSocial.TabIndex = 3;
             this.lblRedSocial.Text = "Red Social";
             // 
@@ -142,10 +142,9 @@
             // 
             this.lblTelefono.AutoSize = true;
             this.lblTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTelefono.Location = new System.Drawing.Point(13, 70);
-            this.lblTelefono.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTelefono.Location = new System.Drawing.Point(20, 108);
             this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(70, 18);
+            this.lblTelefono.Size = new System.Drawing.Size(101, 26);
             this.lblTelefono.TabIndex = 2;
             this.lblTelefono.Text = "Telefono:";
             // 
@@ -153,20 +152,18 @@
             // 
             this.lblGmail.AutoSize = true;
             this.lblGmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGmail.Location = new System.Drawing.Point(13, 32);
-            this.lblGmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblGmail.Location = new System.Drawing.Point(20, 49);
             this.lblGmail.Name = "lblGmail";
-            this.lblGmail.Size = new System.Drawing.Size(51, 18);
+            this.lblGmail.Size = new System.Drawing.Size(76, 26);
             this.lblGmail.TabIndex = 1;
             this.lblGmail.Text = "Gmail:";
             // 
             // btnAgregar
             // 
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Location = new System.Drawing.Point(415, 365);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAgregar.Location = new System.Drawing.Point(622, 562);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(68, 30);
+            this.btnAgregar.Size = new System.Drawing.Size(102, 46);
             this.btnAgregar.TabIndex = 2;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
@@ -175,10 +172,9 @@
             // btnVerTodo
             // 
             this.btnVerTodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVerTodo.Location = new System.Drawing.Point(269, 399);
-            this.btnVerTodo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnVerTodo.Location = new System.Drawing.Point(404, 614);
             this.btnVerTodo.Name = "btnVerTodo";
-            this.btnVerTodo.Size = new System.Drawing.Size(214, 30);
+            this.btnVerTodo.Size = new System.Drawing.Size(321, 46);
             this.btnVerTodo.TabIndex = 3;
             this.btnVerTodo.Text = "Ver Todos Datos de Contacto";
             this.btnVerTodo.UseVisualStyleBackColor = true;
@@ -189,10 +185,9 @@
             this.chkActivo.AutoSize = true;
             this.chkActivo.BackColor = System.Drawing.SystemColors.Control;
             this.chkActivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkActivo.Location = new System.Drawing.Point(104, 332);
-            this.chkActivo.Margin = new System.Windows.Forms.Padding(2);
+            this.chkActivo.Location = new System.Drawing.Point(156, 511);
             this.chkActivo.Name = "chkActivo";
-            this.chkActivo.Size = new System.Drawing.Size(15, 14);
+            this.chkActivo.Size = new System.Drawing.Size(22, 21);
             this.chkActivo.TabIndex = 4;
             this.chkActivo.UseVisualStyleBackColor = false;
             // 
@@ -200,10 +195,9 @@
             // 
             this.lblActivo.AutoSize = true;
             this.lblActivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblActivo.Location = new System.Drawing.Point(31, 329);
-            this.lblActivo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblActivo.Location = new System.Drawing.Point(46, 506);
             this.lblActivo.Name = "lblActivo";
-            this.lblActivo.Size = new System.Drawing.Size(52, 18);
+            this.lblActivo.Size = new System.Drawing.Size(78, 26);
             this.lblActivo.TabIndex = 5;
             this.lblActivo.Text = "Activo:";
             // 
@@ -212,18 +206,20 @@
             this.cmbUsuarios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbUsuarios.FormattingEnabled = true;
-            this.cmbUsuarios.Location = new System.Drawing.Point(30, 99);
+            this.cmbUsuarios.Location = new System.Drawing.Point(45, 152);
+            this.cmbUsuarios.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbUsuarios.Name = "cmbUsuarios";
-            this.cmbUsuarios.Size = new System.Drawing.Size(121, 26);
+            this.cmbUsuarios.Size = new System.Drawing.Size(180, 34);
             this.cmbUsuarios.TabIndex = 6;
             // 
             // lblUusario
             // 
             this.lblUusario.AutoSize = true;
             this.lblUusario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUusario.Location = new System.Drawing.Point(27, 78);
+            this.lblUusario.Location = new System.Drawing.Point(40, 120);
+            this.lblUusario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUusario.Name = "lblUusario";
-            this.lblUusario.Size = new System.Drawing.Size(271, 18);
+            this.lblUusario.Size = new System.Drawing.Size(400, 26);
             this.lblUusario.TabIndex = 7;
             this.lblUusario.Text = "Elija un Usuario para Agregar sus Datos";
             // 
@@ -231,9 +227,10 @@
             // 
             this.btnAtras.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtras.Location = new System.Drawing.Point(8, 365);
+            this.btnAtras.Location = new System.Drawing.Point(12, 562);
+            this.btnAtras.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(75, 30);
+            this.btnAtras.Size = new System.Drawing.Size(112, 46);
             this.btnAtras.TabIndex = 8;
             this.btnAtras.Text = "Atras";
             this.btnAtras.UseVisualStyleBackColor = false;
@@ -242,28 +239,29 @@
             // statusStrip1
             // 
             this.statusStrip1.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.statuslblEstado});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 445);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 686);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(533, 22);
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(2, 0, 21, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(800, 32);
             this.statusStrip1.TabIndex = 9;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // statuslblEstado
             // 
             this.statuslblEstado.Name = "statuslblEstado";
-            this.statuslblEstado.Size = new System.Drawing.Size(215, 17);
+            this.statuslblEstado.Size = new System.Drawing.Size(331, 25);
             this.statuslblEstado.Text = "Estado de Conexion de la Base de Datos";
             // 
             // lblFechaHora
             // 
             this.lblFechaHora.AutoSize = true;
             this.lblFechaHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaHora.Location = new System.Drawing.Point(9, 37);
-            this.lblFechaHora.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblFechaHora.Location = new System.Drawing.Point(14, 57);
             this.lblFechaHora.Name = "lblFechaHora";
-            this.lblFechaHora.Size = new System.Drawing.Size(71, 13);
+            this.lblFechaHora.Size = new System.Drawing.Size(104, 20);
             this.lblFechaHora.TabIndex = 12;
             this.lblFechaHora.Text = "Fecha y Hora";
             // 
@@ -271,10 +269,9 @@
             // 
             this.lblPerfil.AutoSize = true;
             this.lblPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPerfil.Location = new System.Drawing.Point(9, 19);
-            this.lblPerfil.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPerfil.Location = new System.Drawing.Point(14, 29);
             this.lblPerfil.Name = "lblPerfil";
-            this.lblPerfil.Size = new System.Drawing.Size(30, 13);
+            this.lblPerfil.Size = new System.Drawing.Size(44, 20);
             this.lblPerfil.TabIndex = 11;
             this.lblPerfil.Text = "Perfil";
             // 
@@ -282,19 +279,18 @@
             // 
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.Location = new System.Drawing.Point(9, 1);
-            this.lblUsuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUsuario.Location = new System.Drawing.Point(14, 2);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(43, 13);
+            this.lblUsuario.Size = new System.Drawing.Size(64, 20);
             this.lblUsuario.TabIndex = 10;
             this.lblUsuario.Text = "Usuario";
             // 
             // frmAgregarDatosContacto
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Wheat;
-            this.ClientSize = new System.Drawing.Size(533, 467);
+            this.ClientSize = new System.Drawing.Size(800, 718);
             this.Controls.Add(this.lblFechaHora);
             this.Controls.Add(this.lblPerfil);
             this.Controls.Add(this.lblUsuario);
@@ -308,10 +304,9 @@
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.grbContacto);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmAgregarDatosContacto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Agregar Datos de Contactos de los Usuarios";
+            this.Text = "Agregar Datos de Contacto Avanzados de los Usuarios";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmAgregarDatosContacto_FormClosing);
             this.Load += new System.EventHandler(this.frmAgregarDatosContacto_Load);
             this.grbContacto.ResumeLayout(false);

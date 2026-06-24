@@ -23,7 +23,6 @@ namespace prySilvaMenendez_ERP_19._05._26
             nombreUsuario = nombre;
             perfilUsuario = perfil;
         }
-
         private void frmAgregarDatosContacto_Load(object sender, EventArgs e)
         {
             lblUsuario.Text = nombreUsuario;
@@ -52,22 +51,33 @@ namespace prySilvaMenendez_ERP_19._05._26
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtGmail.Text) ||
-                string.IsNullOrWhiteSpace(txtNombreRedSocial.Text) ||
-                string.IsNullOrWhiteSpace(mskTelefono.Text) ||
-                cmbRedesSociales.SelectedIndex == -1 ||
-                cmbUsuarios.SelectedIndex == -1)
-            {
-                MessageBox.Show("Por Favor Complete Todos los Campos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-            clsConexion.ConexionBaseDeDatos.Desconectar();
-            clsConexion.ConexionBaseDeDatos.Conectar();
-            if (cmbUsuarios.SelectedItem == null)
+            if (cmbUsuarios.SelectedIndex == -1)
             {
                 MessageBox.Show("Seleccione un Perfil");
                 return;
             }
+            if (string.IsNullOrWhiteSpace(txtGmail.Text))
+            {
+                MessageBox.Show("El Gmail es Obligatorio.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(mskTelefono.Text))
+            {
+                MessageBox.Show("El Telefono es Obligatorio.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (cmbRedesSociales.SelectedIndex == -1)
+            {
+                MessageBox.Show("La Red Social es Obligatoria.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(txtNombreRedSocial.Text))
+            {
+                MessageBox.Show("El Nombre de la Red Social es Obligatorio.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            clsConexion.ConexionBaseDeDatos.Desconectar();
+            clsConexion.ConexionBaseDeDatos.Conectar();
             string gmail = txtGmail.Text.Trim();
             string telefono = mskTelefono.Text.Trim();
             string redsocial = cmbRedesSociales.SelectedItem.ToString();

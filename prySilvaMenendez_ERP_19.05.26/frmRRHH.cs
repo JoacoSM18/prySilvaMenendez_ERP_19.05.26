@@ -239,11 +239,7 @@ namespace prySilvaMenendez_ERP_19._05._26
                 MessageBox.Show("El Nombre Solo Debe Contener Letras.");
                 return;
             }
-            if (txtContrasena.Text.Length < 7)
-            {
-                MessageBox.Show("La Contraseña Debe Tener al Menos 7 Caracteres.");
-                return;
-            }
+            
             clsConexion.ConexionBaseDeDatos.Desconectar();
             clsConexion.ConexionBaseDeDatos.Conectar();
             string nombre = txtNombre.Text.Trim();
@@ -309,6 +305,15 @@ namespace prySilvaMenendez_ERP_19._05._26
                     Application.Exit();
                 }
             }
+        }
+
+        private void btnAgregarDatosContacto_Click(object sender, EventArgs e)
+        {
+            clsConexion.ConexionBaseDeDatos.AuditarAccion(nombreUsuario, "Ingresó a la Sección para Agregar Datos de Contacto");
+            frmAgregarDatosContacto AgregarDatosContacto = new frmAgregarDatosContacto(nombreUsuario, perfilUsuario);
+            this.Hide();
+            AgregarDatosContacto.ShowDialog();
+            this.Show();
         }
     }
     static class ControlExtensions

@@ -18,8 +18,8 @@ namespace prySilvaMenendez_ERP_19._05._26
             public static string error;
             public static bool Conectar()
             {
-                string ruta = @"C:\Users\Alumno\source\repos\prySilvaMenendez_ERP_19.05.26\prySilvaMenendez_ERP_19.05.26\BaseDatos\SilvaMenendez.accdb";
-                //string ruta = @"C:\Users\joako\source\repos\prySilvaMenendez_ERP_19.05.26\prySilvaMenendez_ERP_19.05.26\BaseDatos\SilvaMenendez.accdb";
+                //string ruta = @"C:\Users\Alumno\source\repos\prySilvaMenendez_ERP_19.05.26\prySilvaMenendez_ERP_19.05.26\BaseDatos\SilvaMenendez.accdb";
+                string ruta = @"C:\Users\joako\source\repos\prySilvaMenendez_ERP_19.05.26\prySilvaMenendez_ERP_19.05.26\BaseDatos\SilvaMenendez.accdb";
                 string cadena = "Provider=Microsoft.ACE.OLEDB.16.0;Data Source=" + ruta;
                 try
                 {
