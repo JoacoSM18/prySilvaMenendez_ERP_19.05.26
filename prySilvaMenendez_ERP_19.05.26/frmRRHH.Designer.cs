@@ -169,7 +169,7 @@
             // 
             // btnMostrarMaps
             // 
-            this.btnMostrarMaps.Location = new System.Drawing.Point(333, 194);
+            this.btnMostrarMaps.Location = new System.Drawing.Point(333, 188);
             this.btnMostrarMaps.Name = "btnMostrarMaps";
             this.btnMostrarMaps.Size = new System.Drawing.Size(230, 43);
             this.btnMostrarMaps.TabIndex = 9;
@@ -393,10 +393,10 @@
             // 
             this.btnAgregarDatosContacto.BackColor = System.Drawing.SystemColors.Window;
             this.btnAgregarDatosContacto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarDatosContacto.Location = new System.Drawing.Point(520, 470);
+            this.btnAgregarDatosContacto.Location = new System.Drawing.Point(520, 466);
             this.btnAgregarDatosContacto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAgregarDatosContacto.Name = "btnAgregarDatosContacto";
-            this.btnAgregarDatosContacto.Size = new System.Drawing.Size(384, 43);
+            this.btnAgregarDatosContacto.Size = new System.Drawing.Size(384, 62);
             this.btnAgregarDatosContacto.TabIndex = 9;
             this.btnAgregarDatosContacto.Text = "Agregar Datos de Contacto Avanzados";
             this.btnAgregarDatosContacto.UseVisualStyleBackColor = false;

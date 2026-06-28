@@ -239,7 +239,6 @@ namespace prySilvaMenendez_ERP_19._05._26
                 MessageBox.Show("El Nombre Solo Debe Contener Letras.");
                 return;
             }
-            
             clsConexion.ConexionBaseDeDatos.Desconectar();
             clsConexion.ConexionBaseDeDatos.Conectar();
             string nombre = txtNombre.Text.Trim();
@@ -249,7 +248,7 @@ namespace prySilvaMenendez_ERP_19._05._26
             string provincia = cmbsProvincias.SelectedItem.ToString();
             string localidad = cmbLocalidades.SelectedItem.ToString();
             string direccion = txtDireccion.Text.Trim();
-            clsConexion.ConexionBaseDeDatos.Consultar("INSERT INTO Usuario (Nombre, Apellido, Perfil, DNI, Provincia, Localidad, Direccion) VALUES ('" + nombre + "', '" + apellido + "', '" + perfil + "', '" + dni + "', '" + provincia + "', '" + localidad + "', '" + direccion + "')" );
+            clsConexion.ConexionBaseDeDatos.Ejecutar("INSERT INTO Usuario (Nombre, Apellido, Perfil, DNI, Provincia, Localidad, DireccionQueReside) " + "VALUES ('" + nombre + "', '" + apellido + "', '" + perfil + "', '" + dni + "', '" + provincia + "', '" + localidad + "', '" + direccion + "')");
             clsConexion.ConexionBaseDeDatos.AuditarAccion(nombreUsuario,"Agregó un Usuario");
             MessageBox.Show("Usuario Agregado Correctamente","Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             txtDNI.Text = "";
@@ -259,6 +258,8 @@ namespace prySilvaMenendez_ERP_19._05._26
             cmbLocalidades.SelectedIndex = -1;
             cmbsProvincias.SelectedIndex = -1;
             cmbPerfiles.SelectedIndex = -1;
+            lblCoordenadasGeo.Text = "";
+            lblCoordenadasGeo.Visible = false;
         }
 
         private void grbAgregar_Enter(object sender, EventArgs e)

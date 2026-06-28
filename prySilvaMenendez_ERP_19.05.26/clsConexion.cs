@@ -52,6 +52,19 @@ namespace prySilvaMenendez_ERP_19._05._26
                 }
                 return tabla;
             }
+            public static void Ejecutar(string sql)
+            {
+                try
+                {
+                    OleDbCommand cmd = new OleDbCommand(sql, conexion);
+                    cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    error = ex.Message;
+                }
+            }
             public static void AuditarSesion(string usuario, bool acceso)
             {
                 try

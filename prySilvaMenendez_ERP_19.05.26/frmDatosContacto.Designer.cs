@@ -48,7 +48,7 @@
             this.dgvDatosContacto.Name = "dgvDatosContacto";
             this.dgvDatosContacto.ReadOnly = true;
             this.dgvDatosContacto.RowHeadersWidth = 62;
-            this.dgvDatosContacto.Size = new System.Drawing.Size(934, 723);
+            this.dgvDatosContacto.Size = new System.Drawing.Size(900, 723);
             this.dgvDatosContacto.TabIndex = 0;
             // 
             // btnAtras
@@ -118,6 +118,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.Wheat;
             this.ClientSize = new System.Drawing.Size(972, 943);
             this.Controls.Add(this.lblFechaHora);
