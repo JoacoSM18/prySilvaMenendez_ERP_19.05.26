@@ -169,7 +169,7 @@
             // 
             // btnMostrarMaps
             // 
-            this.btnMostrarMaps.Location = new System.Drawing.Point(315, 189);
+            this.btnMostrarMaps.Location = new System.Drawing.Point(333, 194);
             this.btnMostrarMaps.Name = "btnMostrarMaps";
             this.btnMostrarMaps.Size = new System.Drawing.Size(230, 43);
             this.btnMostrarMaps.TabIndex = 9;

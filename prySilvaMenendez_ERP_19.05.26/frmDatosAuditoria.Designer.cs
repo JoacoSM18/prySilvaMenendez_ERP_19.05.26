@@ -166,6 +166,7 @@
             // 
             // cmbUsuarios
             // 
+            this.cmbUsuarios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbUsuarios.FormattingEnabled = true;
             this.cmbUsuarios.Location = new System.Drawing.Point(103, 90);
@@ -175,6 +176,7 @@
             // 
             // cmbAccion
             // 
+            this.cmbAccion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbAccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbAccion.FormattingEnabled = true;
             this.cmbAccion.Location = new System.Drawing.Point(443, 90);
@@ -226,6 +228,7 @@
             this.btnMostrarTodo.TabIndex = 23;
             this.btnMostrarTodo.Text = "Mostrar Todo";
             this.btnMostrarTodo.UseVisualStyleBackColor = true;
+            this.btnMostrarTodo.Click += new System.EventHandler(this.btnMostrarTodo_Click);
             // 
             // frmDatosAuditoria
             // 

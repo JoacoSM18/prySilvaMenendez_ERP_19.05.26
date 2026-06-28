@@ -309,7 +309,7 @@ namespace prySilvaMenendez_ERP_19._05._26
 
         private void btnAgregarDatosContacto_Click(object sender, EventArgs e)
         {
-            clsConexion.ConexionBaseDeDatos.AuditarAccion(nombreUsuario, "Ingresó a la Sección para Agregar Datos de Contacto");
+            clsConexion.ConexionBaseDeDatos.AuditarAccion(nombreUsuario, "Ingresó a la Sección para Agregar Datos de Contacto Avanzados");
             frmAgregarDatosContacto AgregarDatosContacto = new frmAgregarDatosContacto(nombreUsuario, perfilUsuario);
             this.Hide();
             AgregarDatosContacto.ShowDialog();
