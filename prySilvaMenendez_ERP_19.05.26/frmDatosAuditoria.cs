@@ -25,8 +25,6 @@ namespace prySilvaMenendez_ERP_19._05._26
 
         private void frmDatosAuditoria_Load(object sender, EventArgs e)
         {
-            DataTable tabla = clsConexion.ConexionBaseDeDatos.Consultar("SELECT * FROM AuditoriaInicioSesion");
-            dgvDatosAuditoriaSesion.DataSource = tabla;
             lblUsuario.Text = nombreUsuario;
             lblPerfil.Text = perfilUsuario;
             lblFechaHora.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
@@ -41,15 +39,18 @@ namespace prySilvaMenendez_ERP_19._05._26
                 statuslblEstado.Text = "Error al Conectar a la Base de Datos";
                 statuslblEstado.BackColor = Color.Red;
             }
-            cmbAccion.Items.Add("Ingreso a Administracion");
-            cmbAccion.Items.Add("Ingreso a Recursos Humanos");
-            cmbAccion.Items.Add("Ingreso al Sistema");
-            cmbAccion.Items.Add("Ingreso a la Sección para Agregar Datos de Contacto Avanzados");
-            cmbAccion.Items.Add("Se Agregó un Usuario");
-            cmbAccion.Items.Add("Ingreso a Datos de Contacto");
-            cmbAccion.Items.Add("Ingresó a la Sección para Dar de Alta un Usuario");
-            cmbAccion.Items.Add("Ingresó a la Sección para Dar de Baja un Usuario");
-            cmbAccion.Items.Add("Ingresó a Datos de Auditoria");
+            DataTable tabla = clsConexion.ConexionBaseDeDatos.Consultar("SELECT * FROM AuditoriaInicioSesion");
+            dgvDatosAuditoriaSesion.DataSource = tabla;
+            DataTable tablaUsuarios = clsConexion.ConexionBaseDeDatos.Consultar("SELECT DISTINCT Usuario FROM AuditoriaInicioSesion");
+            foreach (DataRow fila in tablaUsuarios.Rows)
+            {
+                cmbUsuarios.Items.Add(fila["Usuario"].ToString());
+            }
+            DataTable tablaAcciones = clsConexion.ConexionBaseDeDatos.Consultar("SELECT DISTINCT Accion FROM AuditoriaInicioSesion WHERE Accion IS NOT NULL");
+            foreach (DataRow fila in tablaAcciones.Rows)
+            {
+                cmbAccion.Items.Add(fila["Accion"].ToString());
+            }
         }
 
         private void btnAtras_Click(object sender, EventArgs e)
@@ -76,30 +77,28 @@ namespace prySilvaMenendez_ERP_19._05._26
 
         private void btnFiltrar_Click(object sender, EventArgs e)
         {
-            if (dtp1.Value.Date < dtp2.Value.Date)
-            {
-                MessageBox.Show("La Fecha Hasta no Puede ser Menor que la Fecha Desde.","Advertencia",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
-                return;
-            }
             if (cmbUsuarios.SelectedIndex == -1 && cmbAccion.SelectedIndex == -1)
             {
                 MessageBox.Show("Debe Seleccionar al Menos un Filtro.","Advertencia",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
                 return;
             }
+            DataTable tabla;
             if (cmbUsuarios.SelectedIndex != -1 && cmbAccion.SelectedIndex != -1)
             {
-                DataTable tabla = clsConexion.ConexionBaseDeDatos.Consultar("SELECT * FROM AuditoriaInicioSesion WHERE Usuario = '" + cmbUsuarios.Text + "' AND Accion = '" + cmbAccion.Text + "'");
-                dgvDatosAuditoriaSesion.DataSource = tabla;
+                tabla = clsConexion.ConexionBaseDeDatos.Consultar("SELECT * FROM AuditoriaInicioSesion WHERE Usuario = '" + cmbUsuarios.Text + "' AND Accion = '" + cmbAccion.Text + "'");
             }
             else if (cmbUsuarios.SelectedIndex != -1)
             {
-                DataTable tabla = clsConexion.ConexionBaseDeDatos.Consultar( "SELECT * FROM AuditoriaInicioSesion WHERE Usuario = '" + cmbUsuarios.Text + "'");
-                dgvDatosAuditoriaSesion.DataSource = tabla;
+                tabla = clsConexion.ConexionBaseDeDatos.Consultar("SELECT * FROM AuditoriaInicioSesion WHERE Usuario = '" + cmbUsuarios.Text + "'");
             }
-            else if (cmbAccion.SelectedIndex != -1)
+            else
             {
-                DataTable tabla = clsConexion.ConexionBaseDeDatos.Consultar("SELECT * FROM AuditoriaInicioSesion WHERE Accion = '" + cmbAccion.Text + "'");
-                dgvDatosAuditoriaSesion.DataSource = tabla;
+                tabla = clsConexion.ConexionBaseDeDatos.Consultar("SELECT * FROM AuditoriaInicioSesion WHERE Accion = '" + cmbAccion.Text + "'");
+            }
+            dgvDatosAuditoriaSesion.DataSource = tabla;
+            if (tabla.Rows.Count == 0)
+            {
+                MessageBox.Show("No se encontraron registros.","Información",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
         }
         private void btnMostrarTodo_Click(object sender, EventArgs e)
