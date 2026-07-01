@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAgregarDatosContacto));
             this.grbContacto = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.txtGmail = new System.Windows.Forms.TextBox();
             this.mskTelefono = new System.Windows.Forms.MaskedTextBox();
             this.txtNombreRedSocial = new System.Windows.Forms.TextBox();
@@ -49,7 +50,6 @@
             this.lblFechaHora = new System.Windows.Forms.Label();
             this.lblPerfil = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.grbContacto.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -72,6 +72,16 @@
             this.grbContacto.TabIndex = 0;
             this.grbContacto.TabStop = false;
             this.grbContacto.Text = "Contacto";
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(453, 146);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(245, 44);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Agregue Otra Red Social";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // txtGmail
             // 
@@ -277,16 +287,6 @@
             this.lblUsuario.Size = new System.Drawing.Size(64, 20);
             this.lblUsuario.TabIndex = 10;
             this.lblUsuario.Text = "Usuario";
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(459, 152);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(239, 34);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Agregue Otra Red Social";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // frmAgregarDatosContacto
             // 

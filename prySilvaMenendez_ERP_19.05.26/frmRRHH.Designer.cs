@@ -111,6 +111,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(139, 35);
             this.txtNombre.TabIndex = 2;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // txtApellido
             // 
@@ -118,6 +119,7 @@
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(139, 35);
             this.txtApellido.TabIndex = 1;
+            this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
             // 
             // txtDNI
             // 
@@ -125,6 +127,7 @@
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(139, 35);
             this.txtDNI.TabIndex = 0;
+            this.txtDNI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDNI_KeyPress);
             // 
             // lblAgregarPerfil
             // 
@@ -169,9 +172,10 @@
             // 
             // btnMostrarMaps
             // 
-            this.btnMostrarMaps.Location = new System.Drawing.Point(333, 188);
+            this.btnMostrarMaps.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMostrarMaps.Location = new System.Drawing.Point(356, 185);
             this.btnMostrarMaps.Name = "btnMostrarMaps";
-            this.btnMostrarMaps.Size = new System.Drawing.Size(230, 43);
+            this.btnMostrarMaps.Size = new System.Drawing.Size(189, 43);
             this.btnMostrarMaps.TabIndex = 9;
             this.btnMostrarMaps.Text = "Mostrar en Maps";
             this.btnMostrarMaps.UseVisualStyleBackColor = true;
@@ -393,12 +397,12 @@
             // 
             this.btnAgregarDatosContacto.BackColor = System.Drawing.SystemColors.Window;
             this.btnAgregarDatosContacto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarDatosContacto.Location = new System.Drawing.Point(520, 466);
+            this.btnAgregarDatosContacto.Location = new System.Drawing.Point(599, 475);
             this.btnAgregarDatosContacto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAgregarDatosContacto.Name = "btnAgregarDatosContacto";
-            this.btnAgregarDatosContacto.Size = new System.Drawing.Size(384, 62);
+            this.btnAgregarDatosContacto.Size = new System.Drawing.Size(260, 40);
             this.btnAgregarDatosContacto.TabIndex = 9;
-            this.btnAgregarDatosContacto.Text = "Agregar Datos de Contacto Avanzados";
+            this.btnAgregarDatosContacto.Text = "Agregar Datos de Contacto";
             this.btnAgregarDatosContacto.UseVisualStyleBackColor = false;
             this.btnAgregarDatosContacto.Click += new System.EventHandler(this.btnAgregarDatosContacto_Click);
             // 

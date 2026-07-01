@@ -59,11 +59,19 @@ namespace prySilvaMenendez_ERP_19._05._26
             if (string.IsNullOrWhiteSpace(txtGmail.Text))
             {
                 MessageBox.Show("El Gmail es Obligatorio.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtGmail.Focus();
+                return;
+            }
+            if (!txtGmail.Text.Contains("@") || !txtGmail.Text.Contains("."))
+            {
+                MessageBox.Show("Debe Ingresar un Gmail Válido.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtGmail.Focus();
                 return;
             }
             if (string.IsNullOrWhiteSpace(mskTelefono.Text))
             {
                 MessageBox.Show("El Telefono es Obligatorio.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                mskTelefono.Focus();
                 return;
             }
             if (cmbRedesSociales.SelectedIndex == -1)
@@ -74,6 +82,7 @@ namespace prySilvaMenendez_ERP_19._05._26
             if (string.IsNullOrWhiteSpace(txtNombreRedSocial.Text))
             {
                 MessageBox.Show("El Nombre de la Red Social es Obligatorio.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtNombreRedSocial.Focus();
                 return;
             }
             clsConexion.ConexionBaseDeDatos.Desconectar();
@@ -93,15 +102,16 @@ namespace prySilvaMenendez_ERP_19._05._26
             cmbUsuarios.SelectedIndex = -1;
             chkActivo.Checked = false;
         }
-
-        private void btnVerTodo_Click(object sender, EventArgs e)
+        private void cmbUsuarios_Enter(object sender, EventArgs e)
         {
-            
+            if (cmbUsuarios.Items.Count == 0)
+            {
+                MessageBox.Show("No Hay Usuarios Disponibles para Agregar Información");
+            }
         }
-
         private void mskTelefono_Enter(object sender, EventArgs e)
         {
-            mskTelefono.Select(0, 0);
+            mskTelefono.SelectionStart = 0;
         }
 
         private void btnAtras_Click(object sender, EventArgs e)
@@ -123,14 +133,6 @@ namespace prySilvaMenendez_ERP_19._05._26
                 {
                     volviendo = true;
                 }
-            }
-        }
-
-        private void cmbUsuarios_Enter(object sender, EventArgs e)
-        {
-            if (cmbUsuarios.Items.Count == 0)
-            {
-                MessageBox.Show ("No Hay Usuarios Disponibles para Agregar Información");
             }
         }
     }

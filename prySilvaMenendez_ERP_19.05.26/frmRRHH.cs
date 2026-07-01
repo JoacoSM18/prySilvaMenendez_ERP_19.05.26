@@ -189,6 +189,7 @@ namespace prySilvaMenendez_ERP_19._05._26
             lblUsuario.Text = nombreUsuario;
             lblPerfil.Text = perfilUsuario;
             lblFechaHora.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
+
             clsConexion.ConexionBaseDeDatos.Desconectar();
             clsConexion.ConexionBaseDeDatos.Conectar();
             DataTable tablaLocalidades = clsConexion.ConexionBaseDeDatos.Consultar("SELECT Localidades FROM Localidades");
@@ -202,16 +203,19 @@ namespace prySilvaMenendez_ERP_19._05._26
             if (string.IsNullOrWhiteSpace(txtDNI.Text))
             {
                 MessageBox.Show("El DNI es Obligatorio.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtDNI.Focus();
                 return;
             }
             if (string.IsNullOrWhiteSpace(txtNombre.Text))
             {
                 MessageBox.Show("El Nombre es Obligatorio.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtNombre.Focus();
                 return;
             }
             if (string.IsNullOrWhiteSpace(txtApellido.Text))
             {
                 MessageBox.Show("El Apellido es Obligatorio.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtApellido.Focus();
                 return;
             }
             if (cmbPerfiles.SelectedItem == null)
@@ -224,6 +228,10 @@ namespace prySilvaMenendez_ERP_19._05._26
                 MessageBox.Show("Seleccioná una Provincia.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            if (cmbsProvincias.SelectedItem.ToString() != "Córdoba")
+            {
+                cmbLocalidades.SelectedIndex = 0;
+            }
             if (cmbLocalidades.SelectedIndex == -1)
             {
                 MessageBox.Show("Seleccioná una Localidad.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -232,6 +240,7 @@ namespace prySilvaMenendez_ERP_19._05._26
             if (string.IsNullOrWhiteSpace(txtDireccion.Text))
             {
                 MessageBox.Show("La Dirección es Obligatoria.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtDireccion.Focus();
                 return;
             }
             if (!txtNombre.Text.All(char.IsLetter))
@@ -315,6 +324,30 @@ namespace prySilvaMenendez_ERP_19._05._26
             this.Hide();
             AgregarDatosContacto.ShowDialog();
             this.Show();
+        }
+
+        private void txtApellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtDNI_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
     static class ControlExtensions
