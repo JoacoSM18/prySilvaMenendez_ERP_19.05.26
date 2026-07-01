@@ -42,9 +42,9 @@ namespace prySilvaMenendez_ERP_19._05._26
             clsConexion.ConexionBaseDeDatos.Desconectar();
             clsConexion.ConexionBaseDeDatos.Conectar();
             DataTable tabla = clsConexion.ConexionBaseDeDatos.Consultar(
-    "SELECT * FROM Usuario WHERE Gmail = ''");
+    "SELECT * FROM Usuario WHERE RedSocialPrincipal = ''");
 
-            MessageBox.Show(tabla.Rows.Count.ToString());
+            MessageBox.Show(tabla.Rows.Count.ToString());   
             foreach (DataRow fila in tabla.Rows)
             {
                 string usuario = fila["Nombre"].ToString() + " " + fila["Apellido"].ToString();
