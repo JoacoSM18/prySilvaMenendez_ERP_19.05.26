@@ -41,7 +41,10 @@ namespace prySilvaMenendez_ERP_19._05._26
             }
             clsConexion.ConexionBaseDeDatos.Desconectar();
             clsConexion.ConexionBaseDeDatos.Conectar();
-            DataTable tabla = clsConexion.ConexionBaseDeDatos.Consultar("SELECT Nombre, Apellido FROM Usuario " + "WHERE (Gmail IS NULL OR Gmail = '') " + "AND (Telefono IS NULL OR Telefono = '') " + "AND (RedSocialPrincipal IS NULL OR RedSocialPrincipal = '') " + "AND (NombreRedSocialPrincipal IS NULL OR NombreRedSocialPrincipal = '')" );
+            DataTable tabla = clsConexion.ConexionBaseDeDatos.Consultar(
+    "SELECT * FROM Usuario WHERE Gmail = ''");
+
+            MessageBox.Show(tabla.Rows.Count.ToString());
             foreach (DataRow fila in tabla.Rows)
             {
                 string usuario = fila["Nombre"].ToString() + " " + fila["Apellido"].ToString();
