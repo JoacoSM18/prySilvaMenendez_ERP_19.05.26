@@ -53,6 +53,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsConexion.cs" />
+    <Compile Include="frmRedesSociales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRedesSociales.Designer.cs">
+      <DependentUpon>frmRedesSociales.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDardeAlta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmRedesSociales.resx">
+      <DependentUpon>frmRedesSociales.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAdmin.resx">
       <DependentUpon>frmAdmin.cs</DependentUpon>
     </EmbeddedResource>
