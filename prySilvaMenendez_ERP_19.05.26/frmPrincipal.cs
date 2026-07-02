@@ -43,6 +43,8 @@ namespace prySilvaMenendez_ERP_19._05._26
         private void btnAtras_Click(object sender, EventArgs e)
         {
             this.Close();
+            frmInicioSesion inicioSesion = new frmInicioSesion();
+            inicioSesion.ShowDialog();
         }
 
         private void frmPrincipal_FormClosing(object sender, FormClosingEventArgs e)

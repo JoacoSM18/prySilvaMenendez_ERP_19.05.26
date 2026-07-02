@@ -280,10 +280,10 @@ namespace prySilvaMenendez_ERP_19._05._26
         {
 
         }
-        bool cerrando = false;
+        bool volviendo = false;
         private void btnAtras_Click(object sender, EventArgs e)
         {
-            cerrando = true;
+            volviendo = true;
             this.Close();
         }
 
@@ -337,7 +337,7 @@ namespace prySilvaMenendez_ERP_19._05._26
         }
         private void frmRRHH_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (e.CloseReason == CloseReason.UserClosing && !cerrando && !Program.SalirConfirmado)
+            if (e.CloseReason == CloseReason.UserClosing && !volviendo && !Program.SalirConfirmado)
             {
                 DialogResult resultado = MessageBox.Show("¿Desea Cerrar Sesión?", "Cerrar Sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (resultado == DialogResult.No)

@@ -14,7 +14,7 @@ namespace prySilvaMenendez_ERP_19._05._26
     {
         string nombreUsuario;
         string perfilUsuario;
-        bool cerrarSesion = false;
+        bool volviendo = false;
 
         public frmAdmin(string nombre, string perfil)
         {
@@ -89,12 +89,12 @@ namespace prySilvaMenendez_ERP_19._05._26
         }
         private void btnAtras_Click(object sender, EventArgs e)
         {
-            cerrarSesion = true;
+            volviendo = true;
             this.Close();
         }
         private void frmAdmin_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (e.CloseReason == CloseReason.UserClosing && !cerrarSesion && !Program.SalirConfirmado)
+            if (e.CloseReason == CloseReason.UserClosing && !volviendo && !Program.SalirConfirmado)
             {
                 DialogResult resultado = MessageBox.Show("¿Desea Cerrar Sesión?", "Cerrar Sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (resultado == DialogResult.No)

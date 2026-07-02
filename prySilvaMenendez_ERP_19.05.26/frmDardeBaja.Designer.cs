@@ -47,9 +47,10 @@
             // 
             this.lblFechaHora.AutoSize = true;
             this.lblFechaHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaHora.Location = new System.Drawing.Point(16, 43);
+            this.lblFechaHora.Location = new System.Drawing.Point(11, 28);
+            this.lblFechaHora.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFechaHora.Name = "lblFechaHora";
-            this.lblFechaHora.Size = new System.Drawing.Size(104, 20);
+            this.lblFechaHora.Size = new System.Drawing.Size(71, 13);
             this.lblFechaHora.TabIndex = 16;
             this.lblFechaHora.Text = "Fecha y Hora";
             // 
@@ -57,9 +58,10 @@
             // 
             this.lblPerfil.AutoSize = true;
             this.lblPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPerfil.Location = new System.Drawing.Point(16, 23);
+            this.lblPerfil.Location = new System.Drawing.Point(11, 15);
+            this.lblPerfil.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPerfil.Name = "lblPerfil";
-            this.lblPerfil.Size = new System.Drawing.Size(44, 20);
+            this.lblPerfil.Size = new System.Drawing.Size(30, 13);
             this.lblPerfil.TabIndex = 15;
             this.lblPerfil.Text = "Perfil";
             // 
@@ -67,9 +69,10 @@
             // 
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.Location = new System.Drawing.Point(16, 3);
+            this.lblUsuario.Location = new System.Drawing.Point(11, 2);
+            this.lblUsuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(64, 20);
+            this.lblUsuario.Size = new System.Drawing.Size(43, 13);
             this.lblUsuario.TabIndex = 14;
             this.lblUsuario.Text = "Usuario";
             // 
@@ -79,26 +82,24 @@
             this.statuslblEstado1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.statuslblEstado1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.statuslblEstado});
-            this.statuslblEstado1.Location = new System.Drawing.Point(0, 459);
+            this.statuslblEstado1.Location = new System.Drawing.Point(0, 297);
             this.statuslblEstado1.Name = "statuslblEstado1";
-            this.statuslblEstado1.Padding = new System.Windows.Forms.Padding(2, 0, 21, 0);
-            this.statuslblEstado1.Size = new System.Drawing.Size(562, 32);
+            this.statuslblEstado1.Size = new System.Drawing.Size(424, 22);
             this.statuslblEstado1.TabIndex = 17;
             // 
             // statuslblEstado
             // 
             this.statuslblEstado.Name = "statuslblEstado";
-            this.statuslblEstado.Size = new System.Drawing.Size(331, 25);
+            this.statuslblEstado.Size = new System.Drawing.Size(215, 17);
             this.statuslblEstado.Text = "Estado de Conexion de la Base de Datos";
             // 
             // btnAtras
             // 
             this.btnAtras.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtras.Location = new System.Drawing.Point(18, 395);
-            this.btnAtras.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnAtras.Location = new System.Drawing.Point(12, 257);
             this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(90, 40);
+            this.btnAtras.Size = new System.Drawing.Size(60, 26);
             this.btnAtras.TabIndex = 18;
             this.btnAtras.Text = "Atras";
             this.btnAtras.UseVisualStyleBackColor = false;
@@ -110,11 +111,9 @@
             this.grbEliminar.Controls.Add(this.cmbUsuarios);
             this.grbEliminar.Controls.Add(this.btnEliminar);
             this.grbEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbEliminar.Location = new System.Drawing.Point(45, 123);
-            this.grbEliminar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grbEliminar.Location = new System.Drawing.Point(30, 80);
             this.grbEliminar.Name = "grbEliminar";
-            this.grbEliminar.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.grbEliminar.Size = new System.Drawing.Size(492, 228);
+            this.grbEliminar.Size = new System.Drawing.Size(342, 148);
             this.grbEliminar.TabIndex = 19;
             this.grbEliminar.TabStop = false;
             this.grbEliminar.Text = "Dar de Baja un Usuario";
@@ -123,9 +122,10 @@
             // 
             this.lblEliminar.AutoSize = true;
             this.lblEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEliminar.Location = new System.Drawing.Point(3, 48);
+            this.lblEliminar.Location = new System.Drawing.Point(2, 31);
+            this.lblEliminar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEliminar.Name = "lblEliminar";
-            this.lblEliminar.Size = new System.Drawing.Size(459, 25);
+            this.lblEliminar.Size = new System.Drawing.Size(335, 17);
             this.lblEliminar.TabIndex = 2;
             this.lblEliminar.Text = "Seleccione el DNI de un Usuario para Darlo de Baja";
             // 
@@ -133,16 +133,18 @@
             // 
             this.cmbUsuarios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbUsuarios.FormattingEnabled = true;
-            this.cmbUsuarios.Location = new System.Drawing.Point(14, 86);
+            this.cmbUsuarios.Location = new System.Drawing.Point(9, 56);
+            this.cmbUsuarios.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbUsuarios.Name = "cmbUsuarios";
-            this.cmbUsuarios.Size = new System.Drawing.Size(264, 37);
+            this.cmbUsuarios.Size = new System.Drawing.Size(177, 28);
             this.cmbUsuarios.TabIndex = 1;
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(333, 174);
+            this.btnEliminar.Location = new System.Drawing.Point(222, 113);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(152, 46);
+            this.btnEliminar.Size = new System.Drawing.Size(101, 30);
             this.btnEliminar.TabIndex = 0;
             this.btnEliminar.Text = "Dar de Baja";
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -150,10 +152,10 @@
             // 
             // frmDardeBaja
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Wheat;
-            this.ClientSize = new System.Drawing.Size(562, 491);
+            this.ClientSize = new System.Drawing.Size(424, 319);
             this.Controls.Add(this.grbEliminar);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.statuslblEstado1);
@@ -161,7 +163,6 @@
             this.Controls.Add(this.lblPerfil);
             this.Controls.Add(this.lblUsuario);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmDardeBaja";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dar de Baja";
