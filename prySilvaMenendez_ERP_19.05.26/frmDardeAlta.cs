@@ -74,11 +74,29 @@ namespace prySilvaMenendez_ERP_19._05._26
                 }
             }
         }
-
         private void btnAtras_Click(object sender, EventArgs e)
         {
             volviendo = true;
             this.Close();
         }
+
+        private void frmDardeAlta_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            
+            if (e.CloseReason == CloseReason.UserClosing && !volviendo)
+            {
+                DialogResult resultado = MessageBox.Show("¿Desea Cerrar Sesión?", "Cerrar Sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (resultado == DialogResult.No)
+                {
+                    e.Cancel = true;
+                }
+                else
+                {
+                    Application.Exit();
+                }
+            }
+        }
+
     }
 }
+

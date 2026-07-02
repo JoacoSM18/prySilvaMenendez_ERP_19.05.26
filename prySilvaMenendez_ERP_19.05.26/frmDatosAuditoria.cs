@@ -59,22 +59,6 @@ namespace prySilvaMenendez_ERP_19._05._26
             this.Close();
         }
 
-        private void frmDatosAuditoria_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (!volviendo)
-            {
-                DialogResult resultado = MessageBox.Show("¿Desea Cerrar Sesión?", "Cerrar Sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (resultado == DialogResult.No)
-                {
-                    e.Cancel = true;
-                }
-                else
-                {
-                    volviendo = true;
-                }
-            }
-        }
-
         private void btnFiltrar_Click(object sender, EventArgs e)
         {
             if (cmbUsuarios.SelectedIndex == -1 && cmbAccion.SelectedIndex == -1)
@@ -107,6 +91,21 @@ namespace prySilvaMenendez_ERP_19._05._26
             dgvDatosAuditoriaSesion.DataSource = tabla;
             cmbUsuarios.SelectedIndex = -1;
             cmbAccion.SelectedIndex = -1; 
+        }
+        private void frmDatosAuditoria_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (!volviendo)
+            {
+                DialogResult resultado = MessageBox.Show("¿Desea Cerrar Sesión?", "Cerrar Sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (resultado == DialogResult.No)
+                {
+                    e.Cancel = true;
+                }
+                else
+                {
+                    volviendo = true;
+                }
+            }
         }
     }
 }

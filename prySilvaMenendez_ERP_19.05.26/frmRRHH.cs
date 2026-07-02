@@ -305,23 +305,6 @@ namespace prySilvaMenendez_ERP_19._05._26
                 lblMensaje.Visible = false;
             }
         }
-
-        private void frmRRHH_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (e.CloseReason == CloseReason.UserClosing && !cerrando)
-            {
-                DialogResult resultado = MessageBox.Show("¿Desea Cerrar Sesión?", "Cerrar Sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (resultado == DialogResult.No)
-                {
-                    e.Cancel = true;
-                }
-                else
-                {
-                    Application.Exit();
-                }
-            }
-        }
-
         private void btnAgregarDatosContacto_Click(object sender, EventArgs e)
         {
             clsConexion.ConexionBaseDeDatos.AuditarAccion(nombreUsuario, "Ingresó a la Sección para Agregar Datos de Contacto Avanzados");
@@ -338,7 +321,6 @@ namespace prySilvaMenendez_ERP_19._05._26
                 e.Handled = true;
             }
         }
-
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && !char.IsControl(e.KeyChar))
@@ -346,12 +328,26 @@ namespace prySilvaMenendez_ERP_19._05._26
                 e.Handled = true;
             }
         }
-
         private void txtDNI_KeyPress(object sender, KeyPressEventArgs e)
         {
             if(!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
+            }
+        }
+        private void frmRRHH_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing && !cerrando)
+            {
+                DialogResult resultado = MessageBox.Show("¿Desea Cerrar Sesión?", "Cerrar Sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (resultado == DialogResult.No)
+                {
+                    e.Cancel = true;
+                }
+                else
+                {
+                    Application.Exit();
+                }
             }
         }
     }

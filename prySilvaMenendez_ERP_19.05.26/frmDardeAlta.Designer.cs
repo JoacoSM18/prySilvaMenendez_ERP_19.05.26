@@ -163,6 +163,7 @@
             this.Name = "frmDardeAlta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dar de Alta";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmDardeAlta_FormClosing);
             this.Load += new System.EventHandler(this.frmDardeAlta_Load);
             this.grbDarAlta.ResumeLayout(false);
             this.grbDarAlta.PerformLayout();
