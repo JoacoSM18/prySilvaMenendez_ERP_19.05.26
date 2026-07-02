@@ -189,7 +189,6 @@ namespace prySilvaMenendez_ERP_19._05._26
             lblUsuario.Text = nombreUsuario;
             lblPerfil.Text = perfilUsuario;
             lblFechaHora.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
-
             clsConexion.ConexionBaseDeDatos.Desconectar();
             clsConexion.ConexionBaseDeDatos.Conectar();
             DataTable tablaLocalidades = clsConexion.ConexionBaseDeDatos.Consultar("SELECT Localidades FROM Localidades");
@@ -203,6 +202,12 @@ namespace prySilvaMenendez_ERP_19._05._26
             if (string.IsNullOrWhiteSpace(txtDNI.Text))
             {
                 MessageBox.Show("El DNI es Obligatorio.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtDNI.Focus();
+                return;
+            }
+            if (txtDNI.Text.Trim().Length < 7)
+            {
+                MessageBox.Show("Debe ingresar al menos 7 caracteres.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtDNI.Focus();
                 return;
             }

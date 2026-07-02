@@ -38,10 +38,10 @@ namespace prySilvaMenendez_ERP_19._05._26
                 statuslblEstado.Text = "Error al Conectar a la Base de Datos";
                 statuslblEstado.BackColor = Color.Red;
             }
-            DataTable tabla = clsConexion.ConexionBaseDeDatos.Consultar("SELECT Nombre, Apellido FROM Usuario WHERE Activo = False");
+            DataTable tabla = clsConexion.ConexionBaseDeDatos.Consultar("SELECT DNI FROM Usuario WHERE Activo = False");
             foreach (DataRow fila in tabla.Rows)
             {
-                string usuario = fila["Nombre"].ToString() + " " + fila["Apellido"].ToString();
+                string usuario = fila["DNI"].ToString();
                 cmbUsuarios.Items.Add(usuario);
             }
         }
@@ -53,10 +53,7 @@ namespace prySilvaMenendez_ERP_19._05._26
                 MessageBox.Show("Seleccione un Usuario", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            string usuarioSeleccionado = cmbUsuarios.SelectedItem.ToString();
-            string[] datos = usuarioSeleccionado.Split(' ');
-            string nombre = datos[0];
-            string apellido = datos[1];
+            string dni= cmbUsuarios.SelectedItem.ToString();
             DialogResult resultado = MessageBox.Show("¿Está Seguro que Desea Dar de Alta a este Usuario?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (resultado == DialogResult.Yes)
             {
@@ -64,12 +61,12 @@ namespace prySilvaMenendez_ERP_19._05._26
                 clsConexion.ConexionBaseDeDatos.Conectar();
                 try
                 {
-                    string sql = "UPDATE Usuario SET Activo = True WHERE Nombre = '" + nombre + "' AND Apellido = '" + apellido + "'";
+                    string sql = "UPDATE Usuario SET Activo = True WHERE DNI = '" + dni + "'";
                     OleDbCommand cmd = new OleDbCommand(sql, clsConexion.ConexionBaseDeDatos.conexion);
                     cmd.ExecuteNonQuery();
                     clsConexion.ConexionBaseDeDatos.AuditarAccion(nombreUsuario, "Dió de Alta un Usuario");
                     MessageBox.Show("Usuario Dado de Alta Correctamente");
-                    cmbUsuarios.Items.Remove(usuarioSeleccionado);
+                    cmbUsuarios.Items.Remove(dni);
                 }
                 catch (Exception ex)
                 {

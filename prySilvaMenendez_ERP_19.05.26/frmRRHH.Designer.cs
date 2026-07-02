@@ -108,6 +108,7 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(117, 168);
+            this.txtNombre.MaxLength = 30;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(139, 35);
             this.txtNombre.TabIndex = 2;
@@ -116,6 +117,7 @@
             // txtApellido
             // 
             this.txtApellido.Location = new System.Drawing.Point(117, 112);
+            this.txtApellido.MaxLength = 30;
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(139, 35);
             this.txtApellido.TabIndex = 1;
@@ -124,6 +126,7 @@
             // txtDNI
             // 
             this.txtDNI.Location = new System.Drawing.Point(117, 60);
+            this.txtDNI.MaxLength = 8;
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(139, 35);
             this.txtDNI.TabIndex = 0;
@@ -141,6 +144,7 @@
             // 
             // btnAgregar
             // 
+            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.Location = new System.Drawing.Point(704, 283);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(141, 43);
@@ -172,10 +176,10 @@
             // 
             // btnMostrarMaps
             // 
-            this.btnMostrarMaps.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMostrarMaps.Location = new System.Drawing.Point(356, 185);
+            this.btnMostrarMaps.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMostrarMaps.Location = new System.Drawing.Point(356, 182);
             this.btnMostrarMaps.Name = "btnMostrarMaps";
-            this.btnMostrarMaps.Size = new System.Drawing.Size(189, 43);
+            this.btnMostrarMaps.Size = new System.Drawing.Size(189, 46);
             this.btnMostrarMaps.TabIndex = 9;
             this.btnMostrarMaps.Text = "Mostrar en Maps";
             this.btnMostrarMaps.UseVisualStyleBackColor = true;
@@ -248,6 +252,7 @@
             // txtDireccion
             // 
             this.txtDireccion.Location = new System.Drawing.Point(126, 142);
+            this.txtDireccion.MaxLength = 40;
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(205, 35);
             this.txtDireccion.TabIndex = 3;
@@ -397,10 +402,10 @@
             // 
             this.btnAgregarDatosContacto.BackColor = System.Drawing.SystemColors.Window;
             this.btnAgregarDatosContacto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarDatosContacto.Location = new System.Drawing.Point(599, 475);
+            this.btnAgregarDatosContacto.Location = new System.Drawing.Point(544, 466);
             this.btnAgregarDatosContacto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAgregarDatosContacto.Name = "btnAgregarDatosContacto";
-            this.btnAgregarDatosContacto.Size = new System.Drawing.Size(260, 40);
+            this.btnAgregarDatosContacto.Size = new System.Drawing.Size(315, 44);
             this.btnAgregarDatosContacto.TabIndex = 9;
             this.btnAgregarDatosContacto.Text = "Agregar Datos de Contacto";
             this.btnAgregarDatosContacto.UseVisualStyleBackColor = false;

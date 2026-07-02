@@ -68,7 +68,7 @@
             this.grbContacto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbContacto.Location = new System.Drawing.Point(21, 214);
             this.grbContacto.Name = "grbContacto";
-            this.grbContacto.Size = new System.Drawing.Size(704, 275);
+            this.grbContacto.Size = new System.Drawing.Size(782, 275);
             this.grbContacto.TabIndex = 0;
             this.grbContacto.TabStop = false;
             this.grbContacto.Text = "Contacto";
@@ -76,9 +76,9 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(453, 146);
+            this.button1.Location = new System.Drawing.Point(481, 153);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(245, 44);
+            this.button1.Size = new System.Drawing.Size(295, 38);
             this.button1.TabIndex = 9;
             this.button1.Text = "Agregue Otra Red Social";
             this.button1.UseVisualStyleBackColor = true;
@@ -248,7 +248,7 @@
             this.statusStrip1.Location = new System.Drawing.Point(0, 634);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Padding = new System.Windows.Forms.Padding(2, 0, 21, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(800, 32);
+            this.statusStrip1.Size = new System.Drawing.Size(827, 32);
             this.statusStrip1.TabIndex = 9;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -293,7 +293,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Wheat;
-            this.ClientSize = new System.Drawing.Size(800, 666);
+            this.ClientSize = new System.Drawing.Size(827, 666);
             this.Controls.Add(this.lblFechaHora);
             this.Controls.Add(this.lblPerfil);
             this.Controls.Add(this.lblUsuario);
@@ -308,7 +308,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAgregarDatosContacto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Agregar Datos de Contacto Avanzados de los Usuarios";
+            this.Text = "Agregar Datos de Contacto de los Usuarios";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmAgregarDatosContacto_FormClosing);
             this.Load += new System.EventHandler(this.frmAgregarDatosContacto_Load);
             this.grbContacto.ResumeLayout(false);

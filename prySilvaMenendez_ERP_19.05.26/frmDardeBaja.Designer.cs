@@ -114,7 +114,7 @@
             this.grbEliminar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grbEliminar.Name = "grbEliminar";
             this.grbEliminar.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.grbEliminar.Size = new System.Drawing.Size(454, 228);
+            this.grbEliminar.Size = new System.Drawing.Size(492, 228);
             this.grbEliminar.TabIndex = 19;
             this.grbEliminar.TabStop = false;
             this.grbEliminar.Text = "Dar de Baja un Usuario";
@@ -125,9 +125,9 @@
             this.lblEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEliminar.Location = new System.Drawing.Point(3, 48);
             this.lblEliminar.Name = "lblEliminar";
-            this.lblEliminar.Size = new System.Drawing.Size(374, 25);
+            this.lblEliminar.Size = new System.Drawing.Size(459, 25);
             this.lblEliminar.TabIndex = 2;
-            this.lblEliminar.Text = "Seleccione un Usuario para Darlo de Baja";
+            this.lblEliminar.Text = "Seleccione el DNI de un Usuario para Darlo de Baja";
             // 
             // cmbUsuarios
             // 
@@ -140,7 +140,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(286, 162);
+            this.btnEliminar.Location = new System.Drawing.Point(333, 174);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(152, 46);
             this.btnEliminar.TabIndex = 0;
@@ -164,7 +164,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmDardeBaja";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Eliminar un Usuario";
+            this.Text = "Dar de Baja";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmDardeBaja_FormClosing);
             this.Load += new System.EventHandler(this.frmDardeBaja_Load);
             this.statuslblEstado1.ResumeLayout(false);

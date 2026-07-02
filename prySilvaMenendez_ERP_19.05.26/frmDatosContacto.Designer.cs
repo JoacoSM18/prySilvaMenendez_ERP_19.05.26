@@ -43,19 +43,19 @@
             // dgvDatosContacto
             // 
             this.dgvDatosContacto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDatosContacto.Location = new System.Drawing.Point(16, 91);
+            this.dgvDatosContacto.Location = new System.Drawing.Point(35, 91);
             this.dgvDatosContacto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvDatosContacto.Name = "dgvDatosContacto";
             this.dgvDatosContacto.ReadOnly = true;
             this.dgvDatosContacto.RowHeadersWidth = 62;
-            this.dgvDatosContacto.Size = new System.Drawing.Size(900, 723);
+            this.dgvDatosContacto.Size = new System.Drawing.Size(900, 626);
             this.dgvDatosContacto.TabIndex = 0;
             // 
             // btnAtras
             // 
             this.btnAtras.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtras.Location = new System.Drawing.Point(16, 837);
+            this.btnAtras.Location = new System.Drawing.Point(35, 765);
             this.btnAtras.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(112, 49);
@@ -70,10 +70,10 @@
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.statuslblEstado});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 911);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 839);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Padding = new System.Windows.Forms.Padding(2, 0, 21, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(972, 32);
+            this.statusStrip1.Size = new System.Drawing.Size(971, 32);
             this.statusStrip1.TabIndex = 9;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -118,9 +118,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.Wheat;
-            this.ClientSize = new System.Drawing.Size(972, 943);
+            this.ClientSize = new System.Drawing.Size(971, 871);
             this.Controls.Add(this.lblFechaHora);
             this.Controls.Add(this.lblPerfil);
             this.Controls.Add(this.lblUsuario);

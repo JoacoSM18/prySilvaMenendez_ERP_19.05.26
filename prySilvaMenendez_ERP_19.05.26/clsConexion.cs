@@ -29,7 +29,6 @@ namespace prySilvaMenendez_ERP_19._05._26
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
                     error = ex.Message;
                     return false;
                 }
@@ -48,6 +47,7 @@ namespace prySilvaMenendez_ERP_19._05._26
                 }
                 catch (Exception ex)
                 {
+                    MessageBox.Show(ex.Message);
                     error = ex.Message;
                 }
                 return tabla;

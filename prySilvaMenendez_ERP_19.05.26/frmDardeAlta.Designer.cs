@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDardeAlta));
             this.grbDarAlta = new System.Windows.Forms.GroupBox();
             this.lblSeleccionar = new System.Windows.Forms.Label();
             this.cmbUsuarios = new System.Windows.Forms.ComboBox();
@@ -52,7 +53,7 @@
             this.grbDarAlta.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grbDarAlta.Name = "grbDarAlta";
             this.grbDarAlta.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.grbDarAlta.Size = new System.Drawing.Size(454, 228);
+            this.grbDarAlta.Size = new System.Drawing.Size(478, 228);
             this.grbDarAlta.TabIndex = 24;
             this.grbDarAlta.TabStop = false;
             this.grbDarAlta.Text = "Dar de Alta un Usuario";
@@ -63,22 +64,22 @@
             this.lblSeleccionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSeleccionar.Location = new System.Drawing.Point(3, 48);
             this.lblSeleccionar.Name = "lblSeleccionar";
-            this.lblSeleccionar.Size = new System.Drawing.Size(369, 25);
+            this.lblSeleccionar.Size = new System.Drawing.Size(454, 25);
             this.lblSeleccionar.TabIndex = 2;
-            this.lblSeleccionar.Text = "Seleccione un Usuario para Darlo de Alta";
+            this.lblSeleccionar.Text = "Seleccione el DNI de un Usuario para Darlo de Alta";
             // 
             // cmbUsuarios
             // 
             this.cmbUsuarios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbUsuarios.FormattingEnabled = true;
-            this.cmbUsuarios.Location = new System.Drawing.Point(14, 86);
+            this.cmbUsuarios.Location = new System.Drawing.Point(8, 95);
             this.cmbUsuarios.Name = "cmbUsuarios";
             this.cmbUsuarios.Size = new System.Drawing.Size(264, 37);
             this.cmbUsuarios.TabIndex = 1;
             // 
             // btnDardeAlta
             // 
-            this.btnDardeAlta.Location = new System.Drawing.Point(286, 162);
+            this.btnDardeAlta.Location = new System.Drawing.Point(319, 165);
             this.btnDardeAlta.Name = "btnDardeAlta";
             this.btnDardeAlta.Size = new System.Drawing.Size(152, 46);
             this.btnDardeAlta.TabIndex = 0;
@@ -158,9 +159,10 @@
             this.Controls.Add(this.lblFechaHora);
             this.Controls.Add(this.lblPerfil);
             this.Controls.Add(this.lblUsuario);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmDardeAlta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Dar de Alta un Usuario";
+            this.Text = "Dar de Alta";
             this.Load += new System.EventHandler(this.frmDardeAlta_Load);
             this.grbDarAlta.ResumeLayout(false);
             this.grbDarAlta.PerformLayout();
