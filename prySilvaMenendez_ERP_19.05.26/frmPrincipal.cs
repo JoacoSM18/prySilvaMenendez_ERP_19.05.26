@@ -47,7 +47,7 @@ namespace prySilvaMenendez_ERP_19._05._26
 
         private void frmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (e.CloseReason == CloseReason.UserClosing)
+            if (e.CloseReason == CloseReason.UserClosing && !Program.SalirConfirmado)
             {
                 DialogResult resultado = MessageBox.Show("¿Desea Cerrar Sesión?", "Cerrar Sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (resultado == DialogResult.No)
@@ -56,6 +56,7 @@ namespace prySilvaMenendez_ERP_19._05._26
                 }
                 else
                 {
+                    Program.SalirConfirmado = true;
                     Application.Exit();
                 }
             }

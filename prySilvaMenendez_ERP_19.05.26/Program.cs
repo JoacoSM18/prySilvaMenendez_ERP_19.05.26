@@ -8,6 +8,8 @@ namespace prySilvaMenendez_ERP_19._05._26
 {
     internal static class Program
     {
+        // Flag to indicate the user confirmed exiting the application
+        public static bool SalirConfirmado = false;
         /// <summary>
         /// Punto de entrada principal para la aplicación.
         /// </summary>

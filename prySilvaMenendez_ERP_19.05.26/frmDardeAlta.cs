@@ -82,8 +82,7 @@ namespace prySilvaMenendez_ERP_19._05._26
 
         private void frmDardeAlta_FormClosing(object sender, FormClosingEventArgs e)
         {
-            
-            if (e.CloseReason == CloseReason.UserClosing && !volviendo)
+            if (e.CloseReason == CloseReason.UserClosing && !volviendo && !Program.SalirConfirmado)
             {
                 DialogResult resultado = MessageBox.Show("¿Desea Cerrar Sesión?", "Cerrar Sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (resultado == DialogResult.No)
@@ -92,6 +91,7 @@ namespace prySilvaMenendez_ERP_19._05._26
                 }
                 else
                 {
+                    Program.SalirConfirmado = true;
                     Application.Exit();
                 }
             }

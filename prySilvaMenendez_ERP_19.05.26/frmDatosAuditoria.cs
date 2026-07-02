@@ -94,7 +94,7 @@ namespace prySilvaMenendez_ERP_19._05._26
         }
         private void frmDatosAuditoria_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (!volviendo)
+            if (!volviendo && !Program.SalirConfirmado)
             {
                 DialogResult resultado = MessageBox.Show("¿Desea Cerrar Sesión?", "Cerrar Sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (resultado == DialogResult.No)
@@ -103,7 +103,8 @@ namespace prySilvaMenendez_ERP_19._05._26
                 }
                 else
                 {
-                    volviendo = true;
+                    Program.SalirConfirmado = true;
+                    Application.Exit();
                 }
             }
         }
