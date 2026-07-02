@@ -98,7 +98,7 @@ namespace prySilvaMenendez_ERP_19._05._26
             dgvDatosAuditoriaSesion.DataSource = tabla;
             if (tabla.Rows.Count == 0)
             {
-                MessageBox.Show("No se encontraron registros.","Información",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show("No Se Encontraron Registros.","Información",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
         }
         private void btnMostrarTodo_Click(object sender, EventArgs e)

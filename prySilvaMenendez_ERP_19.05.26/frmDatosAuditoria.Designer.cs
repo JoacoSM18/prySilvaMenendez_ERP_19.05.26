@@ -49,7 +49,7 @@
             // dgvDatosAuditoriaSesion
             // 
             this.dgvDatosAuditoriaSesion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDatosAuditoriaSesion.Location = new System.Drawing.Point(13, 196);
+            this.dgvDatosAuditoriaSesion.Location = new System.Drawing.Point(37, 196);
             this.dgvDatosAuditoriaSesion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvDatosAuditoriaSesion.Name = "dgvDatosAuditoriaSesion";
             this.dgvDatosAuditoriaSesion.ReadOnly = true;
@@ -61,7 +61,7 @@
             // 
             this.btnAtras.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtras.Location = new System.Drawing.Point(13, 754);
+            this.btnAtras.Location = new System.Drawing.Point(13, 778);
             this.btnAtras.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(112, 49);
@@ -76,7 +76,7 @@
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.statuslblEstado});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 823);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 849);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Padding = new System.Windows.Forms.Padding(2, 0, 21, 0);
             this.statusStrip1.Size = new System.Drawing.Size(1014, 32);
@@ -124,7 +124,7 @@
             // 
             this.lblUsuarioFiltro.AutoSize = true;
             this.lblUsuarioFiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuarioFiltro.Location = new System.Drawing.Point(78, 85);
+            this.lblUsuarioFiltro.Location = new System.Drawing.Point(67, 84);
             this.lblUsuarioFiltro.Name = "lblUsuarioFiltro";
             this.lblUsuarioFiltro.Size = new System.Drawing.Size(85, 25);
             this.lblUsuarioFiltro.TabIndex = 14;
@@ -134,7 +134,7 @@
             // 
             this.lblAccion.AutoSize = true;
             this.lblAccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAccion.Location = new System.Drawing.Point(434, 85);
+            this.lblAccion.Location = new System.Drawing.Point(423, 84);
             this.lblAccion.Name = "lblAccion";
             this.lblAccion.Size = new System.Drawing.Size(78, 25);
             this.lblAccion.TabIndex = 15;
@@ -145,7 +145,7 @@
             this.cmbUsuarios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbUsuarios.FormattingEnabled = true;
-            this.cmbUsuarios.Location = new System.Drawing.Point(169, 82);
+            this.cmbUsuarios.Location = new System.Drawing.Point(158, 81);
             this.cmbUsuarios.Name = "cmbUsuarios";
             this.cmbUsuarios.Size = new System.Drawing.Size(244, 33);
             this.cmbUsuarios.TabIndex = 18;
@@ -155,7 +155,7 @@
             this.cmbAccion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbAccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbAccion.FormattingEnabled = true;
-            this.cmbAccion.Location = new System.Drawing.Point(509, 82);
+            this.cmbAccion.Location = new System.Drawing.Point(498, 81);
             this.cmbAccion.Name = "cmbAccion";
             this.cmbAccion.Size = new System.Drawing.Size(265, 33);
             this.cmbAccion.TabIndex = 19;
@@ -163,9 +163,9 @@
             // btnFiltrar
             // 
             this.btnFiltrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFiltrar.Location = new System.Drawing.Point(806, 58);
+            this.btnFiltrar.Location = new System.Drawing.Point(806, 81);
             this.btnFiltrar.Name = "btnFiltrar";
-            this.btnFiltrar.Size = new System.Drawing.Size(108, 43);
+            this.btnFiltrar.Size = new System.Drawing.Size(160, 33);
             this.btnFiltrar.TabIndex = 22;
             this.btnFiltrar.Text = "Filtrar";
             this.btnFiltrar.UseVisualStyleBackColor = true;
@@ -174,9 +174,9 @@
             // btnMostrarTodo
             // 
             this.btnMostrarTodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMostrarTodo.Location = new System.Drawing.Point(785, 132);
+            this.btnMostrarTodo.Location = new System.Drawing.Point(771, 143);
             this.btnMostrarTodo.Name = "btnMostrarTodo";
-            this.btnMostrarTodo.Size = new System.Drawing.Size(157, 47);
+            this.btnMostrarTodo.Size = new System.Drawing.Size(195, 36);
             this.btnMostrarTodo.TabIndex = 23;
             this.btnMostrarTodo.Text = "Mostrar Todo";
             this.btnMostrarTodo.UseVisualStyleBackColor = true;
@@ -188,7 +188,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.Wheat;
-            this.ClientSize = new System.Drawing.Size(1014, 855);
+            this.ClientSize = new System.Drawing.Size(1014, 881);
             this.Controls.Add(this.btnMostrarTodo);
             this.Controls.Add(this.btnFiltrar);
             this.Controls.Add(this.cmbAccion);
