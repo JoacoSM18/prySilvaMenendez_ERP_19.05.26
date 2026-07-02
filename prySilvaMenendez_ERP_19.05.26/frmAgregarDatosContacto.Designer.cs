@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAgregarDatosContacto));
             this.grbContacto = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.txtGmail = new System.Windows.Forms.TextBox();
             this.mskTelefono = new System.Windows.Forms.MaskedTextBox();
             this.txtNombreRedSocial = new System.Windows.Forms.TextBox();
@@ -56,7 +55,6 @@
             // 
             // grbContacto
             // 
-            this.grbContacto.Controls.Add(this.button1);
             this.grbContacto.Controls.Add(this.txtGmail);
             this.grbContacto.Controls.Add(this.mskTelefono);
             this.grbContacto.Controls.Add(this.txtNombreRedSocial);
@@ -72,16 +70,6 @@
             this.grbContacto.TabIndex = 0;
             this.grbContacto.TabStop = false;
             this.grbContacto.Text = "Contacto";
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(481, 153);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(295, 38);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Agregue Otra Red Social";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // txtGmail
             // 
@@ -342,6 +330,5 @@
         private System.Windows.Forms.Label lblFechaHora;
         private System.Windows.Forms.Label lblPerfil;
         private System.Windows.Forms.Label lblUsuario;
-        private System.Windows.Forms.Button button1;
     }
 }
