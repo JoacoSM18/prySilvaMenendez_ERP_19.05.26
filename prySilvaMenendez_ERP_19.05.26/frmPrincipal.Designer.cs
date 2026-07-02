@@ -97,7 +97,7 @@
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(75, 30);
             this.btnAtras.TabIndex = 4;
-            this.btnAtras.Text = "SALIR";
+            this.btnAtras.Text = "Salir";
             this.btnAtras.UseVisualStyleBackColor = false;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 

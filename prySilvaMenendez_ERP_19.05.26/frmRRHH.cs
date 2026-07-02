@@ -174,6 +174,14 @@ namespace prySilvaMenendez_ERP_19._05._26
         }
         private void frmRRHH_Load(object sender, EventArgs e)
         {
+            if (perfilUsuario == "Administrador")
+            {
+                btnAtras.Text = "Atrás";
+            }
+            else if (perfilUsuario == "Recursos Humanos")
+            {
+                btnAtras.Text = "Salir";
+            }
             bool conectado = clsConexion.ConexionBaseDeDatos.Conectar();
             if (conectado)
             {
@@ -207,7 +215,16 @@ namespace prySilvaMenendez_ERP_19._05._26
             }
             if (txtDNI.Text.Trim().Length < 7)
             {
-                MessageBox.Show("Debe ingresar al menos 7 caracteres.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe Ingresar al Menos 7 Caracteres.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtDNI.Focus();
+                return;
+            }
+            clsConexion.ConexionBaseDeDatos.Desconectar();
+            clsConexion.ConexionBaseDeDatos.Conectar();
+            DataTable tabla = clsConexion.ConexionBaseDeDatos.Consultar("SELECT * FROM Usuario WHERE DNI = '" + txtDNI.Text.Trim() + "'");
+            if (tabla.Rows.Count > 0)
+            {
+                MessageBox.Show("Ya Existe un Usuario con ese DNI.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtDNI.Focus();
                 return;
             }

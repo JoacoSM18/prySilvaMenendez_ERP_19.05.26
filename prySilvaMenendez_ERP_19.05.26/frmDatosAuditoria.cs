@@ -61,28 +61,36 @@ namespace prySilvaMenendez_ERP_19._05._26
 
         private void btnFiltrar_Click(object sender, EventArgs e)
         {
-            if (cmbUsuarios.SelectedIndex == -1 && cmbAccion.SelectedIndex == -1)
+            if (dtpDesde.Value.Date > dtpHasta.Value.Date)
             {
-                MessageBox.Show("Debe Seleccionar al Menos un Filtro.","Advertencia",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                MessageBox.Show("La Fecha 'Desde' no Puede ser Mayor que la Fecha 'Hasta'.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
             DataTable tabla;
-            if (cmbUsuarios.SelectedIndex != -1 && cmbAccion.SelectedIndex != -1)
+            string fechaDesde = dtpDesde.Value.ToString("yyyy-MM-dd");
+            string fechaHasta = dtpHasta.Value.ToString("yyyy-MM-dd");
+            if (cmbUsuarios.SelectedIndex == -1 && cmbAccion.SelectedIndex == -1)
             {
-                tabla = clsConexion.ConexionBaseDeDatos.Consultar("SELECT * FROM AuditoriaInicioSesion WHERE Usuario = '" + cmbUsuarios.Text + "' AND Accion = '" + cmbAccion.Text + "'");
+                tabla = clsConexion.ConexionBaseDeDatos.Consultar("SELECT * FROM AuditoriaInicioSesion WHERE FechayHora BETWEEN #" + fechaDesde + " 00:00:00# AND #" + fechaHasta + " 23:59:59#");
+            }
+            else if (cmbUsuarios.SelectedIndex != -1 && cmbAccion.SelectedIndex != -1)
+            {
+                tabla = clsConexion.ConexionBaseDeDatos.Consultar("SELECT * FROM AuditoriaInicioSesion WHERE Usuario = '" + cmbUsuarios.Text + "' AND Accion = '" + cmbAccion.Text + "' AND FechayHora BETWEEN #" + fechaDesde + " 00:00:00# AND #" + fechaHasta + " 23:59:59#");
             }
             else if (cmbUsuarios.SelectedIndex != -1)
             {
-                tabla = clsConexion.ConexionBaseDeDatos.Consultar("SELECT * FROM AuditoriaInicioSesion WHERE Usuario = '" + cmbUsuarios.Text + "'");
+                tabla = clsConexion.ConexionBaseDeDatos.Consultar("SELECT * FROM AuditoriaInicioSesion WHERE Usuario = '" + cmbUsuarios.Text + "' AND FechayHora BETWEEN #" + fechaDesde + " 00:00:00# AND #" + fechaHasta + " 23:59:59#");
             }
             else
             {
-                tabla = clsConexion.ConexionBaseDeDatos.Consultar("SELECT * FROM AuditoriaInicioSesion WHERE Accion = '" + cmbAccion.Text + "'");
+                tabla = clsConexion.ConexionBaseDeDatos.Consultar("SELECT * FROM AuditoriaInicioSesion WHERE Accion = '" + cmbAccion.Text + "' AND FechayHora BETWEEN #" + fechaDesde + " 00:00:00# AND #" + fechaHasta + " 23:59:59#");
             }
+
             dgvDatosAuditoriaSesion.DataSource = tabla;
+
             if (tabla.Rows.Count == 0)
             {
-                MessageBox.Show("No Se Encontraron Registros.","Información",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show("No Se Encontraron Registros.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
         private void btnMostrarTodo_Click(object sender, EventArgs e)

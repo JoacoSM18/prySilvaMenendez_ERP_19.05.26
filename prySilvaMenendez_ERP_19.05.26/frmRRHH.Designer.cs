@@ -99,7 +99,7 @@
             "Diseñador",
             "Vendedor"});
             this.cmbPerfiles.Location = new System.Drawing.Point(64, 145);
-            this.cmbPerfiles.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbPerfiles.Margin = new System.Windows.Forms.Padding(2);
             this.cmbPerfiles.Name = "cmbPerfiles";
             this.cmbPerfiles.Size = new System.Drawing.Size(121, 28);
             this.cmbPerfiles.TabIndex = 11;
@@ -107,7 +107,7 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(78, 109);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.MaxLength = 30;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(94, 26);
@@ -117,7 +117,7 @@
             // txtApellido
             // 
             this.txtApellido.Location = new System.Drawing.Point(78, 73);
-            this.txtApellido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtApellido.Margin = new System.Windows.Forms.Padding(2);
             this.txtApellido.MaxLength = 30;
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(94, 26);
@@ -127,7 +127,7 @@
             // txtDNI
             // 
             this.txtDNI.Location = new System.Drawing.Point(78, 39);
-            this.txtDNI.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDNI.Margin = new System.Windows.Forms.Padding(2);
             this.txtDNI.MaxLength = 8;
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(94, 26);
@@ -149,7 +149,7 @@
             // 
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.Location = new System.Drawing.Point(469, 184);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(94, 28);
             this.btnAgregar.TabIndex = 6;
@@ -180,7 +180,7 @@
             // 
             this.btnMostrarMaps.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMostrarMaps.Location = new System.Drawing.Point(237, 118);
-            this.btnMostrarMaps.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMostrarMaps.Margin = new System.Windows.Forms.Padding(2);
             this.btnMostrarMaps.Name = "btnMostrarMaps";
             this.btnMostrarMaps.Size = new System.Drawing.Size(126, 30);
             this.btnMostrarMaps.TabIndex = 9;
@@ -213,7 +213,7 @@
             this.cmbLocalidades.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbLocalidades.FormattingEnabled = true;
             this.cmbLocalidades.Location = new System.Drawing.Point(84, 56);
-            this.cmbLocalidades.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbLocalidades.Margin = new System.Windows.Forms.Padding(2);
             this.cmbLocalidades.Name = "cmbLocalidades";
             this.cmbLocalidades.Size = new System.Drawing.Size(138, 28);
             this.cmbLocalidades.TabIndex = 6;
@@ -248,7 +248,7 @@
             "Tierra del Fuego",
             "Tucumán"});
             this.cmbsProvincias.Location = new System.Drawing.Point(84, 21);
-            this.cmbsProvincias.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbsProvincias.Margin = new System.Windows.Forms.Padding(2);
             this.cmbsProvincias.Name = "cmbsProvincias";
             this.cmbsProvincias.Size = new System.Drawing.Size(138, 28);
             this.cmbsProvincias.TabIndex = 5;
@@ -257,7 +257,7 @@
             // txtDireccion
             // 
             this.txtDireccion.Location = new System.Drawing.Point(84, 92);
-            this.txtDireccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDireccion.Margin = new System.Windows.Forms.Padding(2);
             this.txtDireccion.MaxLength = 40;
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(138, 26);
@@ -282,7 +282,7 @@
             this.lblDireccion.Name = "lblDireccion";
             this.lblDireccion.Size = new System.Drawing.Size(75, 18);
             this.lblDireccion.TabIndex = 2;
-            this.lblDireccion.Text = "Direccion:";
+            this.lblDireccion.Text = "Dirección:";
             // 
             // lblLocalidad
             // 
